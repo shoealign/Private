@@ -20,33 +20,68 @@
   .price-preview{margin-top:12px;display:flex;align-items:center;justify-content:space-between;background:#f8f9fb;border:1px solid var(--line);border-radius:12px;padding:10px 12px}.price-preview small{color:var(--muted)}.price-preview b{font-size:15px}.recommend-panel{border:1px solid var(--line);border-radius:18px;padding:15px;margin:14px 0;background:#fafbfc}.recommend-panel h4{margin:0 0 9px;font-size:14px}.recommend-groups{display:grid;grid-template-columns:1fr 1fr;gap:10px}.recommend-group small{display:block;color:var(--muted);font-size:11px;margin-bottom:6px}.recommend-chips{display:flex;gap:6px;flex-wrap:wrap}.rec-chip{background:#fff;border:1px solid var(--line);padding:7px 9px;border-radius:9px;font-size:12px;font-weight:800}.detail-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}.fact{border:1px solid var(--line);border-radius:14px;padding:12px;background:#fff}.fact small{display:block;color:var(--muted);font-size:11px;margin-bottom:5px}.fact b{font-size:14px}.price-board{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 18px}.price-card{border:1px solid var(--line);border-radius:16px;padding:14px;background:#fafbfc}.price-card.kream{background:#111;color:#fff;border-color:#111}.price-card small{display:block;font-size:11px;color:var(--muted);margin-bottom:5px}.price-card.kream small{color:#bfc3c9}.price-card strong{font-size:25px;letter-spacing:-.8px}.price-card .sub{font-size:11px;margin-top:6px;color:var(--muted)}.price-card.kream .sub{color:#c9cdd3}.kream-link{display:inline-flex;margin-top:9px;padding:8px 10px;border-radius:9px;background:#fff;color:#111;text-decoration:none;font-weight:800;font-size:12px}.scoreboard{display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center;margin:18px 0}.score-ring{--p:90;width:132px;height:132px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(#111 calc(var(--p)*1%),#e9ebef 0);position:relative;margin:auto}.score-ring:after{content:"";position:absolute;width:100px;height:100px;border-radius:50%;background:#fff}.score-ring .inner{position:relative;z-index:1;text-align:center}.score-ring .inner strong{display:block;font-size:32px;line-height:1}.score-ring .inner span{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.4px}.metric-list{display:grid;gap:9px}.metric{display:grid;grid-template-columns:60px 1fr 36px;gap:9px;align-items:center;font-size:12px}.metric-track{height:10px;background:#eef0f3;border-radius:999px;overflow:hidden}.metric-track i{display:block;height:100%;background:#111;border-radius:999px}.status-chip{display:inline-flex;align-items:center;padding:5px 8px;border-radius:999px;background:#eef7ef;color:#267a37;font-size:11px;font-weight:800}.status-chip.warn{background:#fff3e7;color:#9a5b14}.data-note{font-size:11px;line-height:1.55;color:var(--muted);margin-top:8px}.width-panel{border:1px solid var(--line);border-radius:18px;padding:16px;margin:14px 0;background:#fff}.width-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px}.width-head h4{margin:0 0 4px;font-size:15px}.width-head p{margin:0;color:var(--muted);font-size:12px;line-height:1.45}.width-badge{white-space:nowrap;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:900;background:#eef4ff}.width-scale{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin:10px 0 8px}.width-step{height:9px;border-radius:999px;background:#eceff3}.width-step.on{background:#111}.width-labels{display:flex;justify-content:space-between;color:var(--muted);font-size:10px}.width-meta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:13px}.width-meta div{background:#f8f9fb;border-radius:12px;padding:11px}.width-meta small{display:block;color:var(--muted);font-size:10px;margin-bottom:4px}.width-meta b{font-size:13px}.distance-map{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:8px}.distance-cell{border:1px solid var(--line);border-radius:11px;padding:9px 7px;text-align:center;font-size:11px;color:var(--muted);background:#fff}.distance-cell.best{background:#111;color:#fff;border-color:#111;font-weight:900}.distance-cell.ok{background:#f5f7f9;color:#444}.footer-note{margin-top:30px;color:var(--muted);font-size:12px;line-height:1.6}
   @media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.summary{grid-template-columns:1fr 1fr}.search{display:none}.hero h1{font-size:35px}.detail-grid{grid-template-columns:1fr}}
   @media(max-width:620px){.recommend-groups{grid-template-columns:1fr}.filter-block{padding:12px 12px 9px}.filter-chip{padding:8px 10px;font-size:12px}.toolbar{margin-top:8px}.grid{grid-template-columns:1fr}.hero{padding-top:34px}.nav a{display:none}.summary{grid-template-columns:1fr 1fr}.hero h1{font-size:31px}.proscons{grid-template-columns:1fr}.detail-hero{grid-template-columns:1fr}.detail-photo img{height:170px}.detail-facts{grid-template-columns:1fr 1fr}.price-board{grid-template-columns:1fr}.scoreboard{grid-template-columns:1fr}.score-ring{width:118px;height:118px}.score-ring:after{width:88px;height:88px}}
+
+  /* v4 — quieter, editorial UI */
+  :root{--bg:#fff;--card:#fff;--text:#111;--muted:#737373;--line:#e8e8e8;--accent:#111;--chip:#f5f5f5}
+  body{background:#fff;letter-spacing:-.01em}
+  header{background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid #ededed}
+  .nav{padding:15px 22px;gap:24px}.logo{font-size:21px;letter-spacing:-.7px}.logo span{color:#aaa}.logo small{display:none}.nav a{font-size:13px;color:#555}.search{border:0;border-bottom:1px solid #ddd;border-radius:0;background:transparent;padding:8px 2px;min-width:230px}
+  .hero{padding:54px 22px 36px}.hero h1{font-size:42px;line-height:1.12;letter-spacing:-2.2px;margin-bottom:15px;max-width:680px}.hero p{font-size:15px;line-height:1.7;max-width:620px;color:#666}.hero-badges,.badge,.summary{display:none!important}
+  .wrap{padding-bottom:80px}.filter-block{background:transparent;border:0;border-top:1px solid #eee;border-radius:0;padding:18px 0 14px;margin:0}.filter-title{font-size:12px;color:#777;margin-bottom:11px;letter-spacing:.01em}.filter-row{gap:7px}.filter-chip,.tab,.filter{border:1px solid #ddd;border-radius:8px;padding:8px 11px;font-size:12px;font-weight:600;background:#fff;color:#333}.filter-chip.active,.tab.active{background:#111;color:#fff;border-color:#111}.filter-help{font-size:11px;color:#999}.toolbar{margin:4px 0 20px;gap:8px}
+  .grid{gap:28px 18px}.card{border:0;border-radius:0;overflow:visible;transition:none}.card:hover{transform:none;box-shadow:none}.shoe-img{height:230px;background:#f7f7f7;border-radius:2px}.shoe-img img{padding:20px}.card:hover .shoe-img img{transform:none}.content{padding:14px 0 0}.meta{margin-bottom:7px;gap:8px}.rank{width:auto;height:auto;border-radius:0;background:transparent;color:#999;font-size:11px;font-weight:600}.rank:before{content:'#'}.cat{font-size:11px}.name{font-size:18px;letter-spacing:-.4px}.brand{font-size:12px;margin-top:2px}.fit-badges{margin:10px 0 4px;gap:5px}.fit-badge{font-size:10px;border-radius:4px;padding:5px 7px;background:#f6f6f6;border:0;font-weight:700}.fit-badge.level,.fit-badge.distance{background:#f6f6f6}.fit-badge.best{background:#111;color:#fff}.scoreline{margin:12px 0 10px;gap:7px;border-top:1px solid #eee;padding-top:11px}.score{font-size:23px}.stars{font-size:10px;color:#777;letter-spacing:.05em}.reviews{margin-left:auto;font-size:11px}.bars{gap:6px}.barrow{grid-template-columns:54px 1fr 28px;font-size:11px}.bar{height:4px;background:#eee}.bar i{background:#222}.tags{margin-top:9px}.tag{font-size:10px;padding:0;background:transparent;border-radius:0;color:#777}.tag+.tag:before{content:'·';margin-right:6px;color:#bbb}.price-preview{margin-top:12px;border:0;border-top:1px solid #eee;border-radius:0;background:transparent;padding:10px 0}.price-preview small{font-size:11px}.price-preview b{font-size:14px}.source{border-top:0!important;padding-top:2px!important;font-size:11px!important;color:#999!important}
+  .modal{background:rgba(0,0,0,.35)}.modal-card{border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.16)}.detail-photo{background:#f7f7f7;border-radius:2px}.detail-facts{gap:0;border-top:1px solid #eee;border-bottom:1px solid #eee}.fact{border:0;border-right:1px solid #eee;border-radius:0;padding:13px 12px}.fact:last-child{border-right:0}.recommend-panel,.width-panel{border:1px solid #e8e8e8;border-radius:4px;background:#fff;padding:16px}.rec-chip{border:0;background:#f5f5f5;border-radius:4px;padding:6px 8px}.width-badge{border-radius:4px;background:#f4f4f4}.width-meta div{background:#f7f7f7;border-radius:3px}.distance-cell{border-radius:4px}.price-board{gap:8px}.price-card{border-radius:4px;background:#fff}.price-card.kream{background:#111}.kream-link{border-radius:3px}.score-ring{background:conic-gradient(#111 calc(var(--p)*1%),#ededed 0)}.metric-track{height:6px;background:#eee}.status-chip{border-radius:4px}.proscons>div{border-radius:4px!important}.review-item{border-radius:4px!important}
+  @media(max-width:620px){.hero{padding:34px 18px 26px}.hero h1{font-size:30px;letter-spacing:-1.5px}.hero p{font-size:14px}.wrap{padding-left:18px;padding-right:18px}.grid{gap:34px}.shoe-img{height:245px}.filter-block{padding:15px 0 12px}.filter-chip{font-size:11px}.content{padding-top:12px}}
+
+
+  /* Compact filter / sort controls */
+  .list-controls{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:10px 0 22px;padding-top:14px;border-top:1px solid #eee}
+  .control-left,.control-right{display:flex;align-items:center;gap:8px}
+  .filter-trigger,.sort-wrap{height:40px;border:1px solid #dcdfe4;background:#fff;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#26292e}
+  .filter-trigger{padding:0 13px;cursor:pointer}
+  .filter-trigger .count{min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:#111;color:#fff;font-size:10px;display:none;align-items:center;justify-content:center}
+  .filter-trigger.has-filter .count{display:inline-flex}
+  .sort-wrap{padding:0 10px}.sort-wrap span{color:#858b94;font-size:11px;font-weight:600}.sort-wrap select{border:0;outline:0;background:transparent;font:inherit;font-size:12px;font-weight:700;color:#222;max-width:150px}
+  .result-count{font-size:12px;color:#858b94}
+  .active-filter-bar{display:none;gap:7px;overflow-x:auto;padding-bottom:10px;margin-top:-10px;scrollbar-width:none}.active-filter-bar::-webkit-scrollbar{display:none}.active-filter-bar.on{display:flex}
+  .active-filter-pill{white-space:nowrap;background:#f2f3f5;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:700;color:#444}
+  .filter-sheet{position:fixed;inset:0;z-index:80;display:none;background:rgba(0,0,0,.32);align-items:flex-end;justify-content:center}
+  .filter-sheet.on{display:flex}
+  .filter-sheet-panel{width:min(560px,100%);background:#fff;border-radius:22px 22px 0 0;max-height:78vh;overflow:auto;padding:18px 18px calc(18px + env(safe-area-inset-bottom));box-shadow:0 -16px 45px rgba(0,0,0,.12)}
+  .sheet-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid #eee}.sheet-head h3{margin:0;font-size:18px}.sheet-close{border:0;background:#f1f2f4;width:34px;height:34px;border-radius:50%;font-size:20px;cursor:pointer}
+  .sheet-section{padding:18px 0;border-bottom:1px solid #eee}.sheet-section:last-of-type{border-bottom:0}.sheet-section-title{font-size:12px;font-weight:800;color:#666;margin-bottom:10px}
+  .sheet-options{display:flex;gap:8px;flex-wrap:wrap}.sheet-option{border:1px solid #ddd;background:#fff;border-radius:9px;padding:9px 12px;font-size:12px;font-weight:700;color:#444;cursor:pointer}.sheet-option.active{background:#111;color:#fff;border-color:#111}
+  .sheet-help{font-size:11px;color:#969ba3;line-height:1.5;margin-top:9px}
+  .sheet-actions{position:sticky;bottom:0;background:linear-gradient(to bottom,rgba(255,255,255,.84),#fff 25%);display:grid;grid-template-columns:110px 1fr;gap:8px;padding-top:14px}.reset-filter,.apply-filter{height:44px;border-radius:11px;font-size:13px;font-weight:800;cursor:pointer}.reset-filter{border:1px solid #ddd;background:#fff}.apply-filter{border:1px solid #111;background:#111;color:#fff}
+  @media(max-width:620px){.list-controls{margin-top:0}.sort-wrap span{display:none}.sort-wrap select{max-width:128px}.filter-sheet-panel{max-height:82vh}.result-count{display:none}}
+
 </style>
 </head>
 <body>
 <header><div class="nav"><div class="logo">SHOE<span>ALIGN</span><small>FIND YOUR ALIGN</small></div><a href="#">랭킹</a><a href="#">리뷰</a><a href="#">슈즈 찾기</a><a href="#">브랜드</a><div class="spacer"></div><input class="search" id="search" placeholder="러닝화 검색 (예: 노바블라스트)" /></div></header>
-<section class="hero"><h1>내게 맞는 러닝화,<br>데이터로 얼라인.</h1><p>유튜브·커뮤니티·내돈내산 리뷰를 한곳에 모아 쿠션·안정성·반발력·내구성·가성비를 비교하고, 나에게 맞는 러닝화를 찾는 스포츠화 플랫폼입니다.</p><div class="hero-badges"><span class="badge">리뷰 출처 공개</span><span class="badge">러닝 목적별 랭킹</span><span class="badge">장점/단점 요약</span><span class="badge">MY ALIGN 매칭</span></div></section>
+<section class="hero"><h1>내게 맞는 러닝화,<br>데이터로 얼라인.</h1><p>실사용 리뷰와 제품 데이터를 바탕으로, 러너의 수준과 목표 거리에 맞는 신발을 비교합니다.</p></section>
 <main class="wrap">
-  <div class="summary"><div class="sumcard"><small>등록 슈즈</small><b>128</b></div><div class="sumcard"><small>수집 리뷰</small><b>3,482</b></div><div class="sumcard"><small>평균 평점</small><b>4.42</b></div><div class="sumcard"><small>이번주 리뷰 증가</small><b>+126</b></div></div>
-  <div class="filter-block">
-    <div class="filter-title">신발 유형</div>
-    <div class="toolbar">
-      <button class="tab active" data-cat="all">전체</button><button class="tab" data-cat="daily">데일리/트레이닝</button><button class="tab" data-cat="stability">안정화</button><button class="tab" data-cat="race">레이싱</button>
-      <div class="filter"><select id="sort"><option value="score">ALIGN SCORE 높은순</option><option value="reviews">리뷰 많은순</option><option value="value">가성비순</option></select></div>
+  <div class="list-controls">
+    <div class="control-left">
+      <button class="filter-trigger" id="openFilters">필터 <span class="count" id="filterCount">0</span></button>
+      <span class="result-count" id="resultCount">0개 모델</span>
+    </div>
+    <div class="control-right">
+      <div class="sort-wrap"><span>정렬</span><select id="sort"><option value="score">ALIGN SCORE 높은순</option><option value="reviews">리뷰 많은순</option><option value="value">가성비순</option></select></div>
     </div>
   </div>
-  <div class="filter-block">
-    <div class="filter-title">러닝 경험</div>
-    <div class="filter-row" id="levelFilters"><button class="filter-chip active" data-level="all">전체</button><button class="filter-chip" data-level="beginner">입문용</button><button class="filter-chip" data-level="intermediate">중급용</button><button class="filter-chip" data-level="advanced">숙련자용</button></div>
-    <div class="filter-help">입문용은 안정성·범용성, 중급용은 훈련 효율, 숙련자용은 기록 단축과 고성능 성향을 기준으로 분류한 테스트 기준입니다.</div>
-  </div>
-  <div class="filter-block">
-    <div class="filter-title">추천 대회 거리</div>
-    <div class="filter-row" id="distanceFilters"><button class="filter-chip active" data-distance="all">전체</button><button class="filter-chip" data-distance="5k">5K</button><button class="filter-chip" data-distance="10k">10K</button><button class="filter-chip" data-distance="half">하프</button><button class="filter-chip" data-distance="full">풀</button></div>
-    <div class="filter-help">대회 거리 필터는 '완주 가능'이 아니라 해당 신발의 성향이 특히 잘 맞는 거리 기준입니다.</div>
-  </div>
+  <div class="active-filter-bar" id="activeFilterBar"></div>
   <div class="grid" id="grid"></div>
   <div class="footer-note">※ SHOEALIGN 테스트 프로토타입입니다. BEST 거리는 '사용 가능한 거리'가 아니라 해당 모델의 강점이 가장 잘 살아나는 구간으로 좁혀 표시합니다. 발볼/와이드 정보는 제조사 옵션과 리뷰·랩 자료를 참고한 요약이며, 국내 판매 옵션은 컬러·시기별로 다를 수 있습니다. 현재 리뷰 링크 일부는 화면 구조 확인용 예시입니다.</div>
 </main>
+<div class="filter-sheet" id="filterSheet">
+  <div class="filter-sheet-panel">
+    <div class="sheet-head"><h3>필터</h3><button class="sheet-close" id="closeFilters">×</button></div>
+    <div class="sheet-section"><div class="sheet-section-title">신발 유형</div><div class="sheet-options"><button class="sheet-option active" data-cat="all">전체</button><button class="sheet-option" data-cat="daily">데일리/트레이닝</button><button class="sheet-option" data-cat="stability">안정화</button><button class="sheet-option" data-cat="race">레이싱</button></div></div>
+    <div class="sheet-section"><div class="sheet-section-title">러닝 경험</div><div class="sheet-options"><button class="sheet-option active" data-level="all">전체</button><button class="sheet-option" data-level="beginner">입문용</button><button class="sheet-option" data-level="intermediate">중급용</button><button class="sheet-option" data-level="advanced">숙련자용</button></div><div class="sheet-help">입문용은 안정성·범용성, 중급용은 훈련 효율, 숙련자용은 기록 단축과 고성능 성향을 기준으로 분류합니다.</div></div>
+    <div class="sheet-section"><div class="sheet-section-title">BEST 대회 거리</div><div class="sheet-options"><button class="sheet-option active" data-distance="all">전체</button><button class="sheet-option" data-distance="5k">5K</button><button class="sheet-option" data-distance="10k">10K</button><button class="sheet-option" data-distance="half">하프</button><button class="sheet-option" data-distance="full">풀</button></div><div class="sheet-help">완주 가능 여부가 아니라 해당 신발의 강점이 가장 잘 살아나는 거리 기준입니다.</div></div>
+    <div class="sheet-actions"><button class="reset-filter" id="resetFilters">초기화</button><button class="apply-filter" id="applyFilters">필터 적용</button></div>
+  </div>
+</div>
 <div class="modal" id="modal"><div class="panel"><button class="close" id="close">×</button><div id="detail"></div></div></div>
 <script>
 const shoes=[
@@ -61,6 +96,8 @@ let state={cat:'all',level:'all',distance:'all',sort:'score',q:''};
 function render(){
   let arr=shoes.filter(s=>(state.cat==='all'||s.cat===state.cat) && (state.level==='all'||s.level.includes(state.level)) && (state.distance==='all'||s.distances.includes(state.distance)) && (`${s.name} ${s.brand}`.toLowerCase().includes(state.q.toLowerCase())));
   arr.sort((a,b)=>b[state.sort]-a[state.sort]);
+  document.getElementById('resultCount').textContent=`${arr.length}개 모델`;
+  updateFilterUI();
   document.getElementById('grid').innerHTML=arr.map((s,i)=>`<article class="card" onclick="openDetail('${s.name.replaceAll("'","\\'")}')"><div class="shoe-img"><img src="${s.img}" alt="${s.name}" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='👟'"></div><div class="content"><div class="meta"><span class="rank">${i+1}</span><span class="cat">${s.catko}</span></div><div class="name">${s.name}</div><div class="brand">${s.brand}</div><div class="fit-badges"><span class="fit-badge level">${s.levelko.join(' · ')}</span><span class="fit-badge best">BEST ${s.distanceko.join(' · ')}</span><span class="fit-badge distance">발볼 ${s.widthFeel}</span></div><div class="scoreline"><span class="score">${s.score.toFixed(1)}</span><span class="stars">ALIGN SCORE</span><span class="reviews">리뷰 ${s.reviews}</span></div><div class="bars">${[['쿠션',s.cushion],['안정성',s.stability],['반발력',s.bounce],['가성비',s.value]].map(x=>`<div class="barrow"><span>${x[0]}</span><div class="bar"><i style="width:${x[1]}%"></i></div><b>${x[1]}</b></div>`).join('')}</div><div class="tags">${s.tags.map(t=>`<span class="tag">#${t}</span>`).join('')}</div><div class="price-preview"><small>KREAM 대표가</small><b>${s.kreamPrice}</b></div><div class="source"><span>리뷰 근거 <strong>${s.quotes.length}개</strong></span><span>상세보기 →</span></div></div></article>`).join('') || '<div style="grid-column:1/-1;background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;color:var(--muted)">조건에 맞는 신발이 없습니다. 필터를 하나씩 풀어보세요.</div>';
 }
 function openDetail(name){
@@ -81,7 +118,7 @@ function openDetail(name){
       <div class="fact"><small>모델번호</small><b>${s.model}</b></div>
     </div>
 
-    <div class="width-panel"><div class="width-head"><div><h4>🦶 발볼 & 핏</h4><p>공식 와이드 옵션과 리뷰·랩 측정치를 함께 반영한 요약입니다.</p></div><span class="width-badge">${s.widthFeel}</span></div><div class="width-scale">${[1,2,3,4,5].map(n=>`<span class="width-step ${n<=s.widthLevel?'on':''}"></span>`).join('')}</div><div class="width-labels"><span>매우 좁음</span><span>보통</span><span>매우 넓음</span></div><div class="width-meta"><div><small>와이드 버전</small><b>${s.wideVersion}</b></div><div><small>사이즈/발볼 팁</small><b>${s.widthTip}</b></div></div></div>
+    <div class="width-panel"><div class="width-head"><div><h4>발볼 & 핏</h4><p>공식 와이드 옵션과 리뷰·랩 측정치를 함께 반영한 요약입니다.</p></div><span class="width-badge">${s.widthFeel}</span></div><div class="width-scale">${[1,2,3,4,5].map(n=>`<span class="width-step ${n<=s.widthLevel?'on':''}"></span>`).join('')}</div><div class="width-labels"><span>매우 좁음</span><span>보통</span><span>매우 넓음</span></div><div class="width-meta"><div><small>와이드 버전</small><b>${s.wideVersion}</b></div><div><small>사이즈/발볼 팁</small><b>${s.widthTip}</b></div></div></div>
 
     <div class="price-board">
       <div class="price-card"><small>권장소비자가 / 발매가</small><strong>${s.msrp}</strong><div class="sub">대표 컬러 기준. 국가·컬러별 차이가 있을 수 있습니다.</div></div>
@@ -103,9 +140,37 @@ function openDetail(name){
     <div class="disclosure">※ KREAM 표시가격은 2026-10-07 공개 페이지 기준 스냅샷이며 사이즈·컬러에 따라 달라집니다. KREAM의 공개 실시간 API를 사용하는 구조는 아니므로 실제 서비스의 자동 갱신에는 별도 백엔드 수집 방식과 이용약관 검토가 필요합니다. 리뷰 URL/메타데이터 일부는 화면 구조 확인용 예시입니다.</div>`;
   document.getElementById('modal').classList.add('on')
 }
-document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.cat=b.dataset.cat;render()});
-document.querySelectorAll('[data-level]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-level]').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.level=b.dataset.level;render()});
-document.querySelectorAll('[data-distance]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-distance]').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.distance=b.dataset.distance;render()});
-document.getElementById('sort').onchange=e=>{state.sort=e.target.value;render()};document.getElementById('search').oninput=e=>{state.q=e.target.value;render()};document.getElementById('close').onclick=()=>document.getElementById('modal').classList.remove('on');document.getElementById('modal').onclick=e=>{if(e.target.id==='modal')e.currentTarget.classList.remove('on')};render();
+function updateFilterUI(){
+  const labels=[];
+  if(state.cat!=='all'){const m={daily:'데일리/트레이닝',stability:'안정화',race:'레이싱'};labels.push(m[state.cat])}
+  if(state.level!=='all'){const m={beginner:'입문용',intermediate:'중급용',advanced:'숙련자용'};labels.push(m[state.level])}
+  if(state.distance!=='all'){const m={"5k":'5K',"10k":'10K',half:'하프',full:'풀'};labels.push('BEST '+m[state.distance])}
+  const count=labels.length;
+  const trigger=document.getElementById('openFilters');
+  trigger.classList.toggle('has-filter',count>0);
+  document.getElementById('filterCount').textContent=count;
+  const bar=document.getElementById('activeFilterBar');
+  bar.classList.toggle('on',count>0);
+  bar.innerHTML=labels.map(x=>`<span class="active-filter-pill">${x}</span>`).join('');
+  document.querySelectorAll('[data-cat]').forEach(b=>b.classList.toggle('active',b.dataset.cat===state.cat));
+  document.querySelectorAll('[data-level]').forEach(b=>b.classList.toggle('active',b.dataset.level===state.level));
+  document.querySelectorAll('[data-distance]').forEach(b=>b.classList.toggle('active',b.dataset.distance===state.distance));
+}
+function bindSingle(selector,key){
+  document.querySelectorAll(selector).forEach(b=>b.onclick=()=>{
+    document.querySelectorAll(selector).forEach(x=>x.classList.remove('active'));
+    b.classList.add('active'); state[key]=b.dataset[key];
+  });
+}
+bindSingle('[data-cat]','cat'); bindSingle('[data-level]','level'); bindSingle('[data-distance]','distance');
+document.getElementById('openFilters').onclick=()=>document.getElementById('filterSheet').classList.add('on');
+document.getElementById('closeFilters').onclick=()=>document.getElementById('filterSheet').classList.remove('on');
+document.getElementById('filterSheet').onclick=e=>{if(e.target.id==='filterSheet')e.currentTarget.classList.remove('on')};
+document.getElementById('applyFilters').onclick=()=>{document.getElementById('filterSheet').classList.remove('on');render()};
+document.getElementById('resetFilters').onclick=()=>{state.cat='all';state.level='all';state.distance='all';updateFilterUI();render()};
+document.getElementById('sort').onchange=e=>{state.sort=e.target.value;render()};
+document.getElementById('search').oninput=e=>{state.q=e.target.value;render()};
+document.getElementById('close').onclick=()=>document.getElementById('modal').classList.remove('on');
+document.getElementById('modal').onclick=e=>{if(e.target.id==='modal')e.currentTarget.classList.remove('on')};render();
 </script>
 </body></html>
