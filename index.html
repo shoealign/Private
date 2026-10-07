@@ -56,12 +56,46 @@
   @media(max-width:620px){.list-controls{margin-top:0}.sort-wrap span{display:none}.sort-wrap select{max-width:128px}.filter-sheet-panel{max-height:82vh}.result-count{display:none}}
 
 .race-proof{border-top:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8;padding:16px 0;margin:18px 0}.race-proof-head h4{margin:0 0 5px;font-size:15px}.race-proof-head p{margin:0;color:var(--muted);font-size:11px;line-height:1.5}.race-proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:13px;border:1px solid #e8e8e8}.race-proof-cell{padding:12px;text-align:center;border-right:1px solid #e8e8e8}.race-proof-cell:last-child{border-right:0}.race-proof-cell small{display:block;color:var(--muted);font-size:10px;margin-bottom:4px}.race-proof-cell strong{font-size:18px}.race-proof-note{font-size:10px;color:var(--muted);margin-top:8px;line-height:1.5}
+
+  /* resilient product imagery */
+  .shoe-img,.detail-photo{position:relative}
+  .shoe-img img,.detail-photo img{display:block}
+  .placeholder-img{padding:0!important;object-fit:cover!important}
+  .shoe-img.is-placeholder,.detail-photo.is-placeholder{background:#f6f6f6}
+  .image-status{font-size:10px;color:#9a9a9a;margin-top:6px}
+
+
+  /* top ranking categories */
+  .rank-tabs-wrap{margin:4px 0 16px;border-bottom:1px solid #e8e8e8}
+  .rank-tabs{display:flex;gap:22px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .rank-tabs::-webkit-scrollbar{display:none}
+  .rank-tab{position:relative;border:0;background:transparent;padding:14px 0 13px;font-size:14px;font-weight:700;color:#8a8a8a;cursor:pointer}
+  .rank-tab.active{color:#111}
+  .rank-tab.active:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#111}
+  .rank-context{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin:0 0 12px}
+  .rank-context h2{margin:0;font-size:20px;letter-spacing:-.5px}
+  .rank-context p{margin:4px 0 0;color:var(--muted);font-size:12px;line-height:1.5}
+  .category-score{font-size:10px;color:#999;margin-left:5px}
+  @media(max-width:620px){.rank-tabs{gap:20px}.rank-tab{font-size:13px}.rank-context h2{font-size:18px}.rank-context{margin-bottom:9px}}
+
 </style>
 </head>
 <body>
 <header><div class="nav"><div class="logo">SHOE<span>ALIGN</span><small>FIND YOUR ALIGN</small></div><a href="#">랭킹</a><a href="#">리뷰</a><a href="#">슈즈 찾기</a><a href="#">브랜드</a><div class="spacer"></div><input class="search" id="search" placeholder="러닝화 검색 (예: 노바블라스트)" /></div></header>
 <section class="hero"><h1>내게 맞는 러닝화,<br>데이터로 얼라인.</h1><p>실사용 리뷰와 제품 데이터를 바탕으로, 러너의 수준과 목표 거리에 맞는 신발을 비교합니다.</p></section>
 <main class="wrap">
+  <div class="rank-tabs-wrap">
+    <div class="rank-tabs" id="rankTabs">
+      <button class="rank-tab active" data-rankcat="all">전체</button>
+      <button class="rank-tab" data-rankcat="beginner">입문</button>
+      <button class="rank-tab" data-rankcat="training">트레이닝</button>
+      <button class="rank-tab" data-rankcat="speed">스피드</button>
+      <button class="rank-tab" data-rankcat="long">장거리</button>
+      <button class="rank-tab" data-rankcat="advanced">숙련</button>
+      <button class="rank-tab" data-rankcat="race">레이스</button>
+    </div>
+  </div>
+  <div class="rank-context"><div><h2 id="rankTitle">전체 러닝화 랭킹</h2><p id="rankDesc">현재 등록된 모델을 ALIGN SCORE 기준으로 비교합니다.</p></div></div>
   <div class="list-controls">
     <div class="control-left">
       <button class="filter-trigger" id="openFilters">필터 <span class="count" id="filterCount">0</span></button>
@@ -121,13 +155,63 @@ const shoes=[
 {name:'On Cloudboom Strike 2 LightSpray',level:['intermediate','advanced'],levelko:['중급용','숙련자용'],distances:['half','full'],distanceko:['하프','풀'],usableDistances:['5K','10K','하프','풀'],brand:'On',cat:'race',catko:'레이싱',score:4.86,reviews:2,cushion:96,stability:68,bounce:97,value:68,durability:88,tags:['LightSpray','마라톤','초경량'],img:'',release:'2026',releaseLabel:'글로벌/국내 유통 확인',discontinued:'공식 발표 없음',status:'판매중',msrp:'국내 판매가 확인 필요',kreamPrice:'조회 준비중',kreamUpdated:'-',kreamNote:'KREAM 자동연동 전',kreamUrl:'https://kream.co.kr/search?keyword=cloudboom%20strike%202',model:'Cloudboom Strike 2 LightSpray',widthFeel:'고정핏 호불호',widthLevel:3,wideVersion:'전용 Wide 없음',widthTip:'LightSpray 일체형 갑피는 끈 조절 여지가 적어 발 모양과 궁합이 중요.',raceEvidence:{'5K':0,'10K':0,'하프':0,'풀':0},raceNote:'전문 리뷰에서 마라톤 특화 평가. 커뮤니티에서도 하프·풀용으로 높은 만족 사례가 있음.',quotes:[['매우 가볍고 충격흡수·그립이 좋아 마라톤 레이서로 강점이 있지만 핏 조절 한계가 있다는 평가.','RunRepeat','https://runrepeat.com/on-light-spray-cloudboom-strike-2','2026-09-11','독립 리뷰','랩·실주행 리뷰','미공개','실주행+랩','정사이즈','개인차 큼'],['커뮤니티 러너가 하프·풀 거리용 카본화 중 가장 잘 맞았다고 실제 사용후기를 남김.','Believe in the Run 커뮤니티','https://believeintherun.com/shoe-reviews/on-cloudboom-strike-2-review/','2026-09','커뮤니티 리뷰','실사용자','미공개','하프·풀 사용 경험','정사이즈','개인차 큼']],pros:['초경량 갑피','마라톤 쿠션','좋은 그립'],cons:['핏 조절 어려움','가격 부담']},
 {name:'On Cloudmonster 2',level:['beginner','intermediate'],levelko:['입문용','중급용'],distances:['10k','half'],distanceko:['10K','하프'],usableDistances:['5K','10K','하프','풀'],brand:'On',cat:'daily',catko:'데일리/쿠션',score:4.42,reviews:2,cushion:92,stability:86,bounce:75,value:74,durability:92,tags:['맥스쿠션','롱런','넓은토박스'],img:'',release:'2024',releaseLabel:'국내 출시',discontinued:'공식 발표 없음',status:'판매중',msrp:'국내 판매가 확인 필요',kreamPrice:'조회 준비중',kreamUpdated:'-',kreamNote:'KREAM 자동연동 전',kreamUrl:'https://kream.co.kr/search?keyword=cloudmonster%202',model:'Cloudmonster 2',widthFeel:'넓음',widthLevel:5,wideVersion:'전용 Wide 제한적',widthTip:'기본 토박스가 넓은 편. 다만 사이징 편차 의견이 있어 실착 권장.',raceEvidence:{'5K':0,'10K':0,'하프':0,'풀':0},raceNote:'장거리 훈련용 중심.',quotes:[['넓은 토박스와 안정적인 맥스쿠션으로 롱런에 강하지만 무게와 반발은 아쉽다는 평가.','RunRepeat','https://runrepeat.com/on-cloudmonster-2','2024-03-20','독립 리뷰','랩·실주행 리뷰','미공개','실주행+랩','사이즈 편차 주의','넓음'],['부드러운 롤링과 듀얼덴시티 폼으로 장거리 데일리에 적합하나 사이징 편차가 크다는 평가.','Believe in the Run','https://believeintherun.com/shoe-reviews/on-cloudmonster-2-review/','2024-02-27','독립 리뷰','전문 리뷰어','미공개','롱런','사이즈 편차 주의','넓음']],pros:['넓은 토박스','롱런 안정성','내구성'],cons:['무게','사이징 편차','가격']}
 ];
-let state={brand:'all',cat:'all',level:'all',distance:'all',sort:'score',q:''};
+
+let state={brand:'all',cat:'all',level:'all',distance:'all',sort:'score',q:'',rankcat:'all'};
+function placeholderSvg(brand,name){
+  const safeBrand=(brand||'SHOEALIGN').replace(/[<>&\"']/g,'');
+  const safeName=(name||'Product image').replace(/[<>&\"']/g,'');
+  const short=safeName.length>30?safeName.slice(0,29)+'…':safeName;
+  const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480">
+    <rect width="720" height="480" fill="#f5f5f5"/>
+    <text x="44" y="58" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#777">${safeBrand}</text>
+    <g transform="translate(82 125)">
+      <path d="M72 162c62 0 112-10 154-32 34-18 64-52 96-76 14-10 30-12 47-4l58 27c12 6 22 15 30 26l28 39c7 10 18 16 30 17l64 5c16 2 29 15 29 31v17c0 16-13 29-29 29H80c-31 0-56-25-56-56v-7c0-9 8-16 17-16h31z" fill="#dedede"/>
+      <path d="M95 148c55 0 98-9 136-28 29-14 51-37 78-58" fill="none" stroke="#c4c4c4" stroke-width="10" stroke-linecap="round"/>
+      <path d="M38 223h512" stroke="#bdbdbd" stroke-width="9" stroke-linecap="round"/>
+    </g>
+    <text x="44" y="414" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#222">${short}</text>
+    <text x="44" y="446" font-family="Arial,sans-serif" font-size="14" fill="#888">대표 이미지 준비 중</text>
+  </svg>`;
+  return 'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(svg);
+}
+function safeImgSrc(s){ return s.img && s.img.trim() ? s.img : placeholderSvg(s.brand,s.name); }
+function imageClass(s){ return s.img && s.img.trim() ? '' : 'placeholder-img'; }
+function handleImgError(img){
+  img.onerror=null;
+  img.src=placeholderSvg(img.dataset.brand,img.dataset.name);
+  img.classList.add('placeholder-img');
+  const box=img.closest('.shoe-img,.detail-photo'); if(box) box.classList.add('is-placeholder');
+}
+
+const rankCategories={
+  all:{title:'전체 러닝화 랭킹',desc:'현재 등록된 모델을 ALIGN SCORE 기준으로 비교합니다.',eligible:s=>true},
+  beginner:{title:'입문 러너 추천',desc:'안정성·쿠션·가성비가 좋고 첫 러닝화로 부담이 적은 모델 중심입니다.',eligible:s=>s.level.includes('beginner') && s.cat!=='race'},
+  training:{title:'트레이닝화 랭킹',desc:'이지런부터 평소 훈련까지 자주 신기 좋은 범용성과 내구성을 우선합니다.',eligible:s=>s.cat!=='race' && (s.cat==='daily'||s.cat==='stability')},
+  speed:{title:'스피드 훈련 랭킹',desc:'템포런·인터벌처럼 빠른 훈련에서 반발과 전환이 좋은 모델 중심입니다.',eligible:s=>s.bounce>=90 && s.stability>=55},
+  long:{title:'장거리 러닝 랭킹',desc:'하프·풀 또는 롱런에서 쿠션 보호감과 후반 안정성이 좋은 모델을 우선합니다.',eligible:s=>(s.distances.includes('half')||s.distances.includes('full')) && s.cushion>=88},
+  advanced:{title:'숙련 러너 추천',desc:'고반발·고성능 특성을 활용할 수 있는 숙련 러너용 모델 중심입니다.',eligible:s=>s.level.includes('advanced')},
+  race:{title:'레이스화 랭킹',desc:'기록 단축 목적의 레이스 전용·카본 계열 모델을 비교합니다.',eligible:s=>s.cat==='race'}
+};
+function rankScore(s,cat){
+  const base=s.score*20;
+  if(cat==='beginner') return .30*s.stability+.25*s.cushion+.20*s.value+.15*s.durability+.10*base;
+  if(cat==='training') return .25*s.cushion+.20*s.stability+.20*s.durability+.15*s.value+.10*s.bounce+.10*base;
+  if(cat==='speed') return .35*s.bounce+.20*base+.15*s.value+.15*s.stability+.15*s.cushion;
+  if(cat==='long') return .30*s.cushion+.25*s.durability+.20*s.stability+.15*base+.10*s.bounce;
+  if(cat==='advanced') return .35*s.bounce+.25*base+.15*s.cushion+.15*s.stability+.10*s.durability;
+  if(cat==='race') return .40*s.bounce+.25*base+.20*s.cushion+.10*s.durability+.05*s.stability;
+  return base;
+}
 function render(){
-  let arr=shoes.filter(s=>(state.brand==='all'||s.brand===state.brand) && (state.cat==='all'||s.cat===state.cat) && (state.level==='all'||s.level.includes(state.level)) && (state.distance==='all'||s.distances.includes(state.distance)) && (`${s.name} ${s.brand}`.toLowerCase().includes(state.q.toLowerCase())));
-  arr.sort((a,b)=>b[state.sort]-a[state.sort]);
+  const rankCfg=rankCategories[state.rankcat]||rankCategories.all;
+  document.getElementById('rankTitle').textContent=rankCfg.title;
+  document.getElementById('rankDesc').textContent=rankCfg.desc;
+  let arr=shoes.filter(s=>rankCfg.eligible(s) && (state.brand==='all'||s.brand===state.brand) && (state.cat==='all'||s.cat===state.cat) && (state.level==='all'||s.level.includes(state.level)) && (state.distance==='all'||s.distances.includes(state.distance)) && (`${s.name} ${s.brand}`.toLowerCase().includes(state.q.toLowerCase())));
+  if(state.sort==='score') arr.sort((a,b)=>rankScore(b,state.rankcat)-rankScore(a,state.rankcat) || b.score-a.score);
+  else arr.sort((a,b)=>b[state.sort]-a[state.sort]);
   document.getElementById('resultCount').textContent=`${arr.length}개 모델`;
   updateFilterUI();
-  document.getElementById('grid').innerHTML=arr.map((s,i)=>`<article class="card" onclick="openDetail('${s.name.replaceAll("'","\\'")}')"><div class="shoe-img"><img src="${s.img}" alt="${s.name}" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='👟'"></div><div class="content"><div class="meta"><span class="rank">${i+1}</span><span class="cat">${s.catko}</span></div><div class="name">${s.name}</div><div class="brand">${s.brand}</div><div class="fit-badges"><span class="fit-badge level">${s.levelko.join(' · ')}</span><span class="fit-badge best">BEST ${s.distanceko.join(' · ')}</span><span class="fit-badge distance">발볼 ${s.widthFeel}</span></div><div class="scoreline"><span class="score">${s.score.toFixed(2)}</span><span class="stars">ALIGN SCORE</span><span class="reviews">검증 출처 ${s.reviews}</span></div><div class="bars">${[['쿠션',s.cushion],['안정성',s.stability],['반발력',s.bounce],['가성비',s.value]].map(x=>`<div class="barrow"><span>${x[0]}</span><div class="bar"><i style="width:${x[1]}%"></i></div><b>${x[1]}</b></div>`).join('')}</div><div class="tags">${s.tags.map(t=>`<span class="tag">#${t}</span>`).join('')}</div><div class="price-preview"><small>KREAM 대표가</small><b>${s.kreamPrice}</b></div><div class="source"><span>실리뷰 출처 <strong>${s.quotes.length}개</strong></span><span>상세보기 →</span></div></div></article>`).join('') || '<div style="grid-column:1/-1;background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;color:var(--muted)">조건에 맞는 신발이 없습니다. 필터를 하나씩 풀어보세요.</div>';
+  document.getElementById('grid').innerHTML=arr.map((s,i)=>`<article class="card" onclick="openDetail('${s.name.replaceAll("'","\\'")}')"><div class="shoe-img ${s.img&&s.img.trim()?'':'is-placeholder'}"><img class="${imageClass(s)}" src="${safeImgSrc(s)}" alt="${s.name}" loading="lazy" decoding="async" data-brand="${s.brand}" data-name="${s.name}" onerror="handleImgError(this)"></div><div class="content"><div class="meta"><span class="rank">${i+1}</span><span class="cat">${s.catko}${state.rankcat!=='all'?` <span class="category-score">적합도 ${rankScore(s,state.rankcat).toFixed(1)}</span>`:''}</span></div><div class="name">${s.name}</div><div class="brand">${s.brand}</div><div class="fit-badges"><span class="fit-badge level">${s.levelko.join(' · ')}</span><span class="fit-badge best">BEST ${s.distanceko.join(' · ')}</span><span class="fit-badge distance">발볼 ${s.widthFeel}</span></div><div class="scoreline"><span class="score">${s.score.toFixed(2)}</span><span class="stars">ALIGN SCORE</span><span class="reviews">검증 출처 ${s.reviews}</span></div><div class="bars">${[['쿠션',s.cushion],['안정성',s.stability],['반발력',s.bounce],['가성비',s.value]].map(x=>`<div class="barrow"><span>${x[0]}</span><div class="bar"><i style="width:${x[1]}%"></i></div><b>${x[1]}</b></div>`).join('')}</div><div class="tags">${s.tags.map(t=>`<span class="tag">#${t}</span>`).join('')}</div><div class="price-preview"><small>KREAM 대표가</small><b>${s.kreamPrice}</b></div><div class="source"><span>실리뷰 출처 <strong>${s.quotes.length}개</strong></span><span>상세보기 →</span></div></div></article>`).join('') || '<div style="grid-column:1/-1;background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;color:var(--muted)">조건에 맞는 신발이 없습니다. 필터를 하나씩 풀어보세요.</div>';
 }
 function openDetail(name){
   const s=shoes.find(x=>x.name===name);
@@ -135,11 +219,11 @@ function openDetail(name){
   const statusClass=s.status==='판매중'?'status-chip':'status-chip warn';
   document.getElementById('detail').innerHTML=`
     <div class="detail-hero">
-      <div><div class="detail-photo"><img src="${s.img}" alt="${s.name}" onerror="this.style.display='none';this.parentElement.innerHTML='👟'"></div><div class="photo-note">제품 이미지 · 테스트용 외부 이미지</div></div>
+      <div><div class="detail-photo ${s.img&&s.img.trim()?'':'is-placeholder'}"><img class="${imageClass(s)}" src="${safeImgSrc(s)}" alt="${s.name}" decoding="async" data-brand="${s.brand}" data-name="${s.name}" onerror="handleImgError(this)"></div><div class="photo-note">대표 제품 이미지 · 외부 이미지가 차단되면 안전 대체 이미지로 자동 전환</div></div>
       <div><span class="cat">${s.catko} · ${s.brand}</span><h2>${s.name}</h2><span class="${statusClass}">${s.status}</span></div>
     </div>
 
-    ${s.family?`<div class="series-wrap"><div class="series-title"><h4>시리즈 전체</h4><small>좌우로 스와이프 · 탭하면 해당 세대 상세</small></div><div class="series-track">${shoes.filter(v=>v.family===s.family).sort((a,b)=>a.generation-b.generation).map(v=>`<div class="series-card ${v.name===s.name?'current':''}" onclick="event.stopPropagation();openDetail('${v.name.replaceAll("'","\\'")}')"><div class="shoe-img" style="height:74px"><img src="${v.img}" alt="${v.name}" onerror="this.style.display='none';this.parentElement.innerHTML='👟'"></div><div class="series-meta"><small>${v.releaseLabel||'출시일'} ${v.release} · ${v.msrp}</small><b>${v.name}</b><p>ALIGN ${v.score.toFixed(2)} · 리뷰 ${v.reviews}건</p>${v.name===s.name?'<span class="series-pill">현재 보고 있음</span>':''}</div></div>`).join('')}</div><div class="series-hint">각 세대는 메인 랭킹에서도 독립 모델로 집계됩니다.</div></div>`:''}
+    ${s.family?`<div class="series-wrap"><div class="series-title"><h4>시리즈 전체</h4><small>좌우로 스와이프 · 탭하면 해당 세대 상세</small></div><div class="series-track">${shoes.filter(v=>v.family===s.family).sort((a,b)=>a.generation-b.generation).map(v=>`<div class="series-card ${v.name===s.name?'current':''}" onclick="event.stopPropagation();openDetail('${v.name.replaceAll("'","\\'")}')"><div class="shoe-img ${v.img&&v.img.trim()?'':'is-placeholder'}" style="height:74px"><img class="${imageClass(v)}" src="${safeImgSrc(v)}" alt="${v.name}" loading="lazy" decoding="async" data-brand="${v.brand}" data-name="${v.name}" onerror="handleImgError(this)"></div><div class="series-meta"><small>${v.releaseLabel||'출시일'} ${v.release} · ${v.msrp}</small><b>${v.name}</b><p>ALIGN ${v.score.toFixed(2)} · 리뷰 ${v.reviews}건</p>${v.name===s.name?'<span class="series-pill">현재 보고 있음</span>':''}</div></div>`).join('')}</div><div class="series-hint">각 세대는 메인 랭킹에서도 독립 모델로 집계됩니다.</div></div>`:''}
 
     <div class="recommend-panel"><h4>이 신발이 잘 맞는 러너</h4><div class="recommend-groups"><div class="recommend-group"><small>러닝 경험</small><div class="recommend-chips">${s.levelko.map(x=>`<span class="rec-chip">${x}</span>`).join('')}</div></div><div class="recommend-group"><small>BEST 거리 · 강점이 가장 잘 살아나는 구간</small><div class="recommend-chips">${s.distanceko.map(x=>`<span class="rec-chip" style="background:#111;color:#fff;border-color:#111">${x}</span>`).join('')}</div></div></div><div class="distance-map">${['5K','10K','하프','풀'].map(d=>`<div class="distance-cell ${s.distanceko.includes(d)?'best':(s.usableDistances.includes(d)?'ok':'')}">${d}<br><b>${s.distanceko.includes(d)?'BEST':(s.usableDistances.includes(d)?'가능':'비추천')}</b></div>`).join('')}</div></div>
 
@@ -197,6 +281,12 @@ function bindSingle(selector,key){
     b.classList.add('active'); state[key]=b.dataset[key];
   });
 }
+document.querySelectorAll('[data-rankcat]').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('[data-rankcat]').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); state.rankcat=b.dataset.rankcat;
+  if(state.sort==='score') document.getElementById('sort').value='score';
+  render();
+});
 bindSingle('[data-brand]','brand'); bindSingle('[data-cat]','cat'); bindSingle('[data-level]','level'); bindSingle('[data-distance]','distance');
 document.getElementById('openFilters').onclick=()=>document.getElementById('filterSheet').classList.add('on');
 document.getElementById('closeFilters').onclick=()=>document.getElementById('filterSheet').classList.remove('on');
