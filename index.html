@@ -153,6 +153,20 @@ button,input,select{font:inherit}
 .search{min-width:180px;width:210px;max-width:100%;font-size:13px;letter-spacing:-.02em}
 .search::placeholder{color:#858585;opacity:1}
 @media(max-width:760px){.hero h1{font-size:clamp(22px,5.4vw,32px);letter-spacing:-.055em}.hero:before{opacity:.4}.search{min-width:0;width:100%}}
+
+/* Product-type classification and production-oriented mobile polish */
+.fit-badge.shoe-type{background:#fff;border:1px solid #d9dde2;color:#30343a;font-weight:800}
+.fit-badges{align-items:center;gap:6px}
+.detail-type-line{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:10px}
+.card-essentials .mini:nth-child(2){display:none}
+.card-essentials{justify-content:flex-start;gap:18px}
+.card-essentials .data-confidence{margin-left:auto}
+.card{min-width:0}.name{overflow-wrap:anywhere}
+.card:focus-within{outline:2px solid #333;outline-offset:3px}
+@media(max-width:620px){.fit-badge{font-size:10px;padding:5px 7px}.fit-badge.shoe-type{font-size:10px}.price-preview-row{padding:9px 0}.card-essentials{gap:12px}}
+</style>
+<style>
+.quick-tools{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 18px}.quick-tool,.action-pill{background:#fff;color:#222;border:1px solid #d9dde2;border-radius:999px;padding:9px 13px;font-size:12px;font-weight:750;cursor:pointer}.quick-tool.active,.action-pill.selected{border-color:#171717;background:#f2f3f4;color:#111}.card-actions{display:flex;gap:7px;margin:11px 0 5px}.action-pill{padding:7px 11px;font-size:11px}.compare-dock{display:none;position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:min(740px,calc(100% - 24px));background:#141414;color:white;border-radius:17px;padding:14px 17px;z-index:1000;box-shadow:0 8px 32px #0003}.compare-dock.visible{display:block}.dock-inner{display:flex;justify-content:space-between;gap:12px;align-items:center}.dock-inner small{display:block;font-size:11px;color:#c6c6c6;margin-top:4px;max-width:300px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.dock-buttons{display:flex;gap:8px}.dock-buttons button{border:0;border-radius:9px;padding:10px 12px;font-size:12px;font-weight:800;cursor:pointer}.dock-clear{background:#343434;color:#fff}.dock-primary{background:#fff;color:#111}.dock-primary:disabled{opacity:.45;cursor:default}.compare-panel{max-width:920px}.compare-note{font-size:13px;color:#666}.compare-scroll{overflow-x:auto}.compare-table{border-collapse:collapse;width:100%;min-width:570px;margin-top:16px;font-size:12px}.compare-table th,.compare-table td{padding:14px 12px;border-bottom:1px solid #e5e7eb;text-align:left;min-width:120px}.compare-table thead th{background:#f4f5f6;font-weight:900}.compare-table tbody th{white-space:nowrap;font-weight:800}.compare-table td{font-weight:600}.compare-panel p{line-height:1.7;color:#555}.compare-panel h3{margin-top:20px}@media(max-width:620px){.dock-inner{align-items:flex-start;flex-direction:column}.dock-buttons{width:100%}.dock-buttons button{flex:1}.compare-dock{bottom:8px}}
 </style>
 </head>
 <body>
@@ -182,8 +196,9 @@ button,input,select{font:inherit}
     </div>
   </div>
   <div class="active-filter-bar" id="activeFilterBar"></div>
-  <div class="grid" id="grid"></div>
-  <div class="footer-note">※ SHOELINEUP 테스트 프로토타입입니다. BEST 거리는 '사용 가능한 거리'가 아니라 해당 모델의 강점이 가장 잘 살아나는 구간으로 좁혀 표시합니다. 발볼/와이드 정보는 제조사 옵션과 리뷰·랩 자료를 참고한 요약이며, 국내 판매 옵션은 컬러·시기별로 다를 수 있습니다. 리뷰 링크는 공개 전문 리뷰·공식 자료·공개 커뮤니티 원문으로 연결하며, 깨진 링크는 수시로 교체합니다.</div>
+  <div class="quick-tools"><button id="showAll" class="quick-tool active" type="button">전체 모델</button><button id="showSaved" class="quick-tool" type="button">♡ 관심 신발 <span id="savedCount">0</span></button><button id="showMethod" class="quick-tool" type="button">ⓘ 점수·데이터 안내</button></div>
+  <div class="grid" id="grid"></div><div class="compare-dock" id="compareDock" aria-live="polite"></div>
+  <div class="footer-note">※ 데이터 안내: 등록된 정보는 참고용이며 가격·사이즈·출시 정보는 구매 전 판매처에서 재확인하세요. BEST 거리는 '사용 가능한 거리'가 아니라 해당 모델의 강점이 가장 잘 살아나는 구간으로 좁혀 표시합니다. 발볼/와이드 정보는 제조사 옵션과 리뷰·랩 자료를 참고한 요약이며, 국내 판매 옵션은 컬러·시기별로 다를 수 있습니다. 리뷰 링크는 공개 전문 리뷰·공식 자료·공개 커뮤니티 원문으로 연결하며, 깨진 링크는 수시로 교체합니다.</div>
 </main>
 <div class="filter-sheet" id="filterSheet">
   <div class="filter-sheet-panel">
@@ -223,6 +238,8 @@ button,input,select{font:inherit}
   </div>
   <div class="finder-foot"><button class="finder-back" id="finderBack" disabled>이전</button><button class="finder-next" id="finderNext" disabled>다음</button></div>
 </div></div>
+<div class="modal" id="compareModal"><div class="panel compare-panel"><button class="close" id="closeCompare" aria-label="비교 닫기">×</button><div id="compareContent"></div></div></div>
+<div class="modal" id="methodModal"><div class="panel compare-panel"><button class="close" id="closeMethod" aria-label="안내 닫기">×</button><h2>점수와 데이터 안내</h2><p>LINEUP SCORE는 등록된 제품 평가값을 보여주는 자체 참고 지표입니다. 평가 항목과 리뷰 출처를 확인한 뒤 판단하세요. 모든 제품의 점수를 동일한 공개 산식으로 독립 검증한 것은 아닙니다.</p><h3>구매 전 확인할 것</h3><p>발매가·KREAM 참고가는 실시간 판매가가 아니며, 판매처·사이즈·컬러에 따라 달라질 수 있습니다. 실제 가격은 판매처에서 확인하세요.</p><p>사이즈 추천·마일리지 한도는 참고용 추정이며 개인의 발 형태, 착지 방식, 사용 환경에 따라 달라집니다.</p><p>리뷰 원문은 외부 사이트로 연결되며, 이 서비스는 로그인·사용자 리뷰 등록을 제공하지 않습니다.</p></div></div>
 <div class="modal" id="modal"><div class="panel"><button class="close" id="close">×</button><div id="detail"></div></div></div>
 <script>
 const shoes=[
@@ -541,7 +558,7 @@ function render(){
   }else{
     titleEl.textContent=rankCfg.title; descEl.textContent=rankCfg.desc;
   }
-  let arr=shoes.filter(s=>(state.matchMode||rankCfg.eligible(s)) && (state.brand==='all'||s.brand===state.brand) && (state.cat==='all'||s.cat===state.cat) && (state.level==='all'||s.level.includes(state.level)) && (state.distance==='all'||s.distances.includes(state.distance)) && matchesSearch(s,state.q));
+  let arr=shoes.filter(s=>(!savedOnly || savedShoes.has(s.name)) && (state.matchMode||rankCfg.eligible(s)) && (state.brand==='all'||s.brand===state.brand) && (state.cat==='all'||s.cat===state.cat) && (state.level==='all'||s.level.includes(state.level)) && (state.distance==='all'||s.distances.includes(state.distance)) && matchesSearch(s,state.q));
   syncSortOptions();
   if(state.sort==='match'&&state.matchMode&&state.profile) arr.sort((a,b)=>matchScore(b,state.profile)-matchScore(a,state.profile) || b.score-a.score);
   else if(state.matchMode&&state.profile&&state.sort==='score') arr.sort((a,b)=>b.score-a.score);
@@ -551,6 +568,7 @@ function render(){
   else if(state.sort==='latest') arr.sort((a,b)=>releaseTimestamp(b)-releaseTimestamp(a) || b.score-a.score);
   document.getElementById('resultCount').textContent=`${arr.length}개 모델`;
   updateFilterUI();
+  updateQuickTools();
   const banner=document.getElementById('matchBanner');
   if(state.matchMode&&state.profile){
     banner.classList.add('on');
@@ -560,9 +578,40 @@ function render(){
   document.getElementById('grid').innerHTML=arr.map((s,i)=>{
     const m=state.matchMode&&state.profile?matchScore(s,state.profile):null;
     const reasons=m!==null?matchReasons(s,state.profile):[];
-    return `<article class="card" onclick="openDetail('${s.name.replaceAll("'","\\'")}')"><div class="shoe-img ${s.img&&s.img.trim()?'':'is-placeholder'}"><div class="rank-badge ${i<3?'top':''}"><small>LINE</small><b>${String(i+1).padStart(2,'0')}</b></div><img class="${imageClass(s)}" src="${safeImgSrc(s)}" alt="${s.name}" loading="lazy" decoding="async" data-brand="${s.brand}" data-name="${s.name}" onerror="handleImgError(this)"></div><div class="content"><div class="meta"><span class="cat">${s.catko}${!state.matchMode&&state.rankcat!=='all'?` <span class="category-score">적합도 ${rankScore(s,state.rankcat).toFixed(1)}</span>`:''}</span>${m!==null?`<span class="match-score">MATCH ${m.toFixed(2)}%</span>`:''}</div><div class="name">${s.name}</div><div class="brand">${s.brand}</div>${reasons.length?`<div class="match-reason">${reasons.join(' · ')}</div>`:''}<div class="fit-badges"><span class="fit-badge level">${s.levelko.join(' · ')}</span><span class="fit-badge best">BEST ${s.distanceko.join(' · ')}</span><span class="fit-badge distance">발볼 ${s.widthFeel}</span></div><div class="mileage-chip">교체 검토 ${mileageGuide(s).min}~${mileageGuide(s).max}km</div><div class="scoreline"><span class="score">${s.score.toFixed(2)}</span><span class="stars">LINEUP SCORE</span></div><div class="card-essentials"><div class="mini">BEST<b>${s.distanceko.join(' · ')}</b></div><div class="mini">발볼<b>${s.widthFeel}</b></div><div class="data-confidence ${dataConfidence(s).level}"><i></i>데이터 ${dataConfidence(s).label}</div></div><div class="price-preview"><div class="price-preview-row"><small>발매가</small><b>${s.msrp}</b></div><div class="price-preview-row kream"><small>KREAM 참고가</small><b>${s.kreamPrice}</b></div></div><div class="source"><span>검증 출처 <strong>${validationSources(s).length}개</strong></span><span>상세보기 →</span></div></div></article>`
+    return `<article class="card" onclick="openDetail('${s.name.replaceAll("'","\\'")}')"><div class="shoe-img ${s.img&&s.img.trim()?'':'is-placeholder'}"><div class="rank-badge ${i<3?'top':''}"><small>LINE</small><b>${String(i+1).padStart(2,'0')}</b></div><img class="${imageClass(s)}" src="${safeImgSrc(s)}" alt="${s.name}" loading="lazy" decoding="async" data-brand="${s.brand}" data-name="${s.name}" onerror="handleImgError(this)"></div><div class="content"><div class="meta"><span class="cat">${s.catko}${!state.matchMode&&state.rankcat!=='all'?` <span class="category-score">적합도 ${rankScore(s,state.rankcat).toFixed(1)}</span>`:''}</span>${m!==null?`<span class="match-score">MATCH ${m.toFixed(2)}%</span>`:''}</div><div class="name">${s.name}</div><div class="brand">${s.brand}</div>${reasons.length?`<div class="match-reason">${reasons.join(' · ')}</div>`:''}<div class="card-actions"><button class="action-pill ${savedShoes.has(s.name)?'selected':''}" type="button" aria-label="관심 신발 저장" onclick="event.stopPropagation();toggleSaved(decodeURIComponent('${encodeURIComponent(s.name)}'))">${savedShoes.has(s.name)?'♥ 저장됨':'♡ 관심'}</button><button class="action-pill ${comparedShoes.includes(s.name)?'selected':''}" type="button" onclick="event.stopPropagation();toggleCompare(decodeURIComponent('${encodeURIComponent(s.name)}'))">${comparedShoes.includes(s.name)?'✓ 비교중':'+ 비교'}</button></div><div class="fit-badges"><span class="fit-badge level">${s.levelko.join(' · ')}</span><span class="fit-badge best">BEST ${s.distanceko.join(' · ')}</span><span class="fit-badge distance">발볼 ${s.widthFeel}</span><span class="fit-badge shoe-type">${shoeTypeLabel(s)}</span></div><div class="mileage-chip">교체 검토 ${mileageGuide(s).min}~${mileageGuide(s).max}km</div><div class="scoreline"><span class="score">${s.score.toFixed(2)}</span><span class="stars">LINEUP SCORE</span></div><div class="card-essentials"><div class="mini">BEST<b>${s.distanceko.join(' · ')}</b></div><div class="mini">발볼<b>${s.widthFeel}</b></div><div class="data-confidence ${dataConfidence(s).level}"><i></i>데이터 ${dataConfidence(s).label}</div></div><div class="price-preview"><div class="price-preview-row"><small>발매가</small><b>${shownPrice(s.msrp)}</b></div><div class="price-preview-row kream"><small>KREAM 참고가</small><b>${shownPrice(s.kreamPrice)}</b></div></div><div class="source"><span>검증 출처 <strong>${validationSources(s).length}개</strong></span><span>상세보기 →</span></div></div></article>`
   }).join('') || '<div style="grid-column:1/-1;background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;color:var(--muted)">조건에 맞는 신발이 없습니다. 필터를 하나씩 풀어보세요.</div>';
 }
+// Model-specific technology tags. Unknown plate construction is never inferred from category alone.
+const shoeTypeLabels = {
+  'ASICS Metaspeed Sky Paris':'카본 레이싱화',
+  'adidas Adizero Adios Pro 4':'카본 레이싱화',
+  'adidas Adizero Adios Pro 5':'카본 레이싱화',
+  'Nike Alphafly 1':'카본 레이싱화',
+  'Nike Alphafly 2':'카본 레이싱화',
+  'Nike Alphafly 3':'카본 레이싱화',
+  'Nike Alphafly 4':'카본 레이싱화',
+  'Nike Vaporfly 4':'카본 레이싱화',
+  'New Balance SC Elite v5':'카본 레이싱화',
+  'Saucony Endorphin Pro 4':'카본 레이싱화',
+  'PUMA Fast-R Nitro Elite 3':'카본 레이싱화',
+  'PUMA Deviate Nitro Elite 4':'카본 레이싱화',
+  'PUMA Deviate Nitro 4':'카본 트레이닝화',
+  'HOKA Cielo X1 2.0':'카본 레이싱화',
+  'On Cloudboom Strike':'카본 레이싱화',
+  'On Cloudboom Strike 2 LightSpray':'카본 레이싱화',
+  'Saucony Endorphin Speed 5':'나일론 플레이트화',
+  'New Balance 860 v15':'안정화',
+  'HOKA Clifton 10':'쿠션화',
+  'On Cloudmonster 2':'쿠션화',
+  'ASICS Superblast 2':'슈퍼 트레이닝화',
+  'ASICS Novablast 5':'쿠션 트레이닝화',
+  'ASICS Novablast 6':'쿠션 트레이닝화',
+  'adidas Adizero EVO SL':'경량 트레이닝화',
+  'Nike Pegasus 41':'데일리 트레이닝화',
+  'New Balance FuelCell Rebel v5':'경량 트레이닝화'
+};
+function shoeTypeLabel(s){return shoeTypeLabels[s.name] || (s.cat==='race'?'레이싱화':s.catko||'트레이닝화');}
+function shownPrice(v){return /^\d{1,3}(,\d{3})*원$/.test(String(v||''))?v:'가격 확인 중';}
 function openDetail(name){
   const s=shoes.find(x=>x.name===name);
   const score100=Math.round(s.score*20);
@@ -570,12 +619,12 @@ function openDetail(name){
   document.getElementById('detail').innerHTML=`
     <div class="detail-hero">
       <div><div class="detail-photo ${s.img&&s.img.trim()?'':'is-placeholder'}"><img class="${imageClass(s)}" src="${safeImgSrc(s)}" alt="${s.name}" decoding="async" data-brand="${s.brand}" data-name="${s.name}" onerror="handleImgError(this)"></div><div class="photo-note">대표 제품 이미지 · 외부 이미지가 차단되면 안전 대체 이미지로 자동 전환</div></div>
-      <div><span class="cat">${s.catko} · ${s.brand}</span><h2>${s.name}</h2><span class="${statusClass}">${s.status}</span></div>
+      <div><span class="cat">${s.catko} · ${s.brand}</span><h2>${s.name}</h2><div class="detail-type-line"><span class="fit-badge shoe-type">${shoeTypeLabel(s)}</span><span class="${statusClass}">${s.status}</span></div></div>
     </div>
 
 
     ${state.matchMode&&state.profile?`<div class="recommend-panel"><h4>나와의 MATCH <span style="float:right;font-size:20px">${matchScore(s,state.profile).toFixed(2)}%</span></h4><div class="match-reason">${matchReasons(s,state.profile).join(' · ')||'조건을 종합해 계산한 개인화 적합도'}</div><div style="margin-top:9px" class="data-confidence ${dataConfidence(s).level}"><i></i>추천 근거 데이터 신뢰도 ${dataConfidence(s).label} · 검증 출처 ${dataConfidence(s).sources}개</div>${personalizedSize(s,state.profile)?`<div class="personal-size">평소 ${state.profile.shoeSize}mm 기준 추천: <b>${personalizedSize(s,state.profile).text}</b><br>${personalizedSize(s,state.profile).note}</div>`:''}</div>`:''}
-    ${s.family?`<div class="series-wrap"><div class="series-title"><h4>시리즈 전체</h4><small>좌우로 스와이프 · 탭하면 해당 세대 상세</small></div><div class="series-track">${shoes.filter(v=>v.family===s.family).sort((a,b)=>a.generation-b.generation).map(v=>`<div class="series-card ${v.name===s.name?'current':''}" onclick="event.stopPropagation();openDetail('${v.name.replaceAll("'","\\'")}')"><div class="shoe-img ${v.img&&v.img.trim()?'':'is-placeholder'}" style="height:74px"><img class="${imageClass(v)}" src="${safeImgSrc(v)}" alt="${v.name}" loading="lazy" decoding="async" data-brand="${v.brand}" data-name="${v.name}" onerror="handleImgError(this)"></div><div class="series-meta"><small>${v.releaseLabel||'출시일'} ${v.release} · ${v.msrp}</small><b>${v.name}</b><p>ALIGN ${v.score.toFixed(2)} · 리뷰 ${v.reviews}건</p>${v.name===s.name?'<span class="series-pill">현재 보고 있음</span>':''}</div></div>`).join('')}</div><div class="series-hint">각 세대는 메인 랭킹에서도 독립 모델로 집계됩니다.</div></div>`:''}
+    ${s.family?`<div class="series-wrap"><div class="series-title"><h4>시리즈 전체</h4><small>좌우로 스와이프 · 탭하면 해당 세대 상세</small></div><div class="series-track">${shoes.filter(v=>v.family===s.family).sort((a,b)=>a.generation-b.generation).map(v=>`<div class="series-card ${v.name===s.name?'current':''}" onclick="event.stopPropagation();openDetail('${v.name.replaceAll("'","\\'")}')"><div class="shoe-img ${v.img&&v.img.trim()?'':'is-placeholder'}" style="height:74px"><img class="${imageClass(v)}" src="${safeImgSrc(v)}" alt="${v.name}" loading="lazy" decoding="async" data-brand="${v.brand}" data-name="${v.name}" onerror="handleImgError(this)"></div><div class="series-meta"><small>${v.releaseLabel||'출시일'} ${v.release} · ${v.msrp}</small><b>${v.name}</b><p>LINEUP ${v.score.toFixed(2)} · 리뷰 ${v.reviews}건</p>${v.name===s.name?'<span class="series-pill">현재 보고 있음</span>':''}</div></div>`).join('')}</div><div class="series-hint">각 세대는 메인 랭킹에서도 독립 모델로 집계됩니다.</div></div>`:''}
 
     <div class="recommend-panel"><h4>이 신발이 잘 맞는 러너</h4><div class="recommend-groups"><div class="recommend-group"><small>러닝 경험</small><div class="recommend-chips">${s.levelko.map(x=>`<span class="rec-chip">${x}</span>`).join('')}</div></div><div class="recommend-group"><small>BEST 거리 · 강점이 가장 잘 살아나는 구간</small><div class="recommend-chips">${s.distanceko.map(x=>`<span class="rec-chip" style="background:#111;color:#fff;border-color:#111">${x}</span>`).join('')}</div></div></div><div class="distance-map">${['5K','10K','하프','풀'].map(d=>`<div class="distance-cell ${s.distanceko.includes(d)?'best':(s.usableDistances.includes(d)?'ok':'')}">${d}<br><b>${s.distanceko.includes(d)?'BEST':(s.usableDistances.includes(d)?'가능':'비추천')}</b></div>`).join('')}</div></div>
 
@@ -591,7 +640,7 @@ function openDetail(name){
 
     <div class="size-guide"><h4>거리별 사이즈 가이드</h4><div class="size-sub">공개 리뷰의 핏 평가와 발볼 특성, 장거리 발 부종 가능성을 함께 반영한 상대 가이드입니다.</div><div class="size-grid">${['5K','10K','하프','풀'].map(d=>`<div class="size-cell ${(s.distanceko||[]).includes(d)?'best':''}"><small>${d}</small><b>${sizeGuideFor(s)[d]}</b></div>`).join('')}</div><div class="size-base"><b>기본 핏:</b> ${baseSizeTip(s)} · ${s.widthFeel||'발볼 정보 확인 중'}<br>※ 장거리라고 무조건 반업하는 것은 아닙니다. 발가락 여유·양말 두께·발 부종이 큰 러너에게만 반업을 우선 고려합니다.</div></div>
 
-    <div class="mileage-panel"><div><h4>추천 마일리지 한도</h4><p>리뷰의 장기사용 경험, 카테고리, 내구성 점수를 바탕으로 한 교체 검토 구간입니다.</p></div><div class="mileage-main"><div><small>${mileageGuide(s).label}</small><strong>${mileageGuide(s).min}~${mileageGuide(s).max}km</strong></div><span class="mileage-status">권장 교체 검토</span></div><div class="mileage-track"><i style="width:${mileageGuide(s).pct}%"></i></div><div class="mileage-scale"><span>새 제품</span><span>900km+</span></div><div class="mileage-grid"><div><small>성능 점검 시작</small><b>${mileageGuide(s).min}km 전후</b></div><div><small>권장 교체 검토</small><b>${mileageGuide(s).center}km 전후</b></div><div><small>상한 참고</small><b>${mileageGuide(s).max}km 전후</b></div></div><div class="mileage-note">※ 제조사 보증 수명이 아니라 SHOEALIGN의 참고 가이드입니다. 체중, 착지, 노면, 로테이션, 아웃솔 마모에 따라 실제 수명은 크게 달라질 수 있습니다. 카본 레이싱화는 외형이 멀쩡해도 반발 성능이 먼저 저하될 수 있습니다.</div></div>
+    <div class="mileage-panel"><div><h4>추천 마일리지 한도</h4><p>리뷰의 장기사용 경험, 카테고리, 내구성 점수를 바탕으로 한 교체 검토 구간입니다.</p></div><div class="mileage-main"><div><small>${mileageGuide(s).label}</small><strong>${mileageGuide(s).min}~${mileageGuide(s).max}km</strong></div><span class="mileage-status">권장 교체 검토</span></div><div class="mileage-track"><i style="width:${mileageGuide(s).pct}%"></i></div><div class="mileage-scale"><span>새 제품</span><span>900km+</span></div><div class="mileage-grid"><div><small>성능 점검 시작</small><b>${mileageGuide(s).min}km 전후</b></div><div><small>권장 교체 검토</small><b>${mileageGuide(s).center}km 전후</b></div><div><small>상한 참고</small><b>${mileageGuide(s).max}km 전후</b></div></div><div class="mileage-note">※ 제조사 보증 수명이 아니라 SHOELINEUP의 참고 가이드입니다. 체중, 착지, 노면, 로테이션, 아웃솔 마모에 따라 실제 수명은 크게 달라질 수 있습니다. 카본 레이싱화는 외형이 멀쩡해도 반발 성능이 먼저 저하될 수 있습니다.</div></div>
 
     <div class="price-board">
       <div class="price-card"><small>권장소비자가 / 발매가</small><strong>${s.msrp}</strong><div class="sub">한국 기준 · 대표 SKU 기준. 컬러/SKU별 발매일·발매가는 다를 수 있습니다.</div></div>
@@ -703,6 +752,56 @@ document.querySelectorAll('[data-brandonly]').forEach(b=>b.onclick=()=>{
   render();
   scrollToRank();
 });
+
+
+// No-account tools: browser-only saved shoes and session comparison.
+let savedShoes=new Set();
+try { const v=JSON.parse(localStorage.getItem('shoelineup_saved_v1')||'[]'); if(Array.isArray(v)) savedShoes=new Set(v.filter(x=>typeof x==='string')); } catch(e){}
+let comparedShoes=[];
+let savedOnly=false;
+function updateQuickTools(){
+ document.getElementById('savedCount').textContent=savedShoes.size;
+ document.getElementById('showSaved').classList.toggle('active',savedOnly);
+ document.getElementById('showAll').classList.toggle('active',!savedOnly);
+ renderCompareDock();
+}
+function toggleSaved(name){
+ if(savedShoes.has(name)) savedShoes.delete(name); else savedShoes.add(name);
+ try{localStorage.setItem('shoelineup_saved_v1',JSON.stringify([...savedShoes]));}catch(e){}
+ render();
+}
+function toggleCompare(name){
+ if(comparedShoes.includes(name)) comparedShoes=comparedShoes.filter(n=>n!==name);
+ else if(comparedShoes.length<3) comparedShoes.push(name);
+ else {alert('최대 3개 모델까지 비교할 수 있어요.');return;}
+ render();
+}
+function renderCompareDock(){
+ const el=document.getElementById('compareDock');
+ el.classList.toggle('visible',comparedShoes.length>0);
+ el.innerHTML=comparedShoes.length?`<div class="dock-inner"><div><b>비교하기 ${comparedShoes.length}/3</b><small>${comparedShoes.map(x=>x.replace(/^.*? /,'')).join(' · ')}</small></div><div class="dock-buttons"><button onclick="comparedShoes=[];render()" class="dock-clear">초기화</button><button onclick="openCompare()" class="dock-primary" ${comparedShoes.length<2?'disabled':''}>${comparedShoes.length<2?'2개 이상 선택':'비교 결과 보기 →'}</button></div></div>`:'';
+}
+function openCompare(){
+ if(comparedShoes.length<2)return;
+ const arr=comparedShoes.map(n=>shoes.find(s=>s.name===n)).filter(Boolean);
+ const rows=[['LINEUP SCORE',s=>s.score.toFixed(2)+' / 5'],['신발 유형',shoeTypeLabel],['발볼',s=>s.widthFeel||'확인 중'],['추천 거리',s=>s.distanceko.join(' · ')],['러닝 수준',s=>s.levelko.join(' · ')],['교체 검토',s=>`${mileageGuide(s).min}~${mileageGuide(s).max}km`],['발매가',s=>shownPrice(s.msrp)],['KREAM 참고가',s=>shownPrice(s.kreamPrice)],['리뷰 출처',s=>validationSources(s).length+'개']];
+ const esc=x=>String(x).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+ document.getElementById('compareContent').innerHTML=`<h2>러닝화 비교</h2><p class="compare-note">스펙·평가·가격을 한눈에 비교하세요. 가격은 실시간이 아닙니다.</p><div class="compare-scroll"><table class="compare-table"><thead><tr><th>비교 항목</th>${arr.map(s=>`<th>${esc(s.name)}</th>`).join('')}</tr></thead><tbody>${rows.map(([label,fn])=>`<tr><th>${label}</th>${arr.map(s=>`<td>${esc(fn(s))}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+ document.getElementById('compareModal').classList.add('on');
+}
+function clearSearchAndFilters(){
+ savedOnly=false;state.q='';state.brand='all';state.cat='all';state.level='all';state.distance='all';state.rankcat='all';state.sort='score';state.matchMode=false;
+ document.getElementById('search').value='';document.getElementById('sort').value='score';
+ document.querySelectorAll('[data-rankcat]').forEach(b=>b.classList.toggle('active',b.dataset.rankcat==='all'));
+ render();
+}
+document.getElementById('showAll').onclick=()=>{savedOnly=false;render();};
+document.getElementById('showSaved').onclick=()=>{savedOnly=true;render();};
+document.getElementById('showMethod').onclick=()=>document.getElementById('methodModal').classList.add('on');
+for(const [modal,close] of [['compareModal','closeCompare'],['methodModal','closeMethod']]){
+ document.getElementById(close).onclick=()=>document.getElementById(modal).classList.remove('on');
+ document.getElementById(modal).onclick=e=>{if(e.target.id===modal)e.currentTarget.classList.remove('on');};
+}
 
 render();
 </script>
