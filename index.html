@@ -134,11 +134,12 @@
   /* SHOELINEUP brand system */
   :root{--brand:#111;--accent:#f3ff54}
   .logo{font-size:22px;letter-spacing:-1.2px;line-height:.9}.logo span{font-weight:900;color:#111}.logo small{margin-top:6px;letter-spacing:1.35px;font-size:8px}
-  .hero{position:relative;overflow:hidden}.hero:before{content:"01  02  03";position:absolute;right:max(4vw,24px);top:18px;font-size:72px;font-weight:950;letter-spacing:-6px;color:#f0f1f2;z-index:-1;white-space:nowrap}.hero h1 em{font-style:normal;box-shadow:inset 0 -.38em 0 var(--accent)}
-  .rank-tab.active,.find-btn,.apply-filter,.finder-next,.match-pill{background:#111;color:#fff}.find-btn:after{content:" →"}
-  .rank-badge{border-radius:50%;width:50px;height:50px;min-width:50px;padding:0;background:#111;color:#fff;border:3px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.16)}.rank-badge small{font-size:7px;letter-spacing:.7px}.rank-badge strong{font-size:17px}.card:nth-child(1) .rank-badge{background:#111;box-shadow:0 0 0 3px var(--accent),0 5px 16px rgba(0,0,0,.18)}
+  .hero{position:relative;overflow:hidden}.hero:before{content:"";position:absolute;right:max(4vw,24px);top:18px;font-size:72px;font-weight:950;letter-spacing:-6px;color:#f0f1f2;z-index:-1;white-space:nowrap}.hero h1 em{font-style:normal;box-shadow:inset 0 -.38em 0 var(--accent)}
+  .rank-tab.active{background:transparent!important;color:#111!important}.rank-tab.active:after{background:#111}
+  .find-btn,.apply-filter,.finder-next,.match-pill{background:#111;color:#fff}.find-btn:after{content:" →"}
+  .rank-badge{border-radius:50%;width:50px;height:50px;min-width:50px;padding:0;background:#111;color:#fff;border:3px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.16)}.rank-badge small{font-size:7px;letter-spacing:.7px}.rank-badge strong{font-size:17px}.card:nth-child(1) .rank-badge{background:#111;box-shadow:0 4px 14px rgba(0,0,0,.16)}
   .score-ring{background:conic-gradient(#111 calc(var(--p)*1%),#e9ebef 0)}
-  @media(max-width:760px){.hero:before{font-size:46px;right:-15px;top:8px}.hero h1 em{box-shadow:inset 0 -.3em 0 var(--accent)}}
+  @media(max-width:760px){.hero:before{font-size:46px;right:-15px;top:8px}.hero h1 em{box-shadow:none}}
 
 /* Typography and spacing refinement */
 body{font-family: "Pretendard", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", sans-serif;letter-spacing:-.025em;-webkit-font-smoothing:antialiased;word-break:keep-all}
@@ -146,7 +147,7 @@ button,input,select{font:inherit}
 .logo{letter-spacing:-.065em;white-space:nowrap}
 .nav-link,.rank-tab,.filter-chip{letter-spacing:-.025em;white-space:nowrap}
 .hero h1{font-size:clamp(25px,3.6vw,42px);font-weight:850;letter-spacing:-.055em;line-height:1.25;max-width:none;word-break:keep-all}
-.hero h1 em{box-shadow:none;background:linear-gradient(transparent 72%,var(--accent) 72%);box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero h1 em{font-style:normal;box-shadow:none;background:none;color:inherit}
 .name,.finder-step h3,.rank-context h2{letter-spacing:-.04em;line-height:1.35;word-break:keep-all}
 .brand,.cat,.reviews,.filter-help,.source{line-height:1.5}
 .search{min-width:180px;width:210px;max-width:100%;font-size:13px;letter-spacing:-.02em}
