@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SHOEALIGN - 데이터 기반 스포츠화 리뷰 & 매칭</title>
+<title>SHOELINEUP - 러닝화 랭킹 · 리뷰 · 나만의 라인업</title>
 <style>
   :root{--bg:#f6f7f9;--card:#fff;--text:#17191c;--muted:#6f7680;--line:#e6e8ec;--accent:#111;--chip:#eef1f5;}
   *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR",sans-serif;background:var(--bg);color:var(--text)}
@@ -83,7 +83,7 @@
 
 .source-list{display:grid;gap:8px}.source-list a{display:flex;align-items:center;justify-content:space-between;gap:10px;text-decoration:none;color:#17191c;border:1px solid var(--line);border-radius:12px;padding:11px 12px;background:#fff}.source-list a:hover{background:#f7f8fa}.source-list span{display:flex;flex-direction:column;gap:3px}.source-list small{color:var(--muted);font-size:10px}.source-list em{font-style:normal;font-size:11px;font-weight:800}.shoe-img,.detail-photo{background:#fff}.shoe-img img,.detail-photo img{mix-blend-mode:multiply}.shoe-img.is-placeholder img,.detail-photo.is-placeholder img{mix-blend-mode:normal}
 
-  /* MY ALIGN finder */
+  /* MY LINEUP finder */
   .find-btn{border:1px solid #111;background:#111;color:#fff;border-radius:10px;height:40px;padding:0 14px;font-size:13px;font-weight:800;cursor:pointer;white-space:nowrap}
   .find-btn.secondary{background:#fff;color:#111;border-color:#dcdfe4}
   .finder{position:fixed;inset:0;z-index:120;display:none;background:rgba(0,0,0,.38);align-items:flex-end;justify-content:center}
@@ -130,13 +130,22 @@
   .brand-choice.active{background:#111;color:#fff;border-color:#111}
   .brand-choice.active span{color:#bbb}
   @media(min-width:680px){.brand-grid{grid-template-columns:repeat(4,1fr)}}
+
+  /* SHOELINEUP brand system */
+  :root{--brand:#111;--accent:#f3ff54}
+  .logo{font-size:22px;letter-spacing:-1.2px;line-height:.9}.logo span{font-weight:900;color:#111}.logo small{margin-top:6px;letter-spacing:1.35px;font-size:8px}
+  .hero{position:relative;overflow:hidden}.hero:before{content:"01  02  03";position:absolute;right:max(4vw,24px);top:18px;font-size:72px;font-weight:950;letter-spacing:-6px;color:#f0f1f2;z-index:-1;white-space:nowrap}.hero h1 em{font-style:normal;box-shadow:inset 0 -.38em 0 var(--accent)}
+  .rank-tab.active,.find-btn,.apply-filter,.finder-next,.match-pill{background:#111;color:#fff}.find-btn:after{content:" →"}
+  .rank-badge{border-radius:50%;width:50px;height:50px;min-width:50px;padding:0;background:#111;color:#fff;border:3px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.16)}.rank-badge small{font-size:7px;letter-spacing:.7px}.rank-badge strong{font-size:17px}.card:nth-child(1) .rank-badge{background:#111;box-shadow:0 0 0 3px var(--accent),0 5px 16px rgba(0,0,0,.18)}
+  .score-ring{background:conic-gradient(#111 calc(var(--p)*1%),#e9ebef 0)}
+  @media(max-width:760px){.hero:before{font-size:46px;right:-15px;top:8px}.hero h1 em{box-shadow:inset 0 -.3em 0 var(--accent)}}
 </style>
 </head>
 <body>
-<header><div class="nav"><button class="logo nav-logo" id="navHome" type="button">SHOE<span>ALIGN</span><small>FIND YOUR ALIGN</small></button><button class="nav-link" id="navRanking" type="button">랭킹</button><button class="nav-link" id="navReviews" type="button">리뷰</button><button class="nav-link" id="navFinder" type="button">슈즈 찾기</button><button class="nav-link" id="navBrands" type="button">브랜드</button><div class="spacer"></div><input class="search" id="search" placeholder="러닝화 검색 (예: 슈블, 슈퍼블라스트, 에보SL)" /><button class="find-btn" id="openFinder">내 러닝화 찾기</button></div></header>
-<section class="hero"><h1>내게 맞는 러닝화,<br>데이터로 얼라인.</h1><p>실사용 리뷰와 제품 데이터를 바탕으로, 러너의 수준과 목표 거리에 맞는 신발을 비교합니다.</p></section>
+<header><div class="nav"><button class="logo nav-logo" id="navHome" type="button">SHOE<span>LINEUP</span><small>RUNNING SHOE RANKING</small></button><button class="nav-link" id="navRanking" type="button">랭킹</button><button class="nav-link" id="navReviews" type="button">리뷰</button><button class="nav-link" id="navFinder" type="button">슈즈 찾기</button><button class="nav-link" id="navBrands" type="button">브랜드</button><div class="spacer"></div><input class="search" id="search" placeholder="러닝화 검색 (예: 슈블, 슈퍼블라스트, 에보SL)" /><button class="find-btn" id="openFinder">내 러닝화 찾기</button></div></header>
+<section class="hero"><h1>러닝화, <em>제대로 줄 세워 보자.</em></h1></section>
 <main class="wrap">
-  <div class="match-banner" id="matchBanner"><div><b id="matchBannerTitle">MY ALIGN 추천</b><small id="matchBannerDesc"></small></div><div class="match-actions"><span class="match-pill" id="matchTopScore">MATCH</span><button class="match-reset" id="matchReset">일반 랭킹</button></div></div>
+  <div class="match-banner" id="matchBanner"><div><b id="matchBannerTitle">MY LINEUP 추천</b><small id="matchBannerDesc"></small></div><div class="match-actions"><span class="match-pill" id="matchTopScore">MATCH</span><button class="match-reset" id="matchReset">일반 랭킹</button></div></div>
   <div class="rank-tabs-wrap">
     <div class="rank-tabs" id="rankTabs">
       <button class="rank-tab active" data-rankcat="all">전체</button>
@@ -148,19 +157,19 @@
       <button class="rank-tab" data-rankcat="race">레이스</button>
     </div>
   </div>
-  <div class="rank-context"><div><h2 id="rankTitle">전체 러닝화 랭킹</h2><p id="rankDesc">현재 등록된 모델을 ALIGN SCORE 기준으로 비교합니다.</p></div></div>
+  <div class="rank-context"><div><h2 id="rankTitle">전체 러닝화 랭킹</h2><p id="rankDesc">현재 등록된 모델을 LINEUP SCORE 기준으로 비교합니다.</p></div></div>
   <div class="list-controls">
     <div class="control-left">
       <button class="filter-trigger" id="openFilters">필터 <span class="count" id="filterCount">0</span></button>
       <span class="result-count" id="resultCount">0개 모델</span>
     </div>
     <div class="control-right">
-      <div class="sort-wrap"><span>정렬</span><select id="sort"><option value="score">ALIGN SCORE 순</option><option value="match" id="matchSortOption" disabled>MATCH 순</option><option value="reviews">리뷰 많은 순</option><option value="price">가격 낮은 순</option><option value="latest">최신 출시 순</option></select></div>
+      <div class="sort-wrap"><span>정렬</span><select id="sort"><option value="score">LINEUP SCORE 순</option><option value="match" id="matchSortOption" disabled>MATCH 순</option><option value="reviews">리뷰 많은 순</option><option value="price">가격 낮은 순</option><option value="latest">최신 출시 순</option></select></div>
     </div>
   </div>
   <div class="active-filter-bar" id="activeFilterBar"></div>
   <div class="grid" id="grid"></div>
-  <div class="footer-note">※ SHOEALIGN 테스트 프로토타입입니다. BEST 거리는 '사용 가능한 거리'가 아니라 해당 모델의 강점이 가장 잘 살아나는 구간으로 좁혀 표시합니다. 발볼/와이드 정보는 제조사 옵션과 리뷰·랩 자료를 참고한 요약이며, 국내 판매 옵션은 컬러·시기별로 다를 수 있습니다. 리뷰 링크는 공개 전문 리뷰·공식 자료·공개 커뮤니티 원문으로 연결하며, 깨진 링크는 수시로 교체합니다.</div>
+  <div class="footer-note">※ SHOELINEUP 테스트 프로토타입입니다. BEST 거리는 '사용 가능한 거리'가 아니라 해당 모델의 강점이 가장 잘 살아나는 구간으로 좁혀 표시합니다. 발볼/와이드 정보는 제조사 옵션과 리뷰·랩 자료를 참고한 요약이며, 국내 판매 옵션은 컬러·시기별로 다를 수 있습니다. 리뷰 링크는 공개 전문 리뷰·공식 자료·공개 커뮤니티 원문으로 연결하며, 깨진 링크는 수시로 교체합니다.</div>
 </main>
 <div class="filter-sheet" id="filterSheet">
   <div class="filter-sheet-panel">
@@ -189,7 +198,7 @@
   </div>
 </div>
 <div class="finder" id="finder"><div class="finder-panel">
-  <div class="finder-head"><b>MY ALIGN</b><span style="font-size:11px;color:#999">내 조건으로 찾기</span><div class="spacer"></div><button class="finder-close" id="closeFinder">×</button></div>
+  <div class="finder-head"><b>MY LINEUP</b><span style="font-size:11px;color:#999">내 조건으로 찾기</span><div class="spacer"></div><button class="finder-close" id="closeFinder">×</button></div>
   <div class="finder-progress"><i id="finderProgress" style="width:20%"></i></div>
   <div class="finder-body">
     <section class="finder-step active" data-step="0"><div class="finder-kicker">1 / 5</div><h3>나에게 맞는 러닝화 찾기</h3><p>먼저 기본 정보와 선호 스타일을 알려주세요.</p><div class="finder-group"><div class="finder-group-title">성별</div><div class="finder-options compact-2"><button class="finder-option" data-fkey="gender" data-value="male">남성</button><button class="finder-option" data-fkey="gender" data-value="female">여성</button></div></div><div class="finder-group"><div class="finder-group-title">선호 컬러</div><div class="finder-options compact-4"><button class="finder-option" data-fkey="color" data-value="minimal">미니멀<small>단색·저채도</small></button><button class="finder-option" data-fkey="color" data-value="twotone">투톤<small>2색 중심</small></button><button class="finder-option" data-fkey="color" data-value="bold">컬러풀<small>강한 대비</small></button><button class="finder-option" data-fkey="color" data-value="any">상관없음</button></div><div class="finder-inline-note">컬러는 MATCH 점수보다 실제 컬러웨이 추천에 활용합니다. 현재 프로토타입은 선호값만 저장합니다.</div></div></section>
@@ -240,7 +249,7 @@ const shoes=[
 
 let state={brand:'all',cat:'all',level:'all',distance:'all',sort:'score',q:'',rankcat:'all',matchMode:false,profile:null};
 function placeholderSvg(brand,name){
-  const safeBrand=(brand||'SHOEALIGN').replace(/[<>&\"']/g,'');
+  const safeBrand=(brand||'SHOELINEUP').replace(/[<>&\"']/g,'');
   const safeName=(name||'Product image').replace(/[<>&\"']/g,'');
   const short=safeName.length>30?safeName.slice(0,29)+'…':safeName;
   const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480">
@@ -323,7 +332,7 @@ function validationSources(s){
   return arr.filter(x=>x.url&&x.url!=='#'&&!seen.has(x.url)&&(seen.add(x.url),true));
 }
 const rankCategories={
-  all:{title:'전체 러닝화 랭킹',desc:'현재 등록된 모델을 ALIGN SCORE 기준으로 비교합니다.',eligible:s=>true},
+  all:{title:'전체 러닝화 랭킹',desc:'현재 등록된 모델을 LINEUP SCORE 기준으로 비교합니다.',eligible:s=>true},
   beginner:{title:'입문 러너 추천',desc:'안정성·쿠션·가성비가 좋고 첫 러닝화로 부담이 적은 모델 중심입니다.',eligible:s=>s.level.includes('beginner') && s.cat!=='race'},
   training:{title:'트레이닝화 랭킹',desc:'이지런부터 평소 훈련까지 자주 신기 좋은 범용성과 내구성을 우선합니다.',eligible:s=>s.cat!=='race' && (s.cat==='daily'||s.cat==='stability')},
   speed:{title:'스피드 훈련 랭킹',desc:'템포런·인터벌처럼 빠른 훈련에서 반발과 전환이 좋은 모델 중심입니다.',eligible:s=>s.bounce>=90 && s.stability>=55},
@@ -514,7 +523,7 @@ function render(){
   const titleEl=document.getElementById('rankTitle'), descEl=document.getElementById('rankDesc');
   if(state.matchMode&&state.profile){
     titleEl.textContent='내게 맞는 러닝화';
-    descEl.textContent='발볼·러닝레벨·목표거리·용도·페이스·체중·선호도를 반영한 MY ALIGN 추천입니다.';
+    descEl.textContent='발볼·러닝레벨·목표거리·용도·페이스·체중·선호도를 반영한 MY LINEUP 추천입니다.';
   }else{
     titleEl.textContent=rankCfg.title; descEl.textContent=rankCfg.desc;
   }
@@ -537,7 +546,7 @@ function render(){
   document.getElementById('grid').innerHTML=arr.map((s,i)=>{
     const m=state.matchMode&&state.profile?matchScore(s,state.profile):null;
     const reasons=m!==null?matchReasons(s,state.profile):[];
-    return `<article class="card" onclick="openDetail('${s.name.replaceAll("'","\\'")}')"><div class="shoe-img ${s.img&&s.img.trim()?'':'is-placeholder'}"><div class="rank-badge ${i<3?'top':''}"><small>RANK</small><b>#${i+1}</b></div><img class="${imageClass(s)}" src="${safeImgSrc(s)}" alt="${s.name}" loading="lazy" decoding="async" data-brand="${s.brand}" data-name="${s.name}" onerror="handleImgError(this)"></div><div class="content"><div class="meta"><span class="cat">${s.catko}${!state.matchMode&&state.rankcat!=='all'?` <span class="category-score">적합도 ${rankScore(s,state.rankcat).toFixed(1)}</span>`:''}</span>${m!==null?`<span class="match-score">MATCH ${m.toFixed(2)}%</span>`:''}</div><div class="name">${s.name}</div><div class="brand">${s.brand}</div>${reasons.length?`<div class="match-reason">${reasons.join(' · ')}</div>`:''}<div class="fit-badges"><span class="fit-badge level">${s.levelko.join(' · ')}</span><span class="fit-badge best">BEST ${s.distanceko.join(' · ')}</span><span class="fit-badge distance">발볼 ${s.widthFeel}</span></div><div class="mileage-chip">교체 검토 ${mileageGuide(s).min}~${mileageGuide(s).max}km</div><div class="scoreline"><span class="score">${s.score.toFixed(2)}</span><span class="stars">ALIGN SCORE</span></div><div class="card-essentials"><div class="mini">BEST<b>${s.distanceko.join(' · ')}</b></div><div class="mini">발볼<b>${s.widthFeel}</b></div><div class="data-confidence ${dataConfidence(s).level}"><i></i>데이터 ${dataConfidence(s).label}</div></div><div class="price-preview"><div class="price-preview-row"><small>발매가</small><b>${s.msrp}</b></div><div class="price-preview-row kream"><small>KREAM 참고가</small><b>${s.kreamPrice}</b></div></div><div class="source"><span>검증 출처 <strong>${validationSources(s).length}개</strong></span><span>상세보기 →</span></div></div></article>`
+    return `<article class="card" onclick="openDetail('${s.name.replaceAll("'","\\'")}')"><div class="shoe-img ${s.img&&s.img.trim()?'':'is-placeholder'}"><div class="rank-badge ${i<3?'top':''}"><small>LINE</small><b>${String(i+1).padStart(2,'0')}</b></div><img class="${imageClass(s)}" src="${safeImgSrc(s)}" alt="${s.name}" loading="lazy" decoding="async" data-brand="${s.brand}" data-name="${s.name}" onerror="handleImgError(this)"></div><div class="content"><div class="meta"><span class="cat">${s.catko}${!state.matchMode&&state.rankcat!=='all'?` <span class="category-score">적합도 ${rankScore(s,state.rankcat).toFixed(1)}</span>`:''}</span>${m!==null?`<span class="match-score">MATCH ${m.toFixed(2)}%</span>`:''}</div><div class="name">${s.name}</div><div class="brand">${s.brand}</div>${reasons.length?`<div class="match-reason">${reasons.join(' · ')}</div>`:''}<div class="fit-badges"><span class="fit-badge level">${s.levelko.join(' · ')}</span><span class="fit-badge best">BEST ${s.distanceko.join(' · ')}</span><span class="fit-badge distance">발볼 ${s.widthFeel}</span></div><div class="mileage-chip">교체 검토 ${mileageGuide(s).min}~${mileageGuide(s).max}km</div><div class="scoreline"><span class="score">${s.score.toFixed(2)}</span><span class="stars">LINEUP SCORE</span></div><div class="card-essentials"><div class="mini">BEST<b>${s.distanceko.join(' · ')}</b></div><div class="mini">발볼<b>${s.widthFeel}</b></div><div class="data-confidence ${dataConfidence(s).level}"><i></i>데이터 ${dataConfidence(s).label}</div></div><div class="price-preview"><div class="price-preview-row"><small>발매가</small><b>${s.msrp}</b></div><div class="price-preview-row kream"><small>KREAM 참고가</small><b>${s.kreamPrice}</b></div></div><div class="source"><span>검증 출처 <strong>${validationSources(s).length}개</strong></span><span>상세보기 →</span></div></div></article>`
   }).join('') || '<div style="grid-column:1/-1;background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;color:var(--muted)">조건에 맞는 신발이 없습니다. 필터를 하나씩 풀어보세요.</div>';
 }
 function openDetail(name){
@@ -576,7 +585,7 @@ function openDetail(name){
     </div>
 
     <div class="scoreboard">
-      <div class="score-ring" style="--p:${score100}"><div class="inner"><strong>${s.score.toFixed(2)}</strong><span>ALIGN SCORE / 5.00</span></div></div>
+      <div class="score-ring" style="--p:${score100}"><div class="inner"><strong>${s.score.toFixed(2)}</strong><span>LINEUP SCORE / 5.00</span></div></div>
       <div class="metric-list">
         ${[['쿠션',s.cushion],['안정성',s.stability],['반발력',s.bounce],['내구성',s.durability],['가성비',s.value]].map(x=>`<div class="metric"><span>${x[0]}</span><div class="metric-track"><i style="width:${x[1]}%"></i></div><b>${x[1]}</b></div>`).join('')}
         <div class="data-note">검증 출처 ${validationSources(s).length}개 · 데이터 신뢰도 ${dataConfidence(s).label}(${dataConfidence(s).score}/100). 리뷰 수가 적은 최신 모델은 점수보다 신뢰도를 함께 확인하세요.</div>
@@ -684,3 +693,9 @@ document.querySelectorAll('[data-brandonly]').forEach(b=>b.onclick=()=>{
 render();
 </script>
 </body></html>
+<style>
+.hero h1{white-space:nowrap;font-size:clamp(28px,4.5vw,54px)}
+.hero p{display:none}
+.rank-badge small{letter-spacing:.12em}
+@media(max-width:620px){.hero h1{font-size:clamp(25px,7vw,34px);white-space:nowrap}.rank-badge b{font-variant-numeric:tabular-nums}}
+</style>
