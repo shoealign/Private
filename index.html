@@ -322,10 +322,20 @@ function placeholderSvg(brand,name){
 function safeImgSrc(s){ return s.img || placeholderSvg(s.brand,s.name); }
 function imageClass(s){ return s.imagePlaceholder ? 'placeholder-img' : ''; }
 function handleImgError(img){
+  const original=img.dataset.originalImage || img.getAttribute('src') || '';
+  if(!img.dataset.originalImage) img.dataset.originalImage=original;
+  const attempt=Number(img.dataset.imageAttempt||0);
+  if(/^https?:\/\//i.test(original) && attempt<2){
+    img.dataset.imageAttempt=String(attempt+1);
+    const url=original.replace(/^https?:\/\//i,'');
+    img.src=(attempt===0?'https://wsrv.nl/?url=':'https://images.weserv.nl/?url=')+encodeURIComponent(url)+'&w=1000&output=webp';
+    return;
+  }
   img.onerror=null;
-  const found=shoes.find(s=>s.name===img.dataset.name); img.src=found?'/assets/'+found.slug+'.svg':placeholderSvg(img.dataset.brand,img.dataset.name);
+  const found=shoes.find(s=>s.name===img.dataset.name);
+  img.src=found?'/assets/'+found.slug+'.svg':placeholderSvg(img.dataset.brand,img.dataset.name);
   img.classList.add('placeholder-img');
-  const box=img.closest('.shoe-img,.detail-photo'); if(box) box.classList.add('is-placeholder');
+  const box=img.closest('.shoe-img,.detail-photo');if(box)box.classList.add('is-placeholder');
 }
 
 function sizeGuideFor(s){
