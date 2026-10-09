@@ -1,0 +1,21 @@
+SHOELINEUP - 3단계 배포 안내
+
+1) 이 ZIP을 컴퓨터에서 압축 해제합니다.
+2) GitHub의 기존 SHOELINEUP 저장소에서 'Add file > Upload files'를 누릅니다.
+   압축을 푼 폴더 '안'의 index.html, assets, shoes, compare, sitemap.xml,
+   robots.txt 등을 한꺼번에 올리고 'Commit changes'를 누릅니다.
+   주의: ZIP 파일 자체를 올리면 안 됩니다. 폴더째 한 단계 깊게 올려도 안 됩니다.
+3) Vercel > 프로젝트 > Deployments에서 새 배포가 Ready인지 확인합니다.
+   메인: https://shoealign.vercel.app/
+   메가블라스트: https://shoealign.vercel.app/shoes/asics-megablast/
+   비교: https://shoealign.vercel.app/compare/
+
+기존 GitHub 저장소를 먼저 백업하는 것을 권장합니다.
+
+사진 상태 (중요):
+- 51개 모델 중 34개는 외부 이미지 주소를 참조하며 브라우저에서 정상 로딩되는지 검증되지 않았습니다.
+- 17개는 실제 제품 사진이 아닌 모델명 대체 SVG 이미지입니다.
+- 외부 공식몰의 사진을 무단 복제하는 방식으로 채우지 않았습니다.
+- 세부 내역은 IMAGE_STATUS.csv를 참고하세요.
+
+데이터 편집: assets/shoes.json과 assets/shoes.js를 함께 수정해야 합니다.
