@@ -1,0 +1,602 @@
+{
+  "mode": "Offline Chromium rendering; storage and navigation stubbed. External image network not verified.",
+  "checks": [
+    {
+      "name": "initial 24 cards",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "51 models retained",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "card CTA height and alignment 1440",
+      "passed": true,
+      "details": [
+        {
+          "h": 44,
+          "t": 1083.6875,
+          "w": 162.328125
+        },
+        {
+          "h": 44,
+          "t": 1083.6875,
+          "w": 162.328125
+        }
+      ]
+    },
+    {
+      "name": "same-row CTA baselines",
+      "passed": true,
+      "details": [
+        1070,
+        1070,
+        1070
+      ]
+    },
+    {
+      "name": "no horizontal document overflow 1440",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "card CTA height and alignment 768",
+      "passed": true,
+      "details": [
+        {
+          "h": 44,
+          "t": 1069.40625,
+          "w": 152
+        },
+        {
+          "h": 44,
+          "t": 1069.40625,
+          "w": 152
+        }
+      ]
+    },
+    {
+      "name": "no horizontal document overflow 768",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "card CTA height and alignment 390",
+      "passed": true,
+      "details": [
+        {
+          "h": 44,
+          "t": 963,
+          "w": 158
+        },
+        {
+          "h": 44,
+          "t": 963,
+          "w": 158
+        }
+      ]
+    },
+    {
+      "name": "no horizontal document overflow 390",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "card CTA height and alignment 360",
+      "passed": true,
+      "details": [
+        {
+          "h": 44,
+          "t": 977.421875,
+          "w": 143
+        },
+        {
+          "h": 44,
+          "t": 977.421875,
+          "w": 143
+        }
+      ]
+    },
+    {
+      "name": "no horizontal document overflow 360",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "alias 슈블",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "alias 에보슬",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "alias 보스톤13",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "alias 엣지 도쿄",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "alias 퓨마",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "empty reset exists",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "cancel filter preserves original",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "brand filter applied",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "dock visible after selection",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "dock CTA equal height",
+      "passed": true,
+      "details": [
+        {
+          "h": 44,
+          "t": 746
+        },
+        {
+          "h": 44,
+          "t": 746
+        }
+      ]
+    },
+    {
+      "name": "comparison points directly to table route",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "compare page opens actual table",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "no dock on comparison page",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "compare CTA same baseline 1440",
+      "passed": true,
+      "details": [
+        {
+          "t": 534.6875,
+          "h": 44
+        },
+        {
+          "t": 534.6875,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "name": "compare contained 1440",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "compare CTA same baseline 768",
+      "passed": true,
+      "details": [
+        {
+          "t": 534.6875,
+          "h": 44
+        },
+        {
+          "t": 534.6875,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "name": "compare contained 768",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "compare CTA same baseline 390",
+      "passed": true,
+      "details": [
+        {
+          "t": 481.78125,
+          "h": 44
+        },
+        {
+          "t": 481.78125,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "name": "compare contained 390",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "compare CTA same baseline 360",
+      "passed": true,
+      "details": [
+        {
+          "t": 503.875,
+          "h": 44
+        },
+        {
+          "t": 503.875,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "name": "compare contained 360",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "difference-only filter removes matching rows",
+      "passed": true,
+      "details": [
+        18,
+        10
+      ]
+    },
+    {
+      "name": "3 products max",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "detail sources rendered",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "detail compare still selected",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "detail CTA heights",
+      "passed": true,
+      "details": [
+        44,
+        44
+      ]
+    },
+    {
+      "name": "gender first",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "MATCH automatic after wizard",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "MATCH descending",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "finder closes on result",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "profile restored on fresh document",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "reset score",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "saved filter one product",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "quick guide visible",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "quick guide uses purposes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "dock hidden during guide",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "escape closes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page asics-megablast",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page asics-metaspeed-sky-tokyo",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page asics-metaspeed-edge-tokyo",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page asics-metaspeed-ray",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page adidas-adizero-boston-12",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page adidas-adizero-boston-13",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page adidas-adizero-sl2",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page adidas-adizero-takumi-sen-10",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page asics-gel-kayano-32",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page asics-gel-nimbus-27",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page asics-magic-speed-4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page nike-vomero-18",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page nike-structure-26",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page nike-zoom-fly-6",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page new-balance-1080-v14",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page new-balance-more-v5",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page new-balance-sc-trainer-v3",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page hoka-mach-6",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page hoka-bondi-9",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page hoka-arahi-8",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page saucony-ride-18",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page saucony-triumph-23",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page saucony-guide-18",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page puma-velocity-nitro-4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page puma-magmax-nitro-2",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page asics-novablast-6",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page asics-novablast-5",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page asics-superblast-2",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page asics-metaspeed-sky-paris",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page adidas-adizero-adios-pro-4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page adidas-adizero-adios-pro-5",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page adidas-adizero-evo-sl",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page nike-alphafly-1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page nike-alphafly-2",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page nike-alphafly-3",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page nike-alphafly-4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page nike-vaporfly-4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page nike-pegasus-41",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page new-balance-sc-elite-v5",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page new-balance-fuelcell-rebel-v5",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page new-balance-860-v15",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page saucony-endorphin-pro-4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page saucony-endorphin-speed-5",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page puma-fast-r-nitro-elite-3",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page puma-deviate-nitro-elite-4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page puma-deviate-nitro-4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page hoka-cielo-x1-2-0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page hoka-clifton-10",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page on-cloudboom-strike",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page on-cloudboom-strike-2-lightspray",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent page on-cloudmonster-2",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "errors": [],
+  "pass_count": 99,
+  "fail_count": 0
+}

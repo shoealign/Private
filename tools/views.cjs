@@ -1,0 +1,55 @@
+
+const H=require('../assets/core.js');
+const e=H.escape;
+const SITE='https://shoealign.vercel.app';
+const brand=`<svg viewBox="0 0 42 42" aria-hidden="true"><path d="M3 30 14 8h9L12 34H3z" fill="currentColor"/><path d="M17 34 28 8h10L27 34H17z" fill="currentColor"/><path d="M29 34 38 14v20z" fill="currentColor" opacity=".42"/></svg><span class="brand-wordmark">SHOELINEUP<small>RUNNING SHOE RANKING</small></span>`;
+function header(home=false){return `<header class="site-header"><div class="header-inner"><a class="brand-logo" href="/" aria-label="SHOELINEUP 홈">${brand}</a>${home?`<nav class="desktop-nav" aria-label="주 메뉴"><button id="navRanking">랭킹</button><button id="navReviews">리뷰</button><button id="navBrands">브랜드</button></nav><div class="header-actions"><button class="btn light" id="navQuickGuide" aria-haspopup="dialog">한눈에 보기</button><button class="btn" id="openFinder" aria-haspopup="dialog">내 러닝화 찾기</button></div>`:`<div class="header-actions"><a class="btn light" href="/">전체 러닝화</a><a class="btn" href="/compare/">비교하기</a></div>`}</div></header>`}
+function footer(){return `<footer class="site-footer"><div class="footer-top"><div><b>SHOELINEUP</b><p>리뷰로 비교하고, 나에게 맞는 한 켤레를 찾다.</p></div><a class="btn light" href="mailto:shoelineup@gmail.com?subject=SHOELINEUP%20제휴%20문의">제휴 · 정보 정정 문의 ↗</a></div><div class="footer-links"><a href="/methodology/">점수·데이터 안내</a><a href="/privacy/">저장·개인정보 안내</a><a href="mailto:shoelineup@gmail.com">shoelineup@gmail.com</a></div><p>회원가입과 리뷰 작성을 받지 않습니다. 관심 제품·비교·추천 조건은 이 브라우저에만 저장됩니다.<br>발매가는 현재 판매가가 아닙니다. 가격·사이즈·재고는 구매처에서 확인해 주세요.</p></footer>`}
+function head(title,description,path){return `<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(title)} | SHOELINEUP</title><meta name="description" content="${e(description)}"><link rel="canonical" href="${SITE+path}"><meta name="theme-color" content="#ffffff"><meta property="og:title" content="${e(title)} | SHOELINEUP"><meta property="og:description" content="${e(description)}"><meta property="og:type" content="website"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css?v=20261010"></head>`}
+const img=(s,klass='')=>`<img ${klass?`class="${klass}"`:''} src="${e(s.img)}" alt="${e(s.name)} 제품 사진" loading="lazy" decoding="async" data-slug="${s.slug}" onerror="SL.imageError(this)">`;
+const toggle=(s)=>`<button class="btn light" type="button" data-compare="${e(s.name)}" aria-pressed="false">+ 비교 담기</button>`;
+function sourceCard(q,s){
+ const kind=H.sourceType(q),date=q[3]||'작성일 미확인';
+ const check=s.checkedSources?.[q[2]];
+ return `<article class="review-card" data-source-type="${kind}"><div class="review-head"><strong>${e(q[1])}</strong><span class="chip">${e(H.labels[kind])}</span></div><p>${e(q[0])}</p><div class="review-meta"><span>작성일: ${e(date)}</span><span>제공·협찬: ${e(q[4]||'미확인')}</span><span>${check?'원문 확인: '+check:'기존 수록 자료'}</span></div>${H.isReview(q)?`<div class="review-meta" style="margin-top:8px"><span>사용: ${e(q[7]||'미공개')}</span><span>사이즈: ${e(q[8]||'미공개')}</span><span>구매가: ${e(q[6]||'미공개')}</span></div>`:''}<a href="${e(H.safeUrl(q[2]))}" target="_blank" rel="noopener noreferrer">원문 확인 ↗</a></article>`;
+}
+function family(s){if(s.family)return s.family;return s.name.replace(/\s+(?:v)?\d+(?:\.\d+)?$/i,'')}
+function similar(s,all){return all.filter(x=>x.slug!==s.slug&&x.cat===s.cat).sort((a,b)=>((family(b)===family(s)?20:0)+(b.brand===s.brand?3:0))-((family(a)===family(s)?20:0)+(a.brand===s.brand?3:0))).slice(0,3)}
+function detail(s,all){
+ const stats=H.sourceStats(s),score=H.score(s),official=H.retail(s),k=H.kream(s);
+ const peers=all.filter(x=>x.slug!==s.slug&&family(x)===family(s));
+ const facts=[['신발 유형',H.type(s)],['BEST 거리',(s.distanceko||[]).join(' · ')||'확인 중'],['러닝 경험',(s.levelko||[]).join(' · ')||'확인 중'],['주행 스타일',s.runningStyle||s.catko||'확인 중'],['모델 코드',s.model||'확인 중'],[s.releaseLabel||'수록 출시 정보',s.release||'일정 미확인']];
+ const measures=[['cushion','쿠션'],['stability','안정성'],['bounce','반발력'],['durability','내구성'],['value','가성비']];
+ const sources=H.sources(s);
+ const sourceTypes=[...new Set(sources.map(H.sourceType))];
+ const jsonld=JSON.stringify({'@context':'https://schema.org','@type':'Product',name:s.name,brand:{'@type':'Brand',name:s.brand},description:H.summary(s),image:s.img,url:SITE+'/shoes/'+s.slug+'/'}).replace(/</g,'\\u003c');
+ return `<!doctype html><html lang="ko">${head(s.name+' 리뷰 · 핏 · 비교',s.name+'의 용도, 발볼, 실제 리뷰 원문과 발매가를 비교하세요.','/shoes/'+s.slug+'/')}<body data-page="detail" data-shoe="${s.slug}">${header()}<main class="page-main">
+ <div class="crumb"><a href="/">전체 러닝화</a> / ${e(s.brand)} / ${e(s.name)}</div>
+ <div class="detail-top"><div><div class="detail-picture">${img(s)}</div><p class="photo-credit">대표 컬러 이미지 · <a href="${e(H.safeUrl(s.imageOriginal||s.img))}" target="_blank" rel="noopener noreferrer">이미지 원출처 ↗</a></p></div>
+ <section class="detail-info"><div class="eyebrow">${e(s.brand)}</div><h1>${e(s.name)}</h1><p class="detail-summary">${e(H.summary(s))}</p>
+ <div class="detail-chips"><span class="chip dark">${e(H.type(s))}</span><span class="chip">BEST ${e((s.distanceko||[]).join(' · '))}</span><span class="chip">발볼 ${e(H.width(s))}</span></div>
+ <div class="detail-score"><strong>${score||'집계 전'}</strong><div><b style="font-size:12px">LINEUP SCORE${score?' / 5.00':''}</b><small>${score?'기존 참고 점수 · 산식 검증 전':'비교할 평가 자료를 수집 중입니다.'}</small></div><a href="#sources" style="margin-left:auto;font-size:12px;text-align:right">수록 리뷰 ${stats.reviews.length}건<br><small>전문 ${stats.professional.length} · 사용자 ${stats.users.length}</small></a></div>
+ <div id="detailMatch" hidden></div><div class="card-price"><span class="muted">국내 발매가 · 수록 자료</span><b class="${H.money(s)===null?'pending-price':''}">${e(H.price(s))}</b></div>
+ <div class="detail-ctas">${toggle(s)}<button class="btn light" data-save="${e(s.name)}" aria-pressed="false">♡ 관심</button></div>
+ <p class="note">현재 판매 가격은 아래 구매처에서 확인하세요. 제품 점수와 개인 조건 일치도는 서로 다릅니다.</p>
+ </section></div>
+ <nav class="detail-nav" aria-label="제품 상세 목차"><a href="#overview">한눈 요약</a><a href="#fit">발볼·사이즈</a><a href="#sources">리뷰 ${stats.reviews.length}</a><a href="#buy">구매처</a><a href="#related">함께 비교</a></nav>
+ <section class="detail-section" id="overview"><h2>이런 점을 보고 고르세요</h2><div class="dual"><div class="info-box"><h3>잘 맞는 용도 · 장점</h3><ul>${(s.pros||['자료 수집 중']).map(x=>`<li>${e(x)}</li>`).join('')}</ul></div><div class="info-box"><h3>구매 전 확인할 점</h3><ul>${(s.cons||['자료 수집 중']).map(x=>`<li>${e(x)}</li>`).join('')}</ul></div></div>
+ <div class="data-list" style="margin-top:18px">${facts.map(([a,b])=>`<div class="data-item"><span>${e(a)}</span><b>${e(b)}</b></div>`).join('')}</div>
+ <p class="note">BEST는 중심 용도에 대한 수록 분류입니다. 완주 가능 거리를 제한하는 뜻은 아닙니다. 출시 정보는 대표 SKU·지역·연도만 기재된 경우를 구분해서 읽어 주세요.</p>
+ ${score?`<details style="margin-top:22px"><summary>기존 세부 참고 점수 보기</summary><div class="dual" style="margin-top:14px"><div>${measures.map(([key,label])=>`<div class="metric-row"><span>${label}</span><div class="track"><i style="width:${Math.max(0,Math.min(100,s[key]||0))}%"></i></div><b>${s[key]||'—'}</b></div>`).join('')}</div><p class="muted">이 값은 기존에 수록된 100점 척도 참고값입니다. SHOELINEUP의 실험실 측정치나 검증된 구매자 평점 평균이 아닙니다. RunRepeat 측정값을 환산한 점수도 아닙니다.</p></div></details>`:''}</section>
+ <section class="detail-section" id="fit"><h2>발볼과 사이즈는 따로 확인하세요</h2><div class="dual"><div class="info-box"><h3>표준 모델의 발볼 체감</h3><div class="width-meter">${H.WIDTHS.map((w,i)=>`<span class="${H.widthKnown(s)&&s.widthLevel===i+1?'selected':''}">${w}</span>`).join('')}</div><p class="note">${e(s.widthTip||'리뷰별 실착 차이가 있어 원문 확인이 필요합니다.')}</p></div><div class="info-box"><h3>와이드 옵션 · 사이즈 의견</h3><p><b>와이드:</b> ${e(H.wide(s))}</p><p style="margin-top:10px"><b>사이즈:</b> ${e(H.fitSummary(s))}</p><p class="note">와이드 버전의 유무와 기본 모델 발볼은 다른 정보입니다. 국내 색상·성별·사이즈별 취급 여부는 공식몰에서 확인하세요.</p></div></div>
+ <details style="margin-top:18px"><summary>거리별 사이즈 · 마일리지 안내</summary><p class="note">5K·10K·하프·풀이라는 거리만으로 정사이즈·반업을 확정하지 않습니다. 아래 리뷰의 기준 사이즈와 본인의 실착 여유를 먼저 비교하세요. 모델별 보증 수명이나 교체 한도를 확정할 검증 자료도 아직 갖추지 않았습니다. 기존 점수만으로 계산하던 교체 한도는 표시하지 않습니다.</p></details></section>
+ <section class="detail-section" id="sources"><h2>리뷰 원문과 자료 출처</h2><p class="muted" style="margin-bottom:14px">전문 리뷰 ${stats.professional.length}건 · 사용자 경험 ${stats.users.length}건 · 공식 자료 ${stats.official.length}건. 중복 URL·검색 링크·공식몰 링크는 리뷰 건수에서 제외합니다.</p>
+ <div class="source-tabs" aria-label="출처 유형"><button data-source-filter="all" class="active">전체 ${sources.length}</button>${sourceTypes.map(t=>`<button data-source-filter="${t}">${e(H.labels[t])}</button>`).join('')}</div>
+ ${sources.length?sources.map(q=>sourceCard(q,s)).join(''):'<p class="empty-state">아직 수록된 개별 리뷰 원문이 없습니다.</p>'}
+ <p class="note">요약은 기존 수록 자료입니다. 모든 링크의 현재 접근 상태나 제공·협찬 표시를 이번에 전수 재검증한 것은 아닙니다. 아래 검색 결과는 리뷰 건수에 포함하지 않습니다.</p>
+ <div class="detail-ctas"><a class="btn light" href="https://search.naver.com/search.naver?query=${encodeURIComponent((s.aliases?.[0]||s.name)+' 러닝화 후기')}" target="_blank" rel="noopener noreferrer">국내 후기 더 찾기 ↗</a><a class="btn light" href="https://www.google.com/search?q=${encodeURIComponent(s.name+' review')}" target="_blank" rel="noopener noreferrer">전문 리뷰 더 찾기 ↗</a></div></section>
+ <section class="detail-section" id="buy"><h2>가격은 구매처에서 확인</h2><div class="buy-row"><div><span class="muted">국내 발매가 · 현재 판매가 아님</span><br><strong>${e(H.price(s))}</strong></div>${official?`<a class="btn light" href="${e(official.url)}" target="_blank" rel="noopener noreferrer">${official.label} ↗</a>`:''}</div>
+ ${official?`<p class="note">${e(official.note)}</p>`:''}<div class="buy-row"><div><b>KREAM</b><p>${k.direct?'해당 대표 SKU · 색상과 사이즈 확인':'모델 검색 결과 · 원하는 컬러/사이즈 선택'}</p></div><a class="btn" href="${e(k.url)}" target="_blank" rel="noopener noreferrer">${e(k.label)} ↗</a></div>
+ <p class="note">가격 자동 수집 없이 외부 페이지로 연결합니다. 오래된 참고가격을 현재가로 표시하지 않습니다.</p></section>
+ ${peers.length?`<section class="detail-section"><h2>같은 시리즈 · 다른 세대</h2><div class="series-track">${[s,...peers].map(x=>`<a class="series-card ${x.slug===s.slug?'current':''}" href="/shoes/${x.slug}/">${img(x)}<b>${e(x.name)}</b><small>${x.slug===s.slug?'현재 보는 모델':'이 세대 상세 보기 →'}</small></a>`).join('')}</div></section>`:''}
+ <section class="detail-section" id="related"><h2>함께 비교해 볼 모델</h2><p class="muted" style="margin-bottom:16px">같은 용도·시리즈 기준으로 골랐습니다. 다음 세대가 이전 세대보다 무조건 높은 순위는 아닙니다.</p><div class="similar-grid">${similar(s,all).map(x=>`<article class="similar-card"><a href="/shoes/${x.slug}/">${img(x)}<b>${e(x.name)}</b></a><small>${e(H.type(x))}</small>${toggle(x)}</article>`).join('')}</div></section>
+ ${footer()}</main><aside id="compareDock" hidden></aside><script type="application/ld+json">${jsonld}</script><script src="/assets/shoes.js?v=20261010"></script><script src="/assets/core.js?v=20261010"></script><script src="/assets/detail.js?v=20261010"></script></body></html>`;
+}
+module.exports={head,header,footer,detail,brand};

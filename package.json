@@ -1,0 +1,8 @@
+{
+  "name": "shoelineup",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "build": "node tools/build.mjs"
+  }
+}

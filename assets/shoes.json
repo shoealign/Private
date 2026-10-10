@@ -90,7 +90,20 @@
     "runningStyle": "데일리 · 템포 · 장거리",
     "officialUrl": "https://www.asics.com/us/en-us/megablast/p/ANA_1013A170-400.html",
     "slug": "asics-megablast",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aasics.co.kr+%22ASICS+Megablast%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "메가블라스트",
+      "메가블",
+      "메블",
+      "아식스 메가"
+    ],
+    "imageOriginal": "https://www.runnmore.com/files/images/slike-proizvoda/media/101/1013A170-500/images/1013A170-500.jpg.webp",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "ASICS Metaspeed Sky Tokyo",
@@ -181,7 +194,20 @@
     "runningStyle": "스트라이드형 · 보폭 확대",
     "officialUrl": "https://www.asics.com/jp/ja-jp/metaspeed-sky-tokyo/p/1013A162-400.html",
     "slug": "asics-metaspeed-sky-tokyo",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aasics.co.kr+%22ASICS+Metaspeed+Sky+Tokyo%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "메타스피드 스카이 도쿄",
+      "메스스 도쿄",
+      "스카이 도쿄",
+      "도쿄 스카이"
+    ],
+    "imageOriginal": "https://thelooprunning.com/cdn/shop/files/IMG_5043.png?v=1750969264",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "ASICS Metaspeed Edge Tokyo",
@@ -272,7 +298,20 @@
     "runningStyle": "케이던스형 · 빠른 발 회전",
     "officialUrl": "https://m.asics.co.kr/p/AKR_112631105-400",
     "slug": "asics-metaspeed-edge-tokyo",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aasics.co.kr+%22ASICS+Metaspeed+Edge+Tokyo%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "메타스피드 엣지 도쿄",
+      "메스엣 도쿄",
+      "엣지 도쿄",
+      "도쿄 엣지"
+    ],
+    "imageOriginal": "https://cdn11.bigcommerce.com/s-21x65e8kfn/images/stencil/original/products/80950/438087/ASI15963_2500_11__34947.1753287669.jpg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "ASICS Metaspeed Ray",
@@ -363,7 +402,18 @@
     "runningStyle": "초경량 · 전족부 특화",
     "officialUrl": "https://www.asics.com/nz/en-nz/metaspeed-ray-unisex-1013a176-100",
     "slug": "asics-metaspeed-ray",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aasics.co.kr+%22ASICS+Metaspeed+Ray%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "메타스피드 레이",
+      "메타 레이"
+    ],
+    "imageOriginal": "https://www.asics.com/nz/en-nz/media/catalog/product/image/1373667b3f/metaspeed-ray-tokyo.jpg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "adidas Adizero Boston 12",
@@ -425,7 +475,20 @@
     "pending": true,
     "shoeType": "경량 템포화",
     "slug": "adidas-adizero-boston-12",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aadidas.co.kr+%22adidas+Adizero+Boston+12%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "보스턴12",
+      "보스톤12",
+      "보스턴",
+      "보스톤"
+    ],
+    "imageOriginal": "https://images.novelship.com/product/adidas_adizero_boston_12__black_white__id4234_0_59635.jpeg?auto=compress&bg=FFFFFF&fit=fill&fm=webp&h=1200&pad=80&q=75&trim=color&w=1200",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "adidas Adizero Boston 13",
@@ -455,7 +518,7 @@
       "풀"
     ],
     "score": 0,
-    "reviews": 0,
+    "reviews": 3,
     "cushion": 0,
     "stability": 0,
     "bounce": 0,
@@ -483,11 +546,61 @@
       "풀": 0
     },
     "raceNote": "평가 데이터 수집 중",
-    "quotes": [],
+    "quotes": [
+      [
+        "장거리와 템포 훈련에 폭넓게 사용할 수 있고 밑창 접지력이 좋지만 끈과 설포 조절은 아쉽다는 평가.",
+        "Running Shoes Guru",
+        "https://www.runningshoesguru.com/reviews/road/adidas-adizero-boston-13-review/",
+        "2025-09-06",
+        "직접 구매 공개",
+        "전문 리뷰어",
+        "미공개",
+        "실주행",
+        "정사이즈",
+        "보통"
+      ],
+      [
+        "전작보다 뒤꿈치 고정과 갑피 편안함이 개선됐으며 데일리·템포·가성비 레이스용으로 활용 가능하다는 평가.",
+        "Believe in the Run",
+        "https://believeintherun.com/shoe-reviews/adidas-adizero-boston-13-review/",
+        "2025-04-18",
+        "제휴 링크 고지",
+        "전문 리뷰어",
+        "미공개",
+        "실주행",
+        "실착 권장",
+        "보통"
+      ],
+      [
+        "빠른 훈련과 내구성은 장점이나 토박스가 좁아 발볼이 넓다면 주의가 필요하다는 실험·주행 평가.",
+        "RunRepeat",
+        "https://runrepeat.com/adidas-adizero-boston-13",
+        "2025-06-04",
+        "매체 정책 확인",
+        "랩·실주행 리뷰",
+        "미공개",
+        "랩·실주행",
+        "실착 권장",
+        "좁은 편"
+      ]
+    ],
     "pending": true,
     "shoeType": "경량 템포화",
     "slug": "adidas-adizero-boston-13",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aadidas.co.kr+%22adidas+Adizero+Boston+13%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "보스턴13",
+      "보스톤13",
+      "보스턴",
+      "보스톤"
+    ],
+    "imageOriginal": "https://www.paceathletic.com/cdn/shop/files/Mens-Adidas-Adizero-Boston-13-CloudWhite_PureTeal_Grey-JR4791.jpg?v=1747700982",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "adidas Adizero SL2",
@@ -549,7 +662,19 @@
     "pending": true,
     "shoeType": "경량 트레이닝화",
     "slug": "adidas-adizero-sl2",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aadidas.co.kr+%22adidas+Adizero+SL2%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "에스엘2",
+      "에스엘투",
+      "SL 2"
+    ],
+    "imageOriginal": "https://www.bfgcdn.com/1500_1500_90/023-2461-0611/adidas-adizero-sl2-running-shoes.jpg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "adidas Adizero Takumi Sen 10",
@@ -611,7 +736,19 @@
     "pending": true,
     "shoeType": "레이싱화",
     "slug": "adidas-adizero-takumi-sen-10",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aadidas.co.kr+%22adidas+Adizero+Takumi+Sen+10%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "타쿠미센10",
+      "타쿠미10",
+      "타쿠미"
+    ],
+    "imageOriginal": "https://cdn.shopify.com/s/files/1/0129/6942/files/adidasMen_sTakumiSen10Ivory-Black-White.jpg?v=1711551565",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "ASICS Gel-Kayano 32",
@@ -641,7 +778,7 @@
       "풀"
     ],
     "score": 0,
-    "reviews": 0,
+    "reviews": 1,
     "cushion": 0,
     "stability": 0,
     "bounce": 0,
@@ -669,11 +806,37 @@
       "풀": 0
     },
     "raceNote": "평가 데이터 수집 중",
-    "quotes": [],
+    "quotes": [
+      [
+        "안정성과 충격 흡수, 아웃솔 내구성이 강점이지만 무게와 반발력은 아쉽다는 실험·주행 평가.",
+        "RunRepeat",
+        "https://runrepeat.com/asics-gel-kayano-32",
+        "2025-07-18",
+        "매체 정책 확인",
+        "랩·실주행 리뷰",
+        "미공개",
+        "랩·실주행",
+        "실착 권장",
+        "보통"
+      ]
+    ],
     "pending": true,
     "shoeType": "안정화",
     "slug": "asics-gel-kayano-32",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aasics.co.kr+%22ASICS+Gel-Kayano+32%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "젤카야노32",
+      "젤카야노",
+      "카야노32",
+      "카야노"
+    ],
+    "imageOriginal": "https://cdn.shopify.com/s/files/1/0129/6942/files/mens-asics-gel-kayano-32-white-orange-glow_6.jpg?v=1756482295",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "ASICS Gel-Nimbus 27",
@@ -735,7 +898,20 @@
     "pending": true,
     "shoeType": "쿠션화",
     "slug": "asics-gel-nimbus-27",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aasics.co.kr+%22ASICS+Gel-Nimbus+27%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "젤님버스27",
+      "젤님버스",
+      "님버스27",
+      "님버스"
+    ],
+    "imageOriginal": "https://runner-athletics.gr/sites/default/files/products/1011b958_002_sr_rt_glb_result.jpg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "ASICS Magic Speed 4",
@@ -797,7 +973,19 @@
     "pending": true,
     "shoeType": "카본 트레이닝화",
     "slug": "asics-magic-speed-4",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aasics.co.kr+%22ASICS+Magic+Speed+4%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "매직스피드4",
+      "매스4",
+      "매직 스피드"
+    ],
+    "imageOriginal": "https://solemotive.com/cdn/shop/files/1_93225895-d7c9-4ec3-952a-632661cdb2e1_5000x.png?v=1732850364",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "Nike Vomero 18",
@@ -827,7 +1015,7 @@
       "풀"
     ],
     "score": 0,
-    "reviews": 0,
+    "reviews": 1,
     "cushion": 0,
     "stability": 0,
     "bounce": 0,
@@ -855,11 +1043,35 @@
       "풀": 0
     },
     "raceNote": "평가 데이터 수집 중",
-    "quotes": [],
+    "quotes": [
+      [
+        "풍부한 쿠션과 회복런 적합성이 장점이며 무게와 좁은 토박스, 빠른 페이스 대응은 단점으로 평가.",
+        "RunRepeat",
+        "https://runrepeat.com/nike-vomero-18",
+        "2025-05-25",
+        "매체 정책 확인",
+        "랩·실주행 리뷰",
+        "미공개",
+        "랩·실주행",
+        "실착 권장",
+        "좁은 편"
+      ]
+    ],
     "pending": true,
     "shoeType": "쿠션화",
     "slug": "nike-vomero-18",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Anike.com%2Fkr+%22Nike+Vomero+18%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "보메로18",
+      "보메로"
+    ],
+    "imageOriginal": "https://www.run4it.com/cdn/shop/files/HM6803-007-M-Nike-Vomero18-right-medial-view_952x952.jpg?v=1749031427",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "Nike Structure 26",
@@ -921,7 +1133,20 @@
     "pending": true,
     "shoeType": "안정화",
     "slug": "nike-structure-26",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Anike.com%2Fkr+%22Nike+Structure+26%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "스트럭처26",
+      "스트럭쳐26",
+      "스트럭처",
+      "스트럭쳐"
+    ],
+    "imageOriginal": "https://www.nike.sa/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dw33a5ecbc/nk/930/3/7/3/2/b/9303732b_0301_4904_adc1_04e1e9ade540.jpg?sh=2000&sm=fit&sw=2000",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "Nike Zoom Fly 6",
@@ -983,7 +1208,19 @@
     "pending": true,
     "shoeType": "카본 트레이닝화",
     "slug": "nike-zoom-fly-6",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Anike.com%2Fkr+%22Nike+Zoom+Fly+6%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "줌플라이6",
+      "줌플6",
+      "줌플라이"
+    ],
+    "imageOriginal": "https://www.paceathletic.com/cdn/shop/files/Mens-Nike-Zoom-Fly-6-White_PurePlatinum_ObsidianMist_Gridiron-FN8454-104.jpg?v=1753340890&width=1200",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "New Balance 1080 v14",
@@ -1045,7 +1282,19 @@
     "pending": true,
     "shoeType": "쿠션화",
     "slug": "new-balance-1080-v14",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Anbkorea.com+%22New+Balance+1080+v14%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "1080v14",
+      "1080",
+      "천팔십"
+    ],
+    "imageOriginal": "https://cdn11.bigcommerce.com/s-s62r70/images/stencil/1280x1280/products/5832/20477/W1080N14-5__31240.1728573074.jpg?c=2",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "New Balance More v5",
@@ -1107,7 +1356,19 @@
     "pending": true,
     "shoeType": "맥스 쿠션화",
     "slug": "new-balance-more-v5",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Anbkorea.com+%22New+Balance+More+v5%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "모어v5",
+      "모어5",
+      "프레쉬폼 모어"
+    ],
+    "imageOriginal": "https://shopgbm.com/images/1575/27_23615_1721853688345.png",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "New Balance SC Trainer v3",
@@ -1169,7 +1430,20 @@
     "pending": true,
     "shoeType": "카본 트레이닝화",
     "slug": "new-balance-sc-trainer-v3",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Anbkorea.com+%22New+Balance+SC+Trainer+v3%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "sc트레이너v3",
+      "sc트레이너3",
+      "슈퍼컴프 트레이너",
+      "에스씨트레이너"
+    ],
+    "imageOriginal": "https://image.nbkorea.com/NBRB_Product/20250808/NB20250808133341099001.jpg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "HOKA Mach 6",
@@ -1231,7 +1505,19 @@
     "pending": true,
     "shoeType": "경량 트레이닝화",
     "slug": "hoka-mach-6",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Ahoka.com+%22HOKA+Mach+6%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "마하6",
+      "마하",
+      "마크6"
+    ],
+    "imageOriginal": "https://hoka.mx/cdn/shop/files/1147810-RSLT_1_1024x1024.webp?v=1760586212",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "HOKA Bondi 9",
@@ -1293,7 +1579,18 @@
     "pending": true,
     "shoeType": "맥스 쿠션화",
     "slug": "hoka-bondi-9",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Ahoka.com+%22HOKA+Bondi+9%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "본디9",
+      "본디"
+    ],
+    "imageOriginal": "https://cdn.media.amplience.net/i/sportinglife/25923725_COBALT-BLUE-ULTRAMARINE_0/Mens-Bondi-9-Running-Shoe-COBALT-BLUE-ULTRAMARINE?%24default%24=&fmt=auto",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "HOKA Arahi 8",
@@ -1355,7 +1652,18 @@
     "pending": true,
     "shoeType": "안정화",
     "slug": "hoka-arahi-8",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Ahoka.com+%22HOKA+Arahi+8%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "아라히8",
+      "아라히"
+    ],
+    "imageOriginal": "https://hoka.mx/cdn/shop/files/1168691-ORF_1.png?v=1763665982",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "Saucony Ride 18",
@@ -1417,7 +1725,18 @@
     "pending": true,
     "shoeType": "데일리 트레이닝화",
     "slug": "saucony-ride-18",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Asaucony.com+%22Saucony+Ride+18%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "라이드18",
+      "라이드"
+    ],
+    "imageOriginal": "https://cdn11.bigcommerce.com/s-dxvedf95e5/images/stencil/750x958/products/462/19220/mwrF0taYRjnrPUPwqSmnfOxiMDzzQCy8jJQNZ8U49ySwqOzW3bgza4BQjYwgPSms__95870.1740693768.jpg?c=1",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "Saucony Triumph 23",
@@ -1479,7 +1798,19 @@
     "pending": true,
     "shoeType": "쿠션화",
     "slug": "saucony-triumph-23",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Asaucony.com+%22Saucony+Triumph+23%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "트라이엄프23",
+      "트라이엄프",
+      "트라이엄프 23"
+    ],
+    "imageOriginal": "https://www.paceathletic.com/cdn/shop/files/Mens-Saucony-Triumph-23-White-Laurel.jpg?v=1773637420&width=1701",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "Saucony Guide 18",
@@ -1541,7 +1872,18 @@
     "pending": true,
     "shoeType": "안정화",
     "slug": "saucony-guide-18",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Asaucony.com+%22Saucony+Guide+18%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "가이드18",
+      "가이드"
+    ],
+    "imageOriginal": "https://cdn11.bigcommerce.com/s-21x65e8kfn/images/stencil/original/products/76833/406640/SAU5160_1000_1__20410.1740655213.jpg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "PUMA Velocity Nitro 4",
@@ -1603,7 +1945,19 @@
     "pending": true,
     "shoeType": "데일리 트레이닝화",
     "slug": "puma-velocity-nitro-4",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Akr.puma.com+%22PUMA+Velocity+Nitro+4%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "벨로시티나이트로4",
+      "벨로시티4",
+      "벨나4"
+    ],
+    "imageOriginal": "https://media.rundna.com.au/1e354a70-36a9-4f58-a8e0-0a2fdcf9c771.jpg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "PUMA MagMax Nitro 2",
@@ -1665,7 +2019,21 @@
     "pending": true,
     "shoeType": "맥스 쿠션화",
     "slug": "puma-magmax-nitro-2",
-    "imagePlaceholder": true
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Akr.puma.com+%22PUMA+MagMax+Nitro+2%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "맥맥스2",
+      "매그맥스2",
+      "맥스맥스",
+      "매그맥스",
+      "맥맥스"
+    ],
+    "imageOriginal": "https://media.rundna.com.au/f1a85f97-9dfd-445e-a5f6-3f935a6e998c__L.jpg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "pending",
+    "checkedSources": {}
   },
   {
     "name": "ASICS Novablast 6",
@@ -1697,7 +2065,7 @@
     "cat": "daily",
     "catko": "데일리/트레이닝",
     "score": 4.88,
-    "reviews": 1,
+    "reviews": 2,
     "cushion": 95,
     "stability": 82,
     "bounce": 94,
@@ -1766,7 +2134,21 @@
       "레이싱화만큼 공격적이지 않음"
     ],
     "slug": "asics-novablast-6",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aasics.co.kr+%22ASICS+Novablast+6%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "노바블라스트6",
+      "노바6",
+      "노바 블라스트6",
+      "노바"
+    ],
+    "imageOriginal": "https://img.eobuwie.cloud/product%28c/7/e/5/c7e5fafc8f88b16c1f81caf4e92ef7e4a92e2da3_22_4571633746291.jpg%2Cjpg%29/buty-do-biegania-asics-novablast-6-1011c243-niebieski-0000306007383.jpg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "쿠션 트레이닝화"
   },
   {
     "name": "ASICS Novablast 5",
@@ -1798,7 +2180,7 @@
     "cat": "daily",
     "catko": "데일리/트레이닝",
     "score": 4.91,
-    "reviews": 1,
+    "reviews": 2,
     "cushion": 94,
     "stability": 87,
     "bounce": 93,
@@ -1867,7 +2249,21 @@
       "레이싱화 대비 고속감은 제한적"
     ],
     "slug": "asics-novablast-5",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aasics.co.kr+%22ASICS+Novablast+5%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "노바블라스트5",
+      "노바5",
+      "노바 블라스트5",
+      "노바"
+    ],
+    "imageOriginal": "https://www.asics.co.in/media/catalog/product/1/0/1011b974_400_sr_lt_glb-4.jpg?auto=webp&fit=cover&format=pjpg&height=800&width=640",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "쿠션 트레이닝화"
   },
   {
     "name": "ASICS Superblast 2",
@@ -1897,7 +2293,7 @@
     "cat": "daily",
     "catko": "슈퍼트레이너",
     "score": 4.92,
-    "reviews": 2,
+    "reviews": 4,
     "cushion": 96,
     "stability": 94,
     "bounce": 94,
@@ -1990,7 +2386,26 @@
       "넓은 발에는 애매할 수 있음"
     ],
     "slug": "asics-superblast-2",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aasics.co.kr+%22ASICS+Superblast+2%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "슈퍼블라스트2",
+      "슈퍼블라스트 2",
+      "슈퍼블라스트",
+      "슈블2",
+      "슈블 2",
+      "슈블",
+      "수퍼블라스트2",
+      "수퍼블라스트",
+      "슈퍼블"
+    ],
+    "imageOriginal": "https://131568135.cdn6.editmysite.com/uploads/1/3/1/5/131568135/MHF2JUCXIV5G23CNAYQHEZF7.png",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "슈퍼 트레이닝화"
   },
   {
     "name": "ASICS Metaspeed Sky Paris",
@@ -2018,7 +2433,7 @@
     "cat": "race",
     "catko": "레이싱",
     "score": 4.9,
-    "reviews": 1,
+    "reviews": 3,
     "cushion": 92,
     "stability": 72,
     "bounce": 99,
@@ -2099,7 +2514,21 @@
       "안정성 낮음"
     ],
     "slug": "asics-metaspeed-sky-paris",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aasics.co.kr+%22ASICS+Metaspeed+Sky+Paris%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "메타스피드스카이파리",
+      "메타스피드 스카이 파리",
+      "메타스카이",
+      "메타스피드"
+    ],
+    "imageOriginal": "https://www.run2day.nl/media/catalog/product/cache/9710b2f2ea63f156318feaeb50c5d7bb/a/s/asicsmetaspeedskyparisunisex-2900023716125.jpg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "카본 레이싱화"
   },
   {
     "name": "adidas Adizero Adios Pro 4",
@@ -2130,7 +2559,7 @@
     "cat": "race",
     "catko": "레이싱",
     "score": 4.96,
-    "reviews": 3,
+    "reviews": 5,
     "cushion": 92,
     "stability": 80,
     "bounce": 99,
@@ -2235,7 +2664,25 @@
       "힐 안정성 호불호"
     ],
     "slug": "adidas-adizero-adios-pro-4",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aadidas.co.kr+%22adidas+Adizero+Adios+Pro+4%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "아디제로아디오스프로4",
+      "아디제로 아디오스 프로 4",
+      "아디오스프로4",
+      "아디오스 프로 4",
+      "아디프로4",
+      "아디프로 4",
+      "프로4",
+      "프로 4"
+    ],
+    "imageOriginal": "https://parceriasport.cdn.magazord.com.br/img/2026/01/produto/9784/1.jpg?ims=1920x1920",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "카본 레이싱화"
   },
   {
     "name": "adidas Adizero Adios Pro 5",
@@ -2266,7 +2713,7 @@
     "cat": "race",
     "catko": "레이싱",
     "score": 4.93,
-    "reviews": 1,
+    "reviews": 3,
     "cushion": 93,
     "stability": 82,
     "bounce": 99,
@@ -2348,7 +2795,25 @@
       "초기 내구성 데이터 부족"
     ],
     "slug": "adidas-adizero-adios-pro-5",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aadidas.co.kr+%22adidas+Adizero+Adios+Pro+5%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "아디제로아디오스프로5",
+      "아디제로 아디오스 프로 5",
+      "아디오스프로5",
+      "아디오스 프로 5",
+      "아디프로5",
+      "아디프로 5",
+      "프로5",
+      "프로 5"
+    ],
+    "imageOriginal": "https://cdn.shopify.com/s/files/1/0129/6942/files/adidas-womens-adizero-adios-pro-5-solar-turbo-black-lucid-red-1_1200x630.jpg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "카본 레이싱화"
   },
   {
     "name": "adidas Adizero EVO SL",
@@ -2380,7 +2845,7 @@
     "cat": "daily",
     "catko": "데일리/템포",
     "score": 4.94,
-    "reviews": 2,
+    "reviews": 3,
     "cushion": 91,
     "stability": 77,
     "bounce": 96,
@@ -2461,7 +2926,33 @@
       "레이스 최상급 안정성은 아님"
     ],
     "slug": "adidas-adizero-evo-sl",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aadidas.co.kr+%22adidas+Adizero+EVO+SL%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "에보sl",
+      "에보슬",
+      "에보에스엘",
+      "에보 에스엘",
+      "이보sl",
+      "이보슬",
+      "이보에스엘",
+      "evo에스엘",
+      "evo슬",
+      "아디제로에보sl",
+      "아디제로에보슬",
+      "아디제로 에보 sl",
+      "아디제로 에보슬",
+      "에보"
+    ],
+    "imageOriginal": "https://intersport.com.au/cdn/shop/files/JH6206_1_FOOTWEAR_Photography_SideLateralCenterView_white.jpg?v=1747778597&width=1024",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {
+      "https://runrepeat.com/adidas-adizero-evo-sl": "2026-10-10"
+    },
+    "shoeType": "경량 트레이닝화"
   },
   {
     "name": "Nike Alphafly 1",
@@ -2547,7 +3038,20 @@
       "안정성 적응 필요"
     ],
     "slug": "nike-alphafly-1",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Anike.com%2Fkr+%22Nike+Alphafly+1%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "알파플라이1",
+      "알파1",
+      "알파플라이"
+    ],
+    "imageOriginal": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto%2Cq_auto%3Aeco/7aa06109-6503-4582-a1dc-c2319ba1ca01/air-zoom-alphafly-next-eliud-kipchoge-mens-road-racing-shoes-XNbfJ0.png",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "카본 레이싱화"
   },
   {
     "name": "Nike Alphafly 2",
@@ -2635,7 +3139,20 @@
       "1세대보다 둔하다는 평가"
     ],
     "slug": "nike-alphafly-2",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Anike.com%2Fkr+%22Nike+Alphafly+2%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "알파플라이2",
+      "알파2",
+      "알파플라이"
+    ],
+    "imageOriginal": "https://www.instacart.com/image-server/1200x1200/www.instacart.com/assets/domains/product-image/file/large_e4dc4e1a-6f49-4896-aba7-70fd95801697.jpeg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "카본 레이싱화"
   },
   {
     "name": "Nike Alphafly 3",
@@ -2666,7 +3183,7 @@
     "cat": "race",
     "catko": "레이싱",
     "score": 4.97,
-    "reviews": 2,
+    "reviews": 4,
     "cushion": 96,
     "stability": 89,
     "bounce": 99,
@@ -2759,7 +3276,22 @@
       "레이스 외 활용도 제한"
     ],
     "slug": "nike-alphafly-3",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Anike.com%2Fkr+%22Nike+Alphafly+3%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "알파플라이3",
+      "알파3",
+      "알파플라이"
+    ],
+    "imageOriginal": "https://www.bfgcdn.com/1500_1500_90/023-2304/nike-alphafly-3-road-racing-shoes-chaussures-de-running.jpg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {
+      "https://runrepeat.com/nike-alphafly-3": "2026-10-10"
+    },
+    "shoeType": "카본 레이싱화"
   },
   {
     "name": "Nike Alphafly 4",
@@ -2847,7 +3379,20 @@
       "국내 일정 미정"
     ],
     "slug": "nike-alphafly-4",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Anike.com%2Fkr+%22Nike+Alphafly+4%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "알파플라이4",
+      "알파4",
+      "알파플라이"
+    ],
+    "imageOriginal": "https://cdn.sanity.io/images/c1chvb1i/production/00988709b1f77b4a7bfc4b12802b74a29cd7ec43-1960x1320.jpg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "카본 레이싱화"
   },
   {
     "name": "Nike Vaporfly 4",
@@ -2879,7 +3424,7 @@
     "cat": "race",
     "catko": "레이싱",
     "score": 4.93,
-    "reviews": 2,
+    "reviews": 3,
     "cushion": 88,
     "stability": 59,
     "bounce": 98,
@@ -2960,7 +3505,25 @@
       "내구성·가격 부담"
     ],
     "slug": "nike-vaporfly-4",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Anike.com%2Fkr+%22Nike+Vaporfly+4%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "베이퍼플라이4",
+      "베이퍼플라이 4",
+      "베이퍼4",
+      "베이퍼 4",
+      "베이퍼플라이",
+      "베퍼4",
+      "베퍼 4",
+      "베이퍼"
+    ],
+    "imageOriginal": "https://app.kicksonfire.com/kofapp/upload/events_master_images/ipad_nike-vaporfly-4-ghost-persian-violet.png",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "카본 레이싱화"
   },
   {
     "name": "Nike Pegasus 41",
@@ -2989,7 +3552,7 @@
     "cat": "daily",
     "catko": "데일리/트레이닝",
     "score": 4.42,
-    "reviews": 2,
+    "reviews": 3,
     "cushion": 84,
     "stability": 84,
     "bounce": 78,
@@ -3070,7 +3633,23 @@
       "템포용 반발은 평범"
     ],
     "slug": "nike-pegasus-41",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Anike.com%2Fkr+%22Nike+Pegasus+41%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "페가수스41",
+      "페가수스 41",
+      "페가41",
+      "페가 41",
+      "페가수스",
+      "페가"
+    ],
+    "imageOriginal": "https://assets.footlocker.com/is/image/FLDM/F2722102_01?bfc=on&fmt=webp-alpha&hei=700&wid=700",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "데일리 트레이닝화"
   },
   {
     "name": "New Balance SC Elite v5",
@@ -3099,7 +3678,7 @@
     "cat": "race",
     "catko": "레이싱",
     "score": 4.89,
-    "reviews": 1,
+    "reviews": 3,
     "cushion": 93,
     "stability": 82,
     "bounce": 95,
@@ -3180,7 +3759,26 @@
       "최상급 대비 무게 아쉬움"
     ],
     "slug": "new-balance-sc-elite-v5",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Anbkorea.com+%22New+Balance+SC+Elite+v5%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "sc엘리트v5",
+      "sc엘리트5",
+      "sc 엘리트 5",
+      "에스씨엘리트5",
+      "에스씨 엘리트 5",
+      "엘리트v5",
+      "엘리트5",
+      "sc elite 5",
+      "에스씨"
+    ],
+    "imageOriginal": "https://cdn.prod.website-files.com/624ebfbeeed5677ab444c417/687e3645722151a0eb80c425_5.png",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "카본 레이싱화"
   },
   {
     "name": "New Balance FuelCell Rebel v5",
@@ -3209,7 +3807,7 @@
     "cat": "daily",
     "catko": "데일리/템포",
     "score": 4.58,
-    "reviews": 1,
+    "reviews": 3,
     "cushion": 88,
     "stability": 80,
     "bounce": 91,
@@ -3290,7 +3888,27 @@
       "통풍은 보통"
     ],
     "slug": "new-balance-fuelcell-rebel-v5",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Anbkorea.com+%22New+Balance+FuelCell+Rebel+v5%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "리벨v5",
+      "리벨5",
+      "리벨 5",
+      "레벨v5",
+      "레벨5",
+      "레벨 5",
+      "퓨어셀리벨5",
+      "퓨얼셀리벨5",
+      "퓨얼셀 리벨 5",
+      "리벨"
+    ],
+    "imageOriginal": "https://cdn.fleetfeet.com/a%3A1.5-f%3Acover-w%3A1200/products/WFCX8U7_2.jpg?s=282783e5",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "경량 트레이닝화"
   },
   {
     "name": "New Balance 860 v15",
@@ -3320,7 +3938,7 @@
     "cat": "stability",
     "catko": "안정화",
     "score": 4.51,
-    "reviews": 1,
+    "reviews": 2,
     "cushion": 90,
     "stability": 86,
     "bounce": 72,
@@ -3389,7 +4007,21 @@
       "빠른 페이스 부적합"
     ],
     "slug": "new-balance-860-v15",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Anbkorea.com+%22New+Balance+860+v15%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "860v15",
+      "860 15",
+      "팔육공15",
+      "860"
+    ],
+    "imageOriginal": "https://shop.r10s.jp/step-sports/cabinet/12831450/w860-4ne-d.jpg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "안정화"
   },
   {
     "name": "Saucony Endorphin Pro 4",
@@ -3418,7 +4050,7 @@
     "cat": "race",
     "catko": "레이싱",
     "score": 4.82,
-    "reviews": 2,
+    "reviews": 3,
     "cushion": 94,
     "stability": 87,
     "bounce": 94,
@@ -3499,7 +4131,24 @@
       "폭발적 반발은 덜함"
     ],
     "slug": "saucony-endorphin-pro-4",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Asaucony.com+%22Saucony+Endorphin+Pro+4%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "엔돌핀프로4",
+      "엔돌핀 프로 4",
+      "엔프4",
+      "엔프 4",
+      "써코니프로4",
+      "서코니프로4",
+      "엔돌핀프로"
+    ],
+    "imageOriginal": "https://images.stockx.com/images/Saucony-Endorphin-Pro-4-Fog-Peel.jpg?auto=compress&bg=FFFFFF&dpr=2&fit=fill&fm=webp&h=500&q=90&trim=color&updated_at=1736244095&w=700",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "카본 레이싱화"
   },
   {
     "name": "Saucony Endorphin Speed 5",
@@ -3533,7 +4182,7 @@
     "cat": "daily",
     "catko": "템포/슈퍼트레이너",
     "score": 4.9,
-    "reviews": 1,
+    "reviews": 3,
     "cushion": 91,
     "stability": 81,
     "bounce": 96,
@@ -3544,7 +4193,7 @@
       "템포",
       "레이스가능"
     ],
-    "img": "https://thekit.wolverineworldwide.com/match/media_lookup/S21007-97_1/?preset=dw-pdp-primary",
+    "img": "https://www.soccersportfitness.ca/cdn/shop/files/Saucony_Saucony_Endorphin_Speed_5_chaussures_de_course_pour_homme_0607a9aa9f9c18e8d6ad44fe6c16aaa9.jpg?v=1766525097&width=1600",
     "release": "2025",
     "releaseLabel": "국내 출시",
     "discontinued": "공식 발표 없음",
@@ -3614,7 +4263,24 @@
       "약간 부피감"
     ],
     "slug": "saucony-endorphin-speed-5",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Asaucony.com+%22Saucony+Endorphin+Speed+5%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "엔돌핀스피드5",
+      "엔돌핀 스피드 5",
+      "엔스5",
+      "엔스 5",
+      "스피드5",
+      "스피드 5",
+      "엔돌핀스피드"
+    ],
+    "imageOriginal": "https://www.soccersportfitness.ca/cdn/shop/files/Saucony_Saucony_Endorphin_Speed_5_chaussures_de_course_pour_homme_0607a9aa9f9c18e8d6ad44fe6c16aaa9.jpg?v=1766525097&width=1600",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "나일론 플레이트화"
   },
   {
     "name": "PUMA Fast-R Nitro Elite 3",
@@ -3644,7 +4310,7 @@
     "cat": "race",
     "catko": "레이싱",
     "score": 4.94,
-    "reviews": 2,
+    "reviews": 3,
     "cushion": 93,
     "stability": 45,
     "bounce": 100,
@@ -3725,7 +4391,21 @@
       "풀코스 편안함 호불호"
     ],
     "slug": "puma-fast-r-nitro-elite-3",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Akr.puma.com+%22PUMA+Fast-R+Nitro+Elite+3%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "패스트알3",
+      "패스트r3",
+      "패스트알나이트로엘리트3",
+      "패스트알"
+    ],
+    "imageOriginal": "https://cdn.shopify.com/s/files/1/0612/2736/8677/files/puma-fast-r-3_1024x1024.png?v=1747899489",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "카본 레이싱화"
   },
   {
     "name": "PUMA Deviate Nitro Elite 4",
@@ -3757,7 +4437,7 @@
     "cat": "race",
     "catko": "레이싱",
     "score": 4.91,
-    "reviews": 3,
+    "reviews": 5,
     "cushion": 92,
     "stability": 72,
     "bounce": 97,
@@ -3862,7 +4542,21 @@
       "힐 안정성은 보통"
     ],
     "slug": "puma-deviate-nitro-elite-4",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Akr.puma.com+%22PUMA+Deviate+Nitro+Elite+4%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "디비에이트나이트로엘리트4",
+      "디나엘4",
+      "디비에이트엘리트4",
+      "디비엘4"
+    ],
+    "imageOriginal": "https://runlab.com.ua/image/cache/catalog/pim/product/312127-03/312127-03-312127-03_06-1600x1600.webp",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "카본 레이싱화"
   },
   {
     "name": "PUMA Deviate Nitro 4",
@@ -3905,7 +4599,7 @@
       "템포",
       "그립"
     ],
-    "img": "https://www.paceathletic.com/cdn/shop/files/Mens-PUMA-Deviate-Nitro-4-Ultra-Red_PUMA-Silver-312123-19.jpg?v=1778565856&width=1701",
+    "img": "https://images.puma.net/images/312123/04/sv01/fnd/BRA/w/2000/h/2000/",
     "release": "2026",
     "releaseLabel": "글로벌/국내 유통 확인",
     "discontinued": "공식 발표 없음",
@@ -3963,7 +4657,23 @@
       "힐 반발은 전족부보다 약함"
     ],
     "slug": "puma-deviate-nitro-4",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Akr.puma.com+%22PUMA+Deviate+Nitro+4%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "디비에이트나이트로4",
+      "디비에이트4",
+      "디나4",
+      "디비에이트",
+      "디비에이트 나이트로",
+      "퓨마 나이트로"
+    ],
+    "imageOriginal": "https://images.puma.net/images/312123/04/sv01/fnd/BRA/w/2000/h/2000/",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "카본 트레이닝화"
   },
   {
     "name": "HOKA Cielo X1 2.0",
@@ -3992,7 +4702,7 @@
     "cat": "race",
     "catko": "레이싱",
     "score": 4.9,
-    "reviews": 2,
+    "reviews": 3,
     "cushion": 97,
     "stability": 62,
     "bounce": 98,
@@ -4003,7 +4713,7 @@
       "로커",
       "하프·풀"
     ],
-    "img": "https://www.lbmsport.it/wp-content/uploads/2025/02/hoka-cielo-X1-2.0-unisex-1162053-BKGD-1200x1048.jpg",
+    "img": "https://cdn11.bigcommerce.com/s-21x65e8kfn/images/stencil/original/products/76181/401835/HOK2921_1000_8__40696.1739467208.jpg",
     "release": "2025",
     "releaseLabel": "국내 출시",
     "discontinued": "공식 발표 없음",
@@ -4073,7 +4783,26 @@
       "가격 높음"
     ],
     "slug": "hoka-cielo-x1-2-0",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Ahoka.com+%22HOKA+Cielo+X1+2.0%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "씨엘로x1 2.0",
+      "씨엘로x1",
+      "씨엘로2",
+      "시엘로x1",
+      "호카씨엘로",
+      "시엘로",
+      "시엘로2",
+      "시엘로x12.0",
+      "씨엘로"
+    ],
+    "imageOriginal": "https://cdn11.bigcommerce.com/s-21x65e8kfn/images/stencil/original/products/76181/401835/HOK2921_1000_8__40696.1739467208.jpg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "카본 레이싱화"
   },
   {
     "name": "HOKA Clifton 10",
@@ -4103,7 +4832,7 @@
     "cat": "daily",
     "catko": "데일리/쿠션",
     "score": 4.48,
-    "reviews": 1,
+    "reviews": 2,
     "cushion": 93,
     "stability": 90,
     "bounce": 72,
@@ -4172,7 +4901,21 @@
       "반발감 평범"
     ],
     "slug": "hoka-clifton-10",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Ahoka.com+%22HOKA+Clifton+10%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "클리프톤10",
+      "클리프턴10",
+      "클리프톤",
+      "호카클리프톤"
+    ],
+    "imageOriginal": "https://aad216.a-cdn.akinoncloud.com/products/2025/04/14/21227750/e71667c8-f539-4532-a8a6-7ead63903781.jpg",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "쿠션화"
   },
   {
     "name": "On Cloudboom Strike",
@@ -4202,7 +4945,7 @@
     "cat": "race",
     "catko": "레이싱",
     "score": 4.88,
-    "reviews": 2,
+    "reviews": 4,
     "cushion": 96,
     "stability": 58,
     "bounce": 97,
@@ -4295,7 +5038,21 @@
       "안정성 보통"
     ],
     "slug": "on-cloudboom-strike",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aon.com+%22On+Cloudboom+Strike%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "클라우드붐스트라이크",
+      "클붐",
+      "클라우드붐",
+      "온클라우드붐"
+    ],
+    "imageOriginal": "https://images.ctfassets.net/hnk2vsx53n6l/8l5AGti6qI15Ke5EGxMrX/8949414b988ed582e17b6d56ebf2aa10/bc94347c67d29001d4971ce5c4464a5659bb873f.png?fm=webp",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "카본 레이싱화"
   },
   {
     "name": "On Cloudboom Strike 2 LightSpray",
@@ -4325,7 +5082,7 @@
     "cat": "race",
     "catko": "레이싱",
     "score": 4.86,
-    "reviews": 2,
+    "reviews": 3,
     "cushion": 96,
     "stability": 68,
     "bounce": 97,
@@ -4406,7 +5163,21 @@
       "가격 부담"
     ],
     "slug": "on-cloudboom-strike-2-lightspray",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aon.com+%22On+Cloudboom+Strike+2+LightSpray%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "클라우드붐스트라이크2",
+      "클붐2",
+      "라이트스프레이",
+      "클라우드붐2"
+    ],
+    "imageOriginal": "https://images.ctfassets.net/hnk2vsx53n6l/7z38fA8CW10929N8R0s7K8/bde6c8d0bbecd568d67c5fb936ce973b/a36a251c22e134d1fc3cdccfb4a78c30f87faa89.png?f=center&fit=fill&fl=progressive&fm=jpg&h=1500&q=80&w=1500",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "카본 레이싱화"
   },
   {
     "name": "On Cloudmonster 2",
@@ -4436,7 +5207,7 @@
     "cat": "daily",
     "catko": "데일리/쿠션",
     "score": 4.42,
-    "reviews": 2,
+    "reviews": 4,
     "cushion": 92,
     "stability": 86,
     "bounce": 75,
@@ -4530,6 +5301,20 @@
       "가격"
     ],
     "slug": "on-cloudmonster-2",
-    "imagePlaceholder": false
+    "imagePlaceholder": false,
+    "officialStoreUrl": "https://www.google.com/search?q=site%3Aon.com+%22On+Cloudmonster+2%22",
+    "officialStoreLabel": "공식 제품 검색 ↗",
+    "officialStoreVerified": false,
+    "aliases": [
+      "클라우드몬스터2",
+      "클몬2",
+      "클라우드몬스터",
+      "온클라우드몬스터"
+    ],
+    "imageOriginal": "https://runpacers.com/cdn/shop/files/Womens-On-Cloudmonster-2-Ivory-Tangerine.jpg?v=1760734805",
+    "dataOrigin": "기존 수록 자료",
+    "scoreStatus": "legacy_unverified",
+    "checkedSources": {},
+    "shoeType": "쿠션화"
   }
 ]
