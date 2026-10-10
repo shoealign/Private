@@ -147,3 +147,11 @@ body.has-dock{padding-bottom:95px}
  .compare-table .num{font-size:15px}
  .compare-table .section-row th{font-size:11px}
 }
+
+/* KICKLINEUP identity */
+.brand-accent{color:#111111}.brand-logo svg{flex-shrink:0}.brand-wordmark{font-style:italic;letter-spacing:-1.25px}.brand-wordmark small{font-style:normal;letter-spacing:1.5px}.brand-logo:hover .brand-accent{color:#333333}
+
+/* 2026-10-10 monochrome stacked brand refresh */
+.brand-logo-img{display:block;width:166px;height:auto;max-height:63px;object-fit:contain}
+.brand-logo{gap:0}.brand-accent{color:#111!important}.brand-wordmark{font-style:normal}
+@media(max-width:700px){.brand-logo-img{width:115px;max-height:49px}.header-inner{min-height:66px}}

@@ -1,4 +1,4 @@
-# SHOELINEUP 업데이트 · 먼저 읽어주세요
+# KICKLINEUP 업데이트 · 먼저 읽어주세요
 
 이번 파일은 홈페이지 전체 업데이트입니다. 기존 저장소는 `shoealign/Private`, 현재 공개 주소는 `https://shoealign.vercel.app`을 기준으로 만들었습니다.
 회원가입, 사용자 리뷰 등록, DB, 유료 외부 API는 추가하지 않았습니다.
@@ -13,7 +13,7 @@
    - `index.html`, `assets`, `shoes`, `compare`, `tools`, `package.json`, `vercel.json`이 Private 바로 아래에 있어야 합니다.
    - 이번에는 항목 수가 예전 9개와 다릅니다. 폴더 안까지 하나씩 열어 올릴 필요는 없습니다.
 4. Working Copy → Private → Repository → Commit에서 변경된 파일 전체를 선택합니다.
-5. 메시지를 `SHOELINEUP UX and compare update`로 입력하고 Commit → Push합니다.
+5. 메시지를 `KICKLINEUP UX and compare update`로 입력하고 Commit → Push합니다.
 6. Vercel 최신 배포가 Ready로 바뀌면 확인합니다.
 
 ## 확인할 화면
