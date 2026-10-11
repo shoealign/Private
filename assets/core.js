@@ -7,7 +7,7 @@
   const escape=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const normalize=x=>String(x??'').normalize('NFKC').toLowerCase().replace(/[\s\-_./()[\]]/g,'');
   function safeUrl(x){try{const u=new URL(x);return ['https:','http:'].includes(u.protocol)?u.href:''}catch{return ''}}
-  function canonical(x){try{const u=new URL(x);u.hash='';for(const k of [...u.searchParams.keys()])if(k.startsWith('utm_'))u.searchParams.delete(k);u.hostname=u.hostname.replace(/^www\./,'');if(u.hostname==='runrepeat.com')u.pathname=u.pathname.replace(/^\/(uk|es)\//,'/');return u.href.replace(/\/$/,'')}catch{return String(x||'')}}
+  function canonical(x){try{const u=new URL(x);u.hash='';for(const k of [...u.searchParams.keys()])if(k.startsWith('utm_'))u.searchParams.delete(k);u.hostname=u.hostname.replace(/^www\./,'');if(u.hostname==='외부 리뷰 서비스.com')u.pathname=u.pathname.replace(/^\/(uk|es)\//,'/');return u.href.replace(/\/$/,'')}catch{return String(x||'')}}
   function sourceType(q){
     const u=String(q[2]||'').toLowerCase(),t=String(q[1]||'');
     if(!safeUrl(u))return 'other';
@@ -17,7 +17,7 @@
     if(/blog\.naver|m\.blog\.naver|tistory\.com/.test(u))return 'blog';
     if(/youtube\.com|youtu\.be/.test(u))return 'video';
     if(/공식|제조사|press|newsroom/i.test(t+' '+u))return 'official';
-    if(/runrepeat\.com|believeintherun\.com|runningshoesguru\.com|doctorsofrunning\.com|roadtrailrun\.com|weartesters\.com|rtings\.com|theruntesters\.com/.test(u))return 'professional';
+    if(/외부 리뷰 서비스\.com|believeintherun\.com|runningshoesguru\.com|doctorsofrunning\.com|roadtrailrun\.com|weartesters\.com|rtings\.com|theruntesters\.com/.test(u))return 'professional';
     return 'other';
   }
   const isReview=q=>['professional','community','blog','video'].includes(sourceType(q));
@@ -35,8 +35,8 @@
   function retail(s){
     const direct=safeUrl(s.officialUrl||'');
     if(direct){const u=new URL(direct);if(u.pathname!=='/'&&!/\/search|\/w[/?]/.test(u.pathname)){return {url:direct,label:/\/us\/|\/en-us\/|\/en\/|\/nz\//.test(u.pathname)?'해외 공식 상품':'공식 상품 보기',note:'공식 상품 페이지 · 색상/지역/현재 재고 확인'}}}
-    const fallback=safeUrl(s.officialStoreUrl||'');
-    return fallback?{url:fallback,label:'공식 제품 검색',note:'공식 도메인 검색 결과 · 현재 판매 중이라는 의미는 아닙니다.'}:null;
+    // A search engine result is not an official product page.
+    return null;
   }
   function kream(s){const url=safeUrl(s.kreamUrl)||'https://kream.co.kr/search?keyword='+encodeURIComponent(s.name);return {url,label:/\/products\//.test(url)?'KREAM 가격 확인':'KREAM 모델 검색',direct:/\/products\//.test(url)}}
   function summary(s){const q=sourceStats(s).reviews[0];return q?q[0]:((s.pros||[])[0]||s.catko||'제품 자료 확인 중')}

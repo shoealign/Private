@@ -14,10 +14,10 @@ const categories={
 const base={brand:'all',cat:'all',level:'all',distance:'all',widthfilter:'all',budget:'all'};
 let profile=SL.load('shoelineup_profile_v2',null);
 if(!profile||!['male','female'].includes(profile.gender))profile=null;
-let state={...base,rankcat:'all',q:'',sort:profile?'match':'score',savedOnly:false,matchMode:!!profile,limit:24};
+let state={...base,rankcat:'all',q:'',sort:profile?'match':'latest',savedOnly:false,matchMode:!!profile,limit:24};
 const oldState=SL.load('shoelineup_view_v2',null);
 if(oldState&&sessionStorage.getItem('sl:return')){for(const k of ['rankcat','q','sort','brand','cat','level','distance','widthfilter','budget','savedOnly','limit'])if(oldState[k]!==undefined)state[k]=oldState[k];sessionStorage.removeItem('sl:return')}
-if(state.sort==='match'&&!profile)state.sort='score';
+if(state.sort==='match'&&!profile)state.sort='latest';
 const urlQuery=new URLSearchParams(location.search).get('q');if(urlQuery)state.q=urlQuery;
 $('search').value=state.q;$('sort').value=state.sort;
 let draft={...base},guideBrand='all',guidePurpose='all',lastFocus=null;
@@ -55,7 +55,7 @@ function card(s,i){
  const short=s.name.replace(new RegExp('^'+s.brand+'\\s*','i'),'');
  const ranked=state.sort!=='score'||score;
  return `<article class="product-card" data-product="${s.slug}"><a class="card-photo" href="/shoes/${s.slug}/" aria-label="${E(s.name)} 상세"><span class="line-badge ${i<3&&ranked?'top':''}"><small>LINE</small><strong>${ranked?String(i+1).padStart(2,'0'):'—'}</strong></span><img src="${E(s.img)}" alt="${E(s.name)}" loading="lazy" decoding="async" data-slug="${s.slug}" onerror="SL.imageError(this)"></a><div class="card-main"><div class="card-brand">${E(s.brand)}</div><h3 class="card-title"><a href="/shoes/${s.slug}/">${E(short)}</a></h3><div class="card-facts"><span class="chip dark">BEST ${E((s.distanceko||[]).join(' · '))}</span><span class="chip">발볼 ${E(SL.width(s))}</span><span class="chip">${E(SL.type(s))}</span></div>
- <div class="card-score"><div><strong class="${score?'':'pending'}">${score||'평가 자료 수집 중'}</strong><span class="score-caption">${score?'LINEUP SCORE · 참고':'숫자를 임의로 채우지 않았어요'}</span></div><a class="source-count" href="/shoes/${s.slug}/#sources">수록 리뷰 ${st.reviews.length}<small>전문 ${st.professional.length} · 사용자 ${st.users.length}</small></a></div>
+ <div class="card-score"><div><strong class="${score?'':'pending'}">${score||'스펙 비교 가능'}</strong><span class="score-caption">${score?'검증 전 점수 미표시':'숫자를 임의로 채우지 않았어요'}</span></div><a class="source-count" href="/shoes/${s.slug}/#sources">공식 사양 확인<small>제품별 정보 확인</small></a></div>
  ${fit?`<div class="card-match">MATCH <strong>${fit.value.toFixed(2)} / 100</strong><small>${E(fit.reasons.join(' · ')||'자료 확인 필요')}${fit.cautions.length?' · '+E(fit.cautions[0]):''}</small></div>`:''}
  <div class="card-bottom"><div class="card-price"><span>국내 발매가</span><b class="${SL.money(s)===null?'pending-price':''}">${E(SL.price(s))}</b></div>
  <div class="card-outlinks">${o?`<a href="${E(o.url)}" target="_blank" rel="noopener noreferrer">${E(o.label)} ↗</a>`:'<span></span>'}<a href="${E(k.url)}" target="_blank" rel="noopener noreferrer">KREAM ${k.direct?'확인':'검색'} ↗</a></div>
@@ -88,14 +88,14 @@ $('searchForm').addEventListener('submit',e=>{e.preventDefault();scrollRank()});
 $('search').oninput=e=>{state.q=e.target.value;state.limit=24;render()};
 $('clearSearch').onclick=()=>{state.q='';$('search').value='';render();$('search').focus()};
 $('sort').onchange=e=>{state.sort=e.target.value;state.matchMode=state.sort==='match'&&!!profile;state.limit=24;render()};
-$('rankTabs').onclick=e=>{const b=e.target.closest('[data-rankcat]');if(!b)return;state.rankcat=b.dataset.rankcat;state.matchMode=false;state.sort='score';state.limit=24;render()};
+$('rankTabs').onclick=e=>{const b=e.target.closest('[data-rankcat]');if(!b)return;state.rankcat=b.dataset.rankcat;state.matchMode=false;state.sort='latest';state.limit=24;render()};
 $('loadMore').onclick=()=>{state.limit+=24;render()};
 $('showAll').onclick=()=>{state.savedOnly=false;render()};
 $('showSaved').onclick=()=>{state.savedOnly=true;render()};
 $('activeFilterBar').onclick=e=>{const b=e.target.closest('[data-reset-filter]');if(b){state[b.dataset.resetFilter]='all';render()}};
 $('grid').addEventListener('click',e=>{if(e.target.closest('#emptyReset'))reset()});
 document.addEventListener('click',e=>{if(e.target.closest('a[href^="/shoes/"]')){saveView();sessionStorage.setItem('sl:return','1')}});
-$('navRanking').onclick=()=>{state.sort='score';state.matchMode=false;render();scrollRank()};
+$('navRanking').onclick=()=>{state.sort='latest';state.matchMode=false;render();scrollRank()};
 $('navReviews').onclick=()=>{state.sort='reviews';state.matchMode=false;render();scrollRank()};
 $('navBrands').onclick=()=>modal('brandSheet',true);
 $('closeBrands').onclick=()=>modal('brandSheet',false);
@@ -127,7 +127,7 @@ $('shoeSizeSelect').onchange=e=>fp.shoeSize=e.target.value;$('weeklySelect').onc
 $('finderBack').onclick=()=>{if(step>0)step--;finderUpdate();document.querySelector('.finder-body').scrollTop=0};
 $('finderNext').onclick=()=>{if(required[step].some(k=>!fp[k]))return;if(step<4){step++;finderUpdate();document.querySelector('.finder-body').scrollTop=0;return}
  profile={...fp};SL.save('shoelineup_profile_v2',profile);state={...state,...base,rankcat:'all',q:'',sort:'match',matchMode:true,savedOnly:false,limit:24};$('search').value='';modal('finder',false);render();scrollRank()};
-$('matchReset').onclick=()=>{profile=null;SL.save('shoelineup_profile_v2',null);state.matchMode=false;state.sort='score';render()};
+$('matchReset').onclick=()=>{profile=null;SL.save('shoelineup_profile_v2',null);state.matchMode=false;state.sort='latest';render()};
 const purposes=[['race','레이스','기록 도전',s=>s.cat==='race'],['tempo','템포 · 스피드','빠른 훈련',s=>categories.speed.test(s)&&s.cat!=='race'],['daily','데일리 · 쿠션','편안한 일상 러닝',s=>s.cat==='daily'&&!categories.speed.test(s)],['stability','안정화','지지력 중심',s=>s.cat==='stability']];
 function renderGuide(){
  $('guideBrandFilters').innerHTML=['all',...SL.BRANDS].map(b=>`<button data-guide-brand="${E(b)}" class="${b===guideBrand?'active':''}">${b==='all'?'전체 브랜드':E(b)}</button>`).join('');

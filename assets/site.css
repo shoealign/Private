@@ -155,3 +155,6 @@ body.has-dock{padding-bottom:95px}
 .brand-logo-img{display:block;width:166px;height:auto;max-height:63px;object-fit:contain}
 .brand-logo{gap:0}.brand-accent{color:#111!important}.brand-wordmark{font-style:normal}
 @media(max-width:700px){.brand-logo-img{width:115px;max-height:49px}.header-inner{min-height:66px}}
+
+/* Launch: unverified third-party ratings and review counts are not displayed. */
+.card-score,.source-count,.detail-score,.score-breakdown,.review-count,.detail-reviews{display:none!important}
