@@ -22,9 +22,16 @@ save('compare/index.html',page('러닝화 비교','선택한 러닝화의 발볼
 save('methodology/index.html',page('점수·데이터 안내','LINEUP SCORE와 MATCH, 리뷰 집계, 가격·출시 정보의 기준과 한계를 안내합니다.','/methodology/','methodology-body.html',['core.js']));
 save('privacy/index.html',page('브라우저 저장 안내','로그인 없이 관심 신발과 비교 제품을 브라우저에 저장합니다.','/privacy/','privacy-body.html',['core.js','privacy.js']));
 for(const s of shoes)save('shoes/'+s.slug+'/index.html',V.detail(s,shoes));
-const urls=['/','/compare/','/methodology/','/privacy/',...shoes.map(s=>'/shoes/'+s.slug+'/')];
+const urls=['/reviews/','/request/','/admin/', '/','/compare/','/methodology/','/privacy/',...shoes.map(s=>'/shoes/'+s.slug+'/')];
 save('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+urls.map(u=>'<url><loc>'+config.siteUrl.replace(/\/$/,'')+u+'</loc></url>').join('')+'</urlset>');
 save('robots.txt','User-agent: *\nAllow: /\nSitemap: '+config.siteUrl.replace(/\/$/,'')+'/sitemap.xml\n');
+// RUNFICIAL review enhancement: source-based reviews live in Supabase, never fabricate scores.
+for(const rel of ['index.html','compare/index.html',...shoes.map(s=>'shoes/'+s.slug+'/index.html')]){
+ const target=path.join(root,rel);let html=fs.readFileSync(target,'utf8');
+ html=html.replace('</head>','<link rel="stylesheet" href="/assets/runficial.css"></head>');
+ html=html.replace('</body>','<script src="/assets/runficial-config.js"></script><script src="/assets/runficial.js"></script></body>');
+ fs.writeFileSync(target,html);
+}
 const out=path.join(root,'public');fs.rmSync(out,{recursive:true,force:true});fs.mkdirSync(out);
-for(const name of ['index.html','assets','shoes','compare','methodology','privacy','sitemap.xml','robots.txt'])fs.cpSync(path.join(root,name),path.join(out,name),{recursive:true});
+for(const name of ['index.html','assets','shoes','compare','methodology','privacy','reviews','request','admin','sitemap.xml','robots.txt'])fs.cpSync(path.join(root,name),path.join(out,name),{recursive:true});
 console.log('Built '+shoes.length+' product pages plus main, compare and data-policy pages. No external dependencies.');
