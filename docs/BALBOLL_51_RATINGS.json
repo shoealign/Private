@@ -99,17 +99,6 @@
     "basis": "모델 특성 기반 편집 추정"
   },
   {
-    "model": "ASICS Gel-Nimbus 27",
-    "slug": "asics-gel-nimbus-27",
-    "daily": 91,
-    "long": 94,
-    "tempo": 69,
-    "cushion": 97,
-    "stability": 87,
-    "overall": 87.6,
-    "basis": "모델 특성 기반 편집 추정"
-  },
-  {
     "model": "ASICS Magic Speed 4",
     "slug": "asics-magic-speed-4",
     "daily": 72,
@@ -220,17 +209,6 @@
     "basis": "모델 특성 기반 편집 추정"
   },
   {
-    "model": "Saucony Ride 18",
-    "slug": "saucony-ride-18",
-    "daily": 94,
-    "long": 89,
-    "tempo": 82,
-    "cushion": 89,
-    "stability": 88,
-    "overall": 88.4,
-    "basis": "모델 특성 기반 편집 추정"
-  },
-  {
     "model": "Saucony Triumph 23",
     "slug": "saucony-triumph-23",
     "daily": 94,
@@ -261,17 +239,6 @@
     "cushion": 88,
     "stability": 88,
     "overall": 89.0,
-    "basis": "모델 특성 기반 편집 추정"
-  },
-  {
-    "model": "PUMA MagMax Nitro 2",
-    "slug": "puma-magmax-nitro-2",
-    "daily": 90,
-    "long": 96,
-    "tempo": 74,
-    "cushion": 99,
-    "stability": 84,
-    "overall": 88.6,
     "basis": "모델 특성 기반 편집 추정"
   },
   {

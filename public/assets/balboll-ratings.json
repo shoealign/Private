@@ -62,13 +62,6 @@
     "cushion": 94,
     "stability": 98
   },
-  "asics-gel-nimbus-27": {
-    "daily": 91,
-    "long": 94,
-    "tempo": 69,
-    "cushion": 97,
-    "stability": 87
-  },
   "asics-magic-speed-4": {
     "daily": 72,
     "long": 81,
@@ -139,13 +132,6 @@
     "cushion": 87,
     "stability": 96
   },
-  "saucony-ride-18": {
-    "daily": 94,
-    "long": 89,
-    "tempo": 82,
-    "cushion": 89,
-    "stability": 88
-  },
   "saucony-triumph-23": {
     "daily": 94,
     "long": 95,
@@ -166,13 +152,6 @@
     "tempo": 87,
     "cushion": 88,
     "stability": 88
-  },
-  "puma-magmax-nitro-2": {
-    "daily": 90,
-    "long": 96,
-    "tempo": 74,
-    "cushion": 99,
-    "stability": 84
   },
   "asics-novablast-6": {
     "daily": 90,

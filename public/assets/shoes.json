@@ -942,92 +942,6 @@
     "imageAlternates": []
   },
   {
-    "name": "ASICS Gel-Nimbus 27",
-    "brand": "ASICS",
-    "cat": "daily",
-    "catko": "데일리/쿠션",
-    "level": [
-      "beginner",
-      "intermediate"
-    ],
-    "levelko": [
-      "입문용",
-      "중급용"
-    ],
-    "distances": [
-      "5k",
-      "10k"
-    ],
-    "distanceko": [
-      "5K",
-      "10K"
-    ],
-    "usableDistances": [
-      "5K",
-      "10K",
-      "하프",
-      "풀"
-    ],
-    "score": 0,
-    "reviews": 0,
-    "cushion": 0,
-    "stability": 0,
-    "bounce": 0,
-    "value": 0,
-    "durability": 0,
-    "tags": [
-      "쿠션화"
-    ],
-    "img": "https://runner-athletics.gr/sites/default/files/products/1011b958_002_sr_rt_glb_result.jpg",
-    "release": "확인 중",
-    "msrp": "가격 확인 중",
-    "kreamPrice": "가격 확인 중",
-    "kreamUpdated": "-",
-    "kreamNote": "확인 중",
-    "kreamUrl": "https://kream.co.kr/search?keyword=ASICS%20Gel-Nimbus%2027",
-    "model": "Gel-Nimbus 27",
-    "widthFeel": "확인 중",
-    "widthLevel": 3,
-    "wideVersion": "확인 중",
-    "widthTip": "제조사 및 전문 리뷰 자료 확인 후 업데이트 예정",
-    "raceEvidence": {
-      "5K": 0,
-      "10K": 0,
-      "하프": 0,
-      "풀": 0
-    },
-    "raceNote": "평가 데이터 수집 중",
-    "quotes": [],
-    "pending": true,
-    "shoeType": "쿠션화",
-    "slug": "asics-gel-nimbus-27",
-    "imagePlaceholder": false,
-    "officialStoreUrl": "https://www.google.com/search?q=site%3Aasics.co.kr+%22ASICS+Gel-Nimbus+27%22",
-    "officialStoreLabel": "공식 제품 검색 ↗",
-    "officialStoreVerified": false,
-    "aliases": [
-      "젤님버스27",
-      "젤님버스",
-      "님버스27",
-      "님버스"
-    ],
-    "imageOriginal": "https://runner-athletics.gr/sites/default/files/products/1011b958_002_sr_rt_glb_result.jpg",
-    "dataOrigin": "기존 수록 자료",
-    "scoreStatus": "pending",
-    "checkedSources": {},
-    "balbollRatings": {
-      "daily": 91,
-      "long": 94,
-      "tempo": 69,
-      "cushion": 97,
-      "stability": 87
-    },
-    "balbollRatingStatus": "editorial_estimate",
-    "balbollRatingBasis": "모델 특성 기반 편집 추정",
-    "balbollRatingDisclosure": "BALBOLL 편집부 임시 추정치. RunRepeat 점수를 복제하거나 공식 제휴/검증한 결과가 아닙니다.",
-    "imageAlternates": []
-  },
-  {
     "name": "ASICS Magic Speed 4",
     "brand": "ASICS",
     "cat": "race",
@@ -1890,90 +1804,6 @@
     "imageAlternates": []
   },
   {
-    "name": "Saucony Ride 18",
-    "brand": "Saucony",
-    "cat": "daily",
-    "catko": "데일리/트레이닝",
-    "level": [
-      "beginner",
-      "intermediate"
-    ],
-    "levelko": [
-      "입문용",
-      "중급용"
-    ],
-    "distances": [
-      "5k",
-      "10k"
-    ],
-    "distanceko": [
-      "5K",
-      "10K"
-    ],
-    "usableDistances": [
-      "5K",
-      "10K",
-      "하프",
-      "풀"
-    ],
-    "score": 0,
-    "reviews": 0,
-    "cushion": 0,
-    "stability": 0,
-    "bounce": 0,
-    "value": 0,
-    "durability": 0,
-    "tags": [
-      "데일리 트레이닝화"
-    ],
-    "img": "https://cdn11.bigcommerce.com/s-dxvedf95e5/images/stencil/750x958/products/462/19220/mwrF0taYRjnrPUPwqSmnfOxiMDzzQCy8jJQNZ8U49ySwqOzW3bgza4BQjYwgPSms__95870.1740693768.jpg?c=1",
-    "release": "확인 중",
-    "msrp": "가격 확인 중",
-    "kreamPrice": "가격 확인 중",
-    "kreamUpdated": "-",
-    "kreamNote": "확인 중",
-    "kreamUrl": "https://kream.co.kr/search?keyword=Saucony%20Ride%2018",
-    "model": "Ride 18",
-    "widthFeel": "확인 중",
-    "widthLevel": 3,
-    "wideVersion": "확인 중",
-    "widthTip": "제조사 및 전문 리뷰 자료 확인 후 업데이트 예정",
-    "raceEvidence": {
-      "5K": 0,
-      "10K": 0,
-      "하프": 0,
-      "풀": 0
-    },
-    "raceNote": "평가 데이터 수집 중",
-    "quotes": [],
-    "pending": true,
-    "shoeType": "데일리 트레이닝화",
-    "slug": "saucony-ride-18",
-    "imagePlaceholder": false,
-    "officialStoreUrl": "https://www.google.com/search?q=site%3Asaucony.com+%22Saucony+Ride+18%22",
-    "officialStoreLabel": "공식 제품 검색 ↗",
-    "officialStoreVerified": false,
-    "aliases": [
-      "라이드18",
-      "라이드"
-    ],
-    "imageOriginal": "https://cdn11.bigcommerce.com/s-dxvedf95e5/images/stencil/750x958/products/462/19220/mwrF0taYRjnrPUPwqSmnfOxiMDzzQCy8jJQNZ8U49ySwqOzW3bgza4BQjYwgPSms__95870.1740693768.jpg?c=1",
-    "dataOrigin": "기존 수록 자료",
-    "scoreStatus": "pending",
-    "checkedSources": {},
-    "balbollRatings": {
-      "daily": 94,
-      "long": 89,
-      "tempo": 82,
-      "cushion": 89,
-      "stability": 88
-    },
-    "balbollRatingStatus": "editorial_estimate",
-    "balbollRatingBasis": "모델 특성 기반 편집 추정",
-    "balbollRatingDisclosure": "BALBOLL 편집부 임시 추정치. RunRepeat 점수를 복제하거나 공식 제휴/검증한 결과가 아닙니다.",
-    "imageAlternates": []
-  },
-  {
     "name": "Saucony Triumph 23",
     "brand": "Saucony",
     "cat": "daily",
@@ -2179,7 +2009,7 @@
     "tags": [
       "데일리 트레이닝화"
     ],
-    "img": "https://media.rundna.com.au/1e354a70-36a9-4f58-a8e0-0a2fdcf9c771.jpg",
+    "img": "https://images.puma.net/images/311140/01/sv01/fnd/USA/w/1000/h/1000/",
     "release": "확인 중",
     "msrp": "가격 확인 중",
     "kreamPrice": "가격 확인 중",
@@ -2211,7 +2041,7 @@
       "벨로시티4",
       "벨나4"
     ],
-    "imageOriginal": "https://media.rundna.com.au/1e354a70-36a9-4f58-a8e0-0a2fdcf9c771.jpg",
+    "imageOriginal": "https://images.puma.net/images/311140/01/sv01/fnd/USA/w/1000/h/1000/",
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
@@ -2225,94 +2055,11 @@
     "balbollRatingStatus": "editorial_estimate",
     "balbollRatingBasis": "모델 특성 기반 편집 추정",
     "balbollRatingDisclosure": "BALBOLL 편집부 임시 추정치. RunRepeat 점수를 복제하거나 공식 제휴/검증한 결과가 아닙니다.",
-    "imageAlternates": []
-  },
-  {
-    "name": "PUMA MagMax Nitro 2",
-    "brand": "PUMA",
-    "cat": "daily",
-    "catko": "데일리/쿠션",
-    "level": [
-      "beginner",
-      "intermediate"
+    "imageAlternates": [
+      "https://media.rundna.com.au/1e354a70-36a9-4f58-a8e0-0a2fdcf9c771.jpg"
     ],
-    "levelko": [
-      "입문용",
-      "중급용"
-    ],
-    "distances": [
-      "5k",
-      "10k"
-    ],
-    "distanceko": [
-      "5K",
-      "10K"
-    ],
-    "usableDistances": [
-      "5K",
-      "10K",
-      "하프",
-      "풀"
-    ],
-    "score": 0,
-    "reviews": 0,
-    "cushion": 0,
-    "stability": 0,
-    "bounce": 0,
-    "value": 0,
-    "durability": 0,
-    "tags": [
-      "맥스 쿠션화"
-    ],
-    "img": "https://media.rundna.com.au/f1a85f97-9dfd-445e-a5f6-3f935a6e998c__L.jpg",
-    "release": "확인 중",
-    "msrp": "가격 확인 중",
-    "kreamPrice": "가격 확인 중",
-    "kreamUpdated": "-",
-    "kreamNote": "확인 중",
-    "kreamUrl": "https://kream.co.kr/search?keyword=PUMA%20MagMax%20Nitro%202",
-    "model": "MagMax Nitro 2",
-    "widthFeel": "확인 중",
-    "widthLevel": 3,
-    "wideVersion": "확인 중",
-    "widthTip": "제조사 및 전문 리뷰 자료 확인 후 업데이트 예정",
-    "raceEvidence": {
-      "5K": 0,
-      "10K": 0,
-      "하프": 0,
-      "풀": 0
-    },
-    "raceNote": "평가 데이터 수집 중",
-    "quotes": [],
-    "pending": true,
-    "shoeType": "맥스 쿠션화",
-    "slug": "puma-magmax-nitro-2",
-    "imagePlaceholder": false,
-    "officialStoreUrl": "https://www.google.com/search?q=site%3Akr.puma.com+%22PUMA+MagMax+Nitro+2%22",
-    "officialStoreLabel": "공식 제품 검색 ↗",
-    "officialStoreVerified": false,
-    "aliases": [
-      "맥맥스2",
-      "매그맥스2",
-      "맥스맥스",
-      "매그맥스",
-      "맥맥스"
-    ],
-    "imageOriginal": "https://media.rundna.com.au/f1a85f97-9dfd-445e-a5f6-3f935a6e998c__L.jpg",
-    "dataOrigin": "기존 수록 자료",
-    "scoreStatus": "pending",
-    "checkedSources": {},
-    "balbollRatings": {
-      "daily": 90,
-      "long": 96,
-      "tempo": 74,
-      "cushion": 99,
-      "stability": 84
-    },
-    "balbollRatingStatus": "editorial_estimate",
-    "balbollRatingBasis": "모델 특성 기반 편집 추정",
-    "balbollRatingDisclosure": "BALBOLL 편집부 임시 추정치. RunRepeat 점수를 복제하거나 공식 제휴/검증한 결과가 아닙니다.",
-    "imageAlternates": []
+    "imageSource": "PUMA 공식 Velocity NITRO 4 (311140)",
+    "imageSourceUrl": "https://us.puma.com/us/en/pd/velocity-nitro-4-men/311140"
   },
   {
     "name": "ASICS Novablast 6",
@@ -3460,7 +3207,7 @@
       "카본",
       "마라톤"
     ],
-    "img": "https://www.instacart.com/image-server/1200x1200/www.instacart.com/assets/domains/product-image/file/large_e4dc4e1a-6f49-4896-aba7-70fd95801697.jpeg",
+    "img": "https://shop.charlotterunning.com/images/1575/97_255930_1664279332989.png",
     "release": "2022",
     "releaseLabel": "국내 출시",
     "discontinued": "후속작 출시",
@@ -3515,7 +3262,7 @@
       "알파2",
       "알파플라이"
     ],
-    "imageOriginal": "https://www.instacart.com/image-server/1200x1200/www.instacart.com/assets/domains/product-image/file/large_e4dc4e1a-6f49-4896-aba7-70fd95801697.jpeg",
+    "imageOriginal": "https://shop.charlotterunning.com/images/1575/97_255930_1664279332989.png",
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
@@ -3530,7 +3277,11 @@
     "balbollRatingStatus": "editorial_estimate",
     "balbollRatingBasis": "기존 임시 평점 보정",
     "balbollRatingDisclosure": "BALBOLL 편집부 임시 추정치. RunRepeat 점수를 복제하거나 공식 제휴/검증한 결과가 아닙니다.",
-    "imageAlternates": []
+    "imageAlternates": [
+      "https://www.instacart.com/image-server/1200x1200/www.instacart.com/assets/domains/product-image/file/large_e4dc4e1a-6f49-4896-aba7-70fd95801697.jpeg"
+    ],
+    "imageSource": "Charlotte Running 상품 사진 (Nike Alphafly NEXT% 2)",
+    "imageSourceUrl": "https://shop.charlotterunning.com/product/2480305/nike/mens-alphafly-next-2"
   },
   {
     "name": "Nike Alphafly 3",

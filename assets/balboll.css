@@ -69,3 +69,6 @@
  .balboll-card .line-badge strong{font-size:15px!important}
 }
 @media(max-width:360px){.product-grid{gap:6px!important}.balboll-card .card-main{padding:7px!important}.balboll-card .balboll-card-metrics>div{grid-template-columns:34px minmax(0,1fr) 18px!important;font-size:8px!important}}
+
+/* V7: pros and cons live on product detail pages only. */
+.product-card .balboll-card-pc, .shoe .pc{display:none!important}
