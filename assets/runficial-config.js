@@ -1,1 +1,1 @@
-window.RUNFICIAL_CONFIG = {supabaseUrl:"", supabaseAnonKey:"", requestEmail:"shoelineup@gmail.com"};
+window.MELLO_CONFIG = {supabaseUrl:"", supabaseAnonKey:"", requestEmail:"shoelineup@gmail.com"};

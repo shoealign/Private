@@ -40,7 +40,7 @@ function render(){
    if(different)differenceCount++;
    if(onlyDiff&&!different)continue;
    if(lastSection){rows+=`<tr class="section-row"><th colspan="${a.length+1}">${lastSection}</th></tr>`;lastSection=null}
-   rows+=`<tr class="${different?'row-different':''}"><th scope="row">${E(label)}</th>${vals.map(v=>`<td class="${label==='참고 점수'&&/^\d/.test(v)?'num':''}">${E(v)}</td>`).join('')}</tr>`;
+   rows+=`<tr class="${different?'row-different':''}"><th scope="row">${E(label)}</th>${vals.map(v=>`<td class="${label==='LINEUP SCORE'&&/^\d/.test(v)?'num':''}">${E(v)}</td>`).join('')}</tr>`;
  }
  rows+=`<tr><th scope="row">가격·원문 확인</th>${a.map(s=>{const k=SL.kream(s),o=SL.retail(s);return `<td><div class="buy-cell"><a class="btn" target="_blank" rel="noopener noreferrer" href="${E(k.url)}">KREAM ${k.direct?'가격 확인':'모델 검색'} ↗</a>${o?`<a class="btn light" target="_blank" rel="noopener noreferrer" href="${E(o.url)}">${o.label} ↗</a>`:''}<a class="btn light" href="/shoes/${s.slug}/#sources">리뷰 원문 보기</a></div></td>`}).join('')}</tr>`;
  $('compareTable').innerHTML=`<p class="muted" style="margin-bottom:10px">서로 다른 항목 ${differenceCount}개 · 가격은 실시간이 아닌 수록 발매가입니다.</p><div class="compare-scroll"><table class="compare-table" style="--product-count:${a.length}"><colgroup><col class="label-col">${a.map(()=>'<col>').join('')}</colgroup><thead><tr><th scope="col">비교 기준</th>${a.map(headerCell).join('')}</tr></thead><tbody>${rows}</tbody></table></div>`;

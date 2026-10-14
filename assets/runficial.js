@@ -1,7 +1,7 @@
-(()=>{'use strict';const cfg=window.RUNFICIAL_CONFIG||{},base=(cfg.supabaseUrl||'').replace(/\/$/,''),key=cfg.supabaseAnonKey||'';
+(()=>{'use strict';const cfg=window.MELLO_CONFIG||{},base=(cfg.supabaseUrl||'').replace(/\/$/,''),key=cfg.supabaseAnonKey||'';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const ready=!!(base&&key);window.rf={cfg,ready,esc,async query(path,token){if(!ready)throw Error('데이터베이스 미설정');const r=await fetch(base+'/rest/v1/'+path,{headers:{apikey:key,Authorization:'Bearer '+(token||key)}});if(!r.ok)throw Error('리뷰 조회 실패 ('+r.status+')');return r.json()}};
-const nav=document.createElement('nav');nav.className='rf-nav';nav.innerHTML='<strong>RUNFICIAL <span style="font-size:10px;color:#aaa">런피셜</span></strong><a href="/">러닝화</a><a href="/reviews/">실제 리뷰</a><a href="/request/">리뷰 요청</a><a href="/methodology/">평가 기준</a>';document.body.prepend(nav);
+const nav=document.createElement('nav');nav.className='rf-nav';nav.innerHTML='<strong>MELLO <span style="font-size:10px;color:#aaa">멜로</span></strong><a href="/">러닝화</a><a href="/reviews/">실제 리뷰</a><a href="/request/">리뷰 요청</a><a href="/methodology/">평가 기준</a>';document.body.prepend(nav);
 const slug=location.pathname.match(/^\/shoes\/([a-z0-9-]+)\/?$/)?.[1];if(!slug)return;
 const box=document.createElement('section');box.className='rf-review-panel';box.innerHTML='<h2>실제 리뷰 · 출처 기반 평가</h2><p>운영자가 출처를 확인해 등록한 리뷰입니다. 인용이 아닌 자체 요약이며, 원문은 링크에서 확인하세요.</p><div id="rf-reviews">리뷰 불러오는 중…</div><a href="/request/?shoe='+encodeURIComponent(slug)+'">이 신발 리뷰 요청하기 ↗</a>';
 (document.querySelector('main')||document.body).append(box);
