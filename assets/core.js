@@ -69,7 +69,20 @@
   function toggleSaved(name){let a=saved();a=a.includes(name)?a.filter(x=>x!==name):[...a,name];if(!save('shoelineup_saved_v1',a))toast('이 브라우저에서는 저장이 제한되어 있어요.');root.dispatchEvent(new CustomEvent('sl:saved'))}
   let timer;
   function toast(t){if(!root.document)return;let el=document.getElementById('toast');if(!el){el=document.createElement('div');el.id='toast';el.setAttribute('role','status');document.body.append(el)}el.textContent=t;el.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>el.classList.remove('show'),3500)}
-  function imageError(img){if(img.dataset.failed)return;img.dataset.failed='1';img.src='/assets/'+img.dataset.slug+'.svg';img.classList.add('image-missing');img.title='실제 제품 사진을 불러오지 못했습니다.'}
+  function imageError(img){
+    const slug=img.dataset.slug;
+    const shoe=(root.SHOES||[]).find(s=>s.slug===slug);
+    const alternates=shoe?.imageAlternates||[];
+    const tried=Number(img.dataset.imageTry||0);
+    if(tried<alternates.length){img.dataset.imageTry=String(tried+1);img.src=alternates[tried];return;}
+    if(img.dataset.failed)return;
+    img.dataset.failed='1';img.onerror=null;
+    img.src='/assets/'+slug+'.svg';
+    img.classList.add('image-missing');
+    img.title='제품 사진 연결 실패 · 이미지 확인 중';
+    const card=img.closest('.product-card,.guide-model');
+    if(card && shoe && shoe.brand!=='ASICS')card.classList.add('image-unavailable');
+  }
   const compareUrl=names=>'/compare/?items='+names.map(n=>byName(n)?.slug).filter(Boolean).map(encodeURIComponent).join(',');
   function dock(){
     const el=document.getElementById('compareDock');if(!el)return;

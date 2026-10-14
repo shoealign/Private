@@ -14,10 +14,10 @@ const categories={
 const base={brand:'all',cat:'all',level:'all',distance:'all',widthfilter:'all',budget:'all'};
 let profile=SL.load('shoelineup_profile_v2',null);
 if(!profile||!['male','female'].includes(profile.gender))profile=null;
-let state={...base,rankcat:'all',q:'',sort:profile?'match':'latest',savedOnly:false,matchMode:!!profile,limit:24};
+let state={...base,rankcat:'all',q:'',sort:'score',savedOnly:false,matchMode:!!profile,limit:24};
 const oldState=SL.load('shoelineup_view_v2',null);
 if(oldState&&sessionStorage.getItem('sl:return')){for(const k of ['rankcat','q','sort','brand','cat','level','distance','widthfilter','budget','savedOnly','limit'])if(oldState[k]!==undefined)state[k]=oldState[k];sessionStorage.removeItem('sl:return')}
-if(state.sort==='match'&&!profile)state.sort='latest';
+if(state.sort==='match')state.sort='score';
 const urlQuery=new URLSearchParams(location.search).get('q');if(urlQuery)state.q=urlQuery;
 $('search').value=state.q;$('sort').value=state.sort;
 let draft={...base},guideBrand='all',guidePurpose='all',lastFocus=null;
@@ -29,7 +29,7 @@ function modal(id,on){
 }
 function reset(){state={...state,...base,rankcat:'all',q:'',savedOnly:false,limit:24};$('search').value='';render()}
 function saveView(){SL.save('shoelineup_view_v2',state)}
-const scoreVal=s=>SL.score(s)===null?-1:Number(s.score);
+const scoreVal=s=>s.balbollRatings?Object.values(s.balbollRatings).reduce((a,b)=>a+b,0)/5:-1;
 function released(s){const x=String(s.release||'').match(/20\d{2}(?:[-.]\d{1,2})?(?:[-.]\d{1,2})?/);if(!x)return -Infinity;const t=Date.parse(x[0].replace(/\./g,'-'));return Number.isFinite(t)?t:-Infinity}
 function list(){
  const saved=SL.saved();
@@ -51,15 +51,11 @@ function list(){
  return arr;
 }
 function card(s,i){
- const score=SL.score(s),st=SL.sourceStats(s),fit=state.matchMode&&profile?SL.match(s,profile):null,o=SL.retail(s),k=SL.kream(s);
+ const r=s.balbollRatings,valid=r&&['daily','long','tempo','cushion','stability'].every(k=>Number.isFinite(r[k]));
+ const total=valid?(Object.values(r).reduce((a,b)=>a+b,0)/5).toFixed(1):null;
+ const labels=[['daily','데일리'],['long','장거리'],['tempo','템포런'],['cushion','쿠셔닝'],['stability','안정성']];
  const short=s.name.replace(new RegExp('^'+s.brand+'\\s*','i'),'');
- const ranked=state.sort!=='score'||score;
- return `<article class="product-card" data-product="${s.slug}"><a class="card-photo" href="/shoes/${s.slug}/" aria-label="${E(s.name)} 상세"><span class="line-badge ${i<3&&ranked?'top':''}"><small>LINE</small><strong>${ranked?String(i+1).padStart(2,'0'):'—'}</strong></span><img src="${E(s.img)}" alt="${E(s.name)}" loading="lazy" decoding="async" data-slug="${s.slug}" onerror="SL.imageError(this)"></a><div class="card-main"><div class="card-brand">${E(s.brand)}</div><h3 class="card-title"><a href="/shoes/${s.slug}/">${E(short)}</a></h3><div class="card-facts"><span class="chip dark">BEST ${E((s.distanceko||[]).join(' · '))}</span><span class="chip">발볼 ${E(SL.width(s))}</span><span class="chip">${E(SL.type(s))}</span></div>
- <div class="card-score"><div><strong class="${score?'':'pending'}">${score||'스펙 비교 가능'}</strong><span class="score-caption">${score?'검증 전 점수 미표시':'숫자를 임의로 채우지 않았어요'}</span></div><a class="source-count" href="/shoes/${s.slug}/#sources">공식 사양 확인<small>제품별 정보 확인</small></a></div>
- ${fit?`<div class="card-match">MATCH <strong>${fit.value.toFixed(2)} / 100</strong><small>${E(fit.reasons.join(' · ')||'자료 확인 필요')}${fit.cautions.length?' · '+E(fit.cautions[0]):''}</small></div>`:''}
- <div class="card-bottom"><div class="card-price"><span>국내 발매가</span><b class="${SL.money(s)===null?'pending-price':''}">${E(SL.price(s))}</b></div>
- <div class="card-outlinks">${o?`<a href="${E(o.url)}" target="_blank" rel="noopener noreferrer">${E(o.label)} ↗</a>`:'<span></span>'}<a href="${E(k.url)}" target="_blank" rel="noopener noreferrer">KREAM ${k.direct?'확인':'검색'} ↗</a></div>
- <div class="card-actions"><button class="btn light ${SL.saved().includes(s.name)?'selected':''}" data-save="${E(s.name)}" aria-pressed="${SL.saved().includes(s.name)}">${SL.saved().includes(s.name)?'♥ 관심 저장됨':'♡ 관심'}</button><button class="btn light ${SL.comparison().includes(s.name)?'selected':''}" data-compare="${E(s.name)}" aria-pressed="${SL.comparison().includes(s.name)}">${SL.comparison().includes(s.name)?'✓ 비교 담김':'+ 비교 담기'}</button></div></div></div></article>`;
+ return `<article class="product-card balboll-card" data-product="${s.slug}"><a class="card-photo" href="/shoes/${s.slug}/" aria-label="${E(s.name)} 상세"><span class="line-badge"><small>NO.</small><strong>${String(i+1).padStart(2,'0')}</strong></span><img src="${E(s.img)}" alt="${E(s.name)}" loading="lazy" decoding="async" data-slug="${s.slug}" onerror="SL.imageError(this)"></a><div class="card-main"><div class="card-brand">${E(s.brand)}</div><h3 class="card-title"><a href="/shoes/${s.slug}/">${E(short)}</a></h3><div class="card-facts"><span class="chip">${E(SL.type(s))}</span><span class="chip">발볼 ${E(s.widthFeel||'확인 중')}</span></div><div class="balboll-card-score"><div><small>BALBOLL SCORE</small><strong>${total||'—'}<em>${total?'/ 100':'평가 준비 중'}</em></strong></div><span class="balboll-provisional">${total?'기존 데이터 기반 임시 점수':'평가 자료 수집 중'}</span></div><div class="balboll-card-metrics">${labels.map(([k,label])=>`<div><span>${label}</span><div class="balboll-mini-track"><i style="width:${valid?r[k]:0}%"></i></div><b>${valid?r[k]:'—'}</b></div>`).join('')}</div><div class="balboll-card-pc"><div><b>+ 장점</b><p>${E((s.pros||[]).slice(0,3).join(' · ')||'자료 확인 중')}</p></div><div><b>− 단점</b><p>${E((s.cons||[]).slice(0,3).join(' · ')||'자료 확인 중')}</p></div></div><a class="balboll-detail-link" href="/shoes/${s.slug}/">상세 평가 보기 →</a></div></article>`;
 }
 function updateTags(){
  const label={brand:state.brand,cat:{daily:'데일리/트레이닝',race:'레이싱',stability:'안정화'}[state.cat],level:{beginner:'입문',intermediate:'중급',advanced:'숙련'}[state.level],distance:SL.distance(state.distance),widthfilter:{narrow:'발볼 좁음',normal:'발볼 보통',wide:'발볼 넓음'}[state.widthfilter],budget:(Number(state.budget)/10000)+'만 원 이하'};
@@ -134,7 +130,7 @@ function renderGuide(){
  $('guidePurposeFilters').innerHTML=[['all','전체 용도'],...purposes].map(([key,label])=>`<button data-guide-purpose="${key}" class="${key===guidePurpose?'active':''}">${label}</button>`).join('');
  $('quickGuideRows').innerHTML=purposes.filter(([key])=>guidePurpose==='all'||guidePurpose===key).map(([id,title,sub,test])=>{
   const arr=shoes.filter(s=>test(s)&&(guideBrand==='all'||s.brand===guideBrand));
-  return `<section class="guide-tier-row"><div class="guide-tier-label"><strong>${title}</strong><small>${sub}</small><small>${arr.length}개</small></div><div class="guide-models">${arr.map(s=>`<article class="guide-model"><a href="/shoes/${s.slug}/"><span class="guide-brand">${E(s.brand)}</span><img src="${E(s.img)}" data-slug="${s.slug}" alt="${E(s.name)}" loading="lazy" onerror="SL.imageError(this)"><b>${E(s.name.replace(s.brand+' ',''))}</b></a><button class="btn light" data-compare="${E(s.name)}">${SL.comparison().includes(s.name)?'✓ 비교 담김':'+ 비교 담기'}</button></article>`).join('')||'<p class="muted">해당 모델이 아직 없습니다.</p>'}</div></section>`;
+  return `<section class="guide-tier-row"><div class="guide-tier-label"><strong>${title}</strong><small>${sub}</small><small>${arr.length}개</small></div><div class="guide-models">${arr.map(s=>`<article class="guide-model"><a href="/shoes/${s.slug}/"><span class="guide-brand">${E(s.brand)}</span><img src="${E(s.img)}" data-slug="${s.slug}" alt="${E(s.name)}" loading="lazy" onerror="SL.imageError(this)"><b>${E(s.name.replace(s.brand+' ',''))}</b></a></article>`).join('')||'<p class="muted">해당 모델이 아직 없습니다.</p>'}</div></section>`;
  }).join('');
 }
 $('navQuickGuide').onclick=()=>{renderGuide();modal('quickGuideModal',true)};$('closeQuickGuide').onclick=()=>modal('quickGuideModal',false);$('guideBackToRank').onclick=()=>modal('quickGuideModal',false);

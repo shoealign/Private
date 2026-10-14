@@ -17,21 +17,21 @@ function page(title,description,url,template,scripts,home=false){
  const body=fs.readFileSync(path.join(root,'tools',template),'utf8').replace('<!-- SITE_FOOTER -->',V.footer());
  return '<!doctype html><html lang="ko">'+V.head(title,description,url)+'<body>'+V.header(home)+body+scripts.map(x=>'<script src="/assets/'+x+'?v='+config.version+'"></script>').join('')+'</body></html>';
 }
-save('index.html',page('러닝화 랭킹 · 나만의 라인업','러닝화를 용도와 발볼로 찾고, 최대 3개 제품을 사진·핏·리뷰·발매가로 비교하세요.','/','home-body.html',['shoes.js','core.js','main.js'],true));
-save('compare/index.html',page('러닝화 비교','선택한 러닝화의 발볼, 용도, 리뷰와 구매처를 같은 표에서 비교하세요.','/compare/','compare-body.html',['shoes.js','core.js','compare.js']));
-save('methodology/index.html',page('점수·데이터 안내','LINEUP SCORE와 MATCH, 리뷰 집계, 가격·출시 정보의 기준과 한계를 안내합니다.','/methodology/','methodology-body.html',['core.js']));
-save('privacy/index.html',page('브라우저 저장 안내','로그인 없이 관심 신발과 비교 제품을 브라우저에 저장합니다.','/privacy/','privacy-body.html',['core.js','privacy.js']));
+save('index.html',page('러닝화 평점과 장단점','러닝화 5개 항목 평점과 장점, 단점, 발볼을 한눈에 확인하세요.','/','home-body.html',['shoes.js','core.js','main.js'],true));
+
+save('methodology/index.html',page('점수·데이터 안내','BALBOLL 점수와 리뷰 출처, 평가 기준을 안내합니다.','/methodology/','methodology-body.html',['core.js']));
+save('privacy/index.html',page('브라우저 저장 안내','사이트 데이터 처리 안내입니다.','/privacy/','privacy-body.html',['core.js','privacy.js']));
 for(const s of shoes)save('shoes/'+s.slug+'/index.html',V.detail(s,shoes));
-const urls=['/reviews/','/request/','/admin/', '/','/compare/','/methodology/','/privacy/',...shoes.map(s=>'/shoes/'+s.slug+'/')];
+const urls=['/reviews/','/request/','/admin/', '/','/methodology/','/privacy/',...shoes.map(s=>'/shoes/'+s.slug+'/')];
 save('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+urls.map(u=>'<url><loc>'+config.siteUrl.replace(/\/$/,'')+u+'</loc></url>').join('')+'</urlset>');
 save('robots.txt','User-agent: *\nAllow: /\nSitemap: '+config.siteUrl.replace(/\/$/,'')+'/sitemap.xml\n');
-// RUNFICIAL review enhancement: source-based reviews live in Supabase, never fabricate scores.
-for(const rel of ['index.html','compare/index.html',...shoes.map(s=>'shoes/'+s.slug+'/index.html')]){
+// BALBOLL review enhancement: source-based reviews live in Supabase, never fabricate scores.
+for(const rel of ['index.html',...shoes.map(s=>'shoes/'+s.slug+'/index.html')]){
  const target=path.join(root,rel);let html=fs.readFileSync(target,'utf8');
- html=html.replace('</head>','<link rel="stylesheet" href="/assets/runficial.css"></head>');
- html=html.replace('</body>','<script src="/assets/runficial-config.js"></script><script src="/assets/runficial.js"></script></body>');
- fs.writeFileSync(target,html);
+ html=html.replace('</head>','<link rel="stylesheet" href="/assets/runficial.css"><link rel="stylesheet" href="/assets/balboll.css"></head>');
+ html=html.replace('</body>','<script src="/assets/balboll-ui.js"></script></body>');
+ if(rel.startsWith('shoes/'))html=html.replace('</body>','<script src="/assets/balboll-detail.js"></script></body>');fs.writeFileSync(target,html);
 }
 const out=path.join(root,'public');fs.rmSync(out,{recursive:true,force:true});fs.mkdirSync(out);
-for(const name of ['index.html','assets','shoes','compare','methodology','privacy','reviews','request','admin','sitemap.xml','robots.txt'])fs.cpSync(path.join(root,name),path.join(out,name),{recursive:true});
-console.log('Built '+shoes.length+' product pages plus main, compare and data-policy pages. No external dependencies.');
+for(const name of ['index.html','assets','shoes','methodology','privacy','reviews','request','admin','sitemap.xml','robots.txt'])fs.cpSync(path.join(root,name),path.join(out,name),{recursive:true});
+console.log('Built '+shoes.length+' product pages plus main and data-policy pages. No external dependencies.');

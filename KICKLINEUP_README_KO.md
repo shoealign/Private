@@ -1,6 +1,6 @@
-# KICKLINEUP 리브랜딩 배포 안내
+# BALBOLL 리브랜딩 배포 안내
 
-- 브랜드: KICKLINEUP (킥라인업)
+- 브랜드: BALBOLL (발볼)
 - 슬로건: PICK YOUR KICK.
 - 기존 제품 51개, 비교/추천 기능 및 데이터 유지
 - 현재 주소 https://shoealign.vercel.app 유지 (새 도메인 구입 후 변경 가능)

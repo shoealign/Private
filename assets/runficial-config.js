@@ -1,1 +1,1 @@
-window.MELLO_CONFIG = {supabaseUrl:"", supabaseAnonKey:"", requestEmail:"shoelineup@gmail.com"};
+window.BALBOLL_CONFIG = {supabaseUrl:"", supabaseAnonKey:"", requestEmail:"shoelineup@gmail.com"};
