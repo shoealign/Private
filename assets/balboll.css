@@ -2,3 +2,44 @@
 .brand-logo .balboll-symbol{display:grid;place-items:center;background:#222;color:#fff;border-radius:13px;font-size:29px;font-weight:900;width:46px;height:46px;letter-spacing:-3px}.balboll-symbol span{color:#c7ef8c}.brand-wordmark{font-size:27px!important;letter-spacing:-1.6px!important;text-transform:lowercase}.brand-wordmark small{font-size:9px!important;letter-spacing:1.8px!important}.balboll-card-score{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #e8e8e8;padding:15px 0 12px;gap:8px}.balboll-card-score small{display:block;color:#777;font-size:10px;letter-spacing:1.2px}.balboll-card-score strong{display:block;font-size:34px;letter-spacing:-1.5px;line-height:1.2}.balboll-card-score em{font-size:12px;font-style:normal;color:#888;margin-left:6px;letter-spacing:0}.balboll-provisional{font-size:10px;color:#888;text-align:right;max-width:115px}.balboll-card-metrics{display:grid;gap:7px;margin:8px 0 15px}.balboll-card-metrics>div{display:grid;grid-template-columns:54px 1fr 29px;align-items:center;gap:8px;font-size:12px}.balboll-card-metrics b{text-align:right;font-variant-numeric:tabular-nums}.balboll-mini-track{height:7px;border-radius:8px;background:#edf0eb;overflow:hidden}.balboll-mini-track i{display:block;background:#91b96a;height:100%;border-radius:8px}.balboll-card-pc{display:grid;grid-template-columns:1fr 1fr;gap:10px}.balboll-card-pc>div{background:#f7f8f5;border-radius:10px;padding:11px;min-width:0}.balboll-card-pc b{font-size:12px}.balboll-card-pc p{font-size:12px;line-height:1.6;margin:6px 0 0;word-break:keep-all}.balboll-detail-link{display:block;text-align:center;padding:13px;margin-top:14px;background:#222;color:white!important;border-radius:10px;text-decoration:none;font-size:13px;font-weight:700}.card-actions,#compareDock,[data-compare],[data-save]{display:none!important}.balboll-detail-ratings{max-width:1150px;margin:25px auto;padding:25px;background:#f7f8f5;border-radius:18px}.balboll-row{display:grid;grid-template-columns:80px 1fr 35px;gap:10px;align-items:center;margin:10px 0}.balboll-track{height:9px;background:#e5e8e0;border-radius:8px;overflow:hidden}.balboll-track i{display:block;height:100%;background:#91b96a}.balboll-pc{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}.balboll-pc>div{background:white;padding:16px;border-radius:12px}.balboll-note{font-size:12px;color:#777}@media(max-width:650px){.balboll-card-pc{grid-template-columns:1fr 1fr}.balboll-detail-ratings{margin:12px;padding:16px}}
 /* 사진 연결이 실패한 비-ASICS 모델은 목록에서 숨깁니다. ASICS는 항상 유지합니다. */
 .product-card.image-unavailable,.guide-model.image-unavailable{display:none!important}
+
+/* BALBOLL compact rankings v3 */
+.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.product-card.balboll-card{display:grid;grid-template-columns:152px minmax(0,1fr);align-items:stretch;border-radius:16px;box-shadow:0 3px 15px rgba(18,25,20,.035)}
+.balboll-card .card-photo{height:100%;min-height:258px;background:#f5f6f3}
+.balboll-card .card-photo img{height:100%;width:100%;object-fit:contain;padding:12px}
+.balboll-card .card-main{padding:12px 13px 11px;display:block}
+.balboll-card .card-brand{font-size:10px;margin-bottom:2px;font-weight:700}
+.balboll-card .card-title{font-size:15px;min-height:0;line-height:1.3;margin:0 0 6px;letter-spacing:-.4px}
+.balboll-card .card-facts{display:flex;flex-wrap:wrap;gap:4px;min-height:0;margin:0 0 6px}
+.balboll-card .card-facts .chip{font-size:10px;padding:3px 6px}
+.balboll-card .balboll-card-score{padding:6px 0;margin:0;gap:4px}
+.balboll-card .balboll-card-score strong{font-size:29px;line-height:1.1}
+.balboll-card .balboll-card-score small{font-size:9px;letter-spacing:.7px}
+.balboll-card .balboll-card-score em{font-size:10px;margin-left:3px}
+.balboll-card .balboll-provisional{font-size:9px;max-width:84px}
+.balboll-card .balboll-card-metrics{gap:4px;margin:6px 0 8px}
+.balboll-card .balboll-card-metrics>div{grid-template-columns:46px 1fr 24px;gap:5px;font-size:10px}
+.balboll-card .balboll-mini-track{height:5px}
+.balboll-card .balboll-card-pc{gap:5px}
+.balboll-card .balboll-card-pc>div{padding:7px;border-radius:7px}
+.balboll-card .balboll-card-pc b{font-size:10px}
+.balboll-card .balboll-card-pc p{font-size:10px;line-height:1.35;margin-top:3px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.balboll-card .balboll-detail-link{padding:7px;margin-top:7px;border-radius:7px;font-size:11px}
+.balboll-card .line-badge{width:auto;min-width:69px;height:32px;border-radius:8px;top:9px;left:9px;display:flex;flex-direction:row;gap:2px;padding:0 8px;background:#202721;color:#d4f59d;border:0;box-shadow:0 3px 10px rgba(0,0,0,.18);transform:rotate(-3deg)}
+.balboll-card .line-badge small{font-size:10px;font-weight:900;letter-spacing:.6px}
+.balboll-card .line-badge strong{font-size:20px;margin:0;font-weight:950;letter-spacing:-1px}
+@media(max-width:1100px){.product-grid{grid-template-columns:1fr}.product-card.balboll-card{grid-template-columns:180px minmax(0,1fr)}.balboll-card .card-photo{min-height:245px}}
+@media(max-width:650px){.product-grid{grid-template-columns:1fr;gap:10px}.product-card.balboll-card{grid-template-columns:112px minmax(0,1fr);border-radius:12px}.balboll-card .card-photo{height:100%;min-height:240px}.balboll-card .card-photo img{padding:6px}.balboll-card .card-main{padding:9px 9px 8px}.balboll-card .card-title{font-size:14px}.balboll-card .card-facts .chip{font-size:9px}.balboll-card .balboll-card-score strong{font-size:26px}.balboll-card .balboll-provisional{font-size:8px;max-width:68px}.balboll-card .balboll-card-pc{grid-template-columns:1fr 1fr}.balboll-card .balboll-card-pc>div{padding:5px}.balboll-card .balboll-card-pc p{font-size:9px}.balboll-card .line-badge{top:7px;left:6px;min-width:59px;height:27px;padding:0 5px}.balboll-card .line-badge small{font-size:9px}.balboll-card .line-badge strong{font-size:17px}}
+
+/* V4: consistent image framing, neutral backgrounds across the entire site. */
+.product-card.balboll-card{overflow:hidden}
+.balboll-card .card-photo{display:flex;align-items:center;justify-content:center;background:#fff!important;overflow:hidden;isolation:isolate;border-right:1px solid #edf0ec}
+.balboll-card .card-photo img{display:block;position:relative;width:100%!important;height:160px!important;max-height:160px;object-fit:contain!important;object-position:center center;padding:12px!important;box-sizing:border-box;mix-blend-mode:multiply;filter:contrast(1.025)}
+.balboll-card .line-badge{z-index:2}
+.detail-picture{background:#fff!important;border:1px solid #ecefec}
+.detail-picture>img{display:block;max-width:100%;object-fit:contain;object-position:center;background:#fff;mix-blend-mode:multiply}
+.guide-model img,.similar-card img{background:#fff;object-fit:contain;object-position:center;mix-blend-mode:multiply}
+.guide-model,.similar-card{background:#fff}
+@media(max-width:1100px){.balboll-card .card-photo img{height:154px!important;max-height:154px}}
+@media(max-width:650px){.product-card.balboll-card{grid-template-columns:116px minmax(0,1fr)}.balboll-card .card-photo img{height:110px!important;max-height:110px;padding:6px!important}.balboll-card .card-photo{min-height:0}}
