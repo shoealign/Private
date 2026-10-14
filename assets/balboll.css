@@ -72,3 +72,7 @@
 
 /* V7: pros and cons live on product detail pages only. */
 .product-card .balboll-card-pc, .shoe .pc{display:none!important}
+
+/* V8 release: never hide a model solely due to image loading failures. */
+.product-card.image-unavailable,.guide-model.image-unavailable{display:flex!important}
+.product-card.image-fallback .card-photo{background:#f4f5f3!important}

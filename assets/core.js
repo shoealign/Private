@@ -81,7 +81,7 @@
     img.classList.add('image-missing');
     img.title='제품 사진 연결 실패 · 이미지 확인 중';
     const card=img.closest('.product-card,.guide-model');
-    if(card && shoe && shoe.brand!=='ASICS')card.classList.add('image-unavailable');
+    if(card)card.classList.add('image-fallback');
   }
   const compareUrl=names=>'/compare/?items='+names.map(n=>byName(n)?.slug).filter(Boolean).map(encodeURIComponent).join(',');
   function dock(){

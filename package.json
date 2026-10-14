@@ -3,6 +3,6 @@
   "version": "1.1.0",
   "private": true,
   "scripts": {
-    "build": "node tools/build.mjs"
+    "build": "node tools/build.mjs && node tools/postbuild-v10.cjs"
   }
 }
