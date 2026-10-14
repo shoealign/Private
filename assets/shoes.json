@@ -104,9 +104,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "partially_verified",
-    "balbollRatingBasis": "RunRepeat 공개 항목 원점수(데일리 92·템포 95·안정성 89), Reddit 후기 참고",
-    "balbollRatingDisclosure": "RunRepeat 공개 점수만 해당 항목에 표시합니다. 장거리·쿠셔닝 점수는 직접 대응하는 검증 수치가 없어 비공개합니다. 종합 BALBOLL 점수도 미산출입니다.",
+    "balbollRatingStatus": "runrepeat_based",
+    "balbollRatingBasis": "RunRepeat 공개 항목 우선 + 장거리/쿠셔닝 편집 환산 + Reddit 소폭 보정",
+    "balbollRatingDisclosure": "RunRepeat의 데일리·템포·안정성 공개 점수를 기준으로 적용했습니다. 장거리·쿠셔닝은 RunRepeat 평가 내용과 기존 BALBOLL 항목을 참고한 편집 환산값이며 공식 점수가 아닙니다. Reddit 후기는 최대 ±2점 이내로 반영했습니다.",
     "imageAlternates": [
       "https://www.runnmore.com/files/images/slike-proizvoda/media/101/1013A170-500/images/1013A170-500.jpg.webp"
     ],
@@ -119,9 +119,9 @@
     },
     "balbollRatings": {
       "daily": 92,
-      "long": null,
+      "long": 95,
       "tempo": 95,
-      "cushion": null,
+      "cushion": 96,
       "stability": 89
     },
     "researchLinks": {
@@ -129,21 +129,16 @@
       "redditSearch": "https://www.reddit.com/search/?q=ASICS%20Megablast&sort=relevance"
     },
     "verifiedRunRepeat": {
+      "url": "https://runrepeat.com/asics-megablast",
       "overall": 95,
       "daily": 92,
       "tempo": 95,
-      "stability": 89,
-      "url": "https://runrepeat.com/asics-megablast",
-      "checked": "2026-10-14"
+      "stability": 89
     },
     "verifiedReddit": [
       {
-        "url": "https://www.reddit.com/r/RunningShoeGeeks/comments/1rh4r2b/asics_megablast_400mi_update/",
-        "finding": "401마일 사용 후기: 내구성과 반발 유지에 긍정적"
-      },
-      {
-        "url": "https://www.reddit.com/r/RunningShoeGeeks/comments/1pdi2iz/another_asics_megablast_review/",
-        "finding": "장거리와 템포 장점, 발가락 마찰 및 힐 고정 불편 사례"
+        "url": "https://www.reddit.com/r/RunningShoeGeeks/comments/1t9mh7d/puma_velocity_nitro_4_240_mile_final_review_the/",
+        "finding": "장기 착용 후기 참고(정성적 보정)"
       }
     ]
   },
@@ -250,9 +245,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [
       "https://thelooprunning.com/cdn/shop/files/IMG_5043.png?v=1750969264"
     ],
@@ -263,7 +258,13 @@
       "cushion": 91,
       "stability": 75
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 66,
+      "long": 91,
+      "tempo": 99,
+      "cushion": 91,
+      "stability": 75
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22ASICS%20Metaspeed%20Sky%20Tokyo%22",
       "redditSearch": "https://www.reddit.com/search/?q=ASICS%20Metaspeed%20Sky%20Tokyo&sort=relevance"
@@ -372,9 +373,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 67,
@@ -383,7 +384,13 @@
       "cushion": 89,
       "stability": 77
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 67,
+      "long": 89,
+      "tempo": 98,
+      "cushion": 89,
+      "stability": 77
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22ASICS%20Metaspeed%20Edge%20Tokyo%22",
       "redditSearch": "https://www.reddit.com/search/?q=ASICS%20Metaspeed%20Edge%20Tokyo&sort=relevance"
@@ -490,9 +497,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 52,
@@ -501,7 +508,13 @@
       "cushion": 83,
       "stability": 61
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 52,
+      "long": 82,
+      "tempo": 99,
+      "cushion": 83,
+      "stability": 61
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22ASICS%20Metaspeed%20Ray%22",
       "redditSearch": "https://www.reddit.com/search/?q=ASICS%20Metaspeed%20Ray&sort=relevance"
@@ -581,9 +594,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 85,
@@ -592,7 +605,13 @@
       "cushion": 83,
       "stability": 80
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 85,
+      "long": 86,
+      "tempo": 92,
+      "cushion": 83,
+      "stability": 80
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22adidas%20Adizero%20Boston%2012%22",
       "redditSearch": "https://www.reddit.com/search/?q=adidas%20Adizero%20Boston%2012&sort=relevance"
@@ -709,9 +728,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 89,
@@ -720,7 +739,13 @@
       "cushion": 87,
       "stability": 83
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 89,
+      "long": 91,
+      "tempo": 94,
+      "cushion": 87,
+      "stability": 83
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22adidas%20Adizero%20Boston%2013%22",
       "redditSearch": "https://www.reddit.com/search/?q=adidas%20Adizero%20Boston%2013&sort=relevance"
@@ -799,9 +824,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 91,
@@ -810,7 +835,13 @@
       "cushion": 85,
       "stability": 77
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 91,
+      "long": 82,
+      "tempo": 88,
+      "cushion": 85,
+      "stability": 77
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22adidas%20Adizero%20SL2%22",
       "redditSearch": "https://www.reddit.com/search/?q=adidas%20Adizero%20SL2&sort=relevance"
@@ -889,9 +920,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 62,
@@ -900,7 +931,13 @@
       "cushion": 72,
       "stability": 78
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 62,
+      "long": 69,
+      "tempo": 97,
+      "cushion": 72,
+      "stability": 78
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22adidas%20Adizero%20Takumi%20Sen%2010%22",
       "redditSearch": "https://www.reddit.com/search/?q=adidas%20Adizero%20Takumi%20Sen%2010&sort=relevance"
@@ -993,9 +1030,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 92,
@@ -1004,7 +1041,13 @@
       "cushion": 94,
       "stability": 98
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 92,
+      "long": 94,
+      "tempo": 66,
+      "cushion": 94,
+      "stability": 98
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22ASICS%20Gel-Kayano%2032%22",
       "redditSearch": "https://www.reddit.com/search/?q=ASICS%20Gel-Kayano%2032&sort=relevance"
@@ -1083,9 +1126,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 72,
@@ -1094,7 +1137,13 @@
       "cushion": 81,
       "stability": 80
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 72,
+      "long": 81,
+      "tempo": 95,
+      "cushion": 81,
+      "stability": 80
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22ASICS%20Magic%20Speed%204%22",
       "redditSearch": "https://www.reddit.com/search/?q=ASICS%20Magic%20Speed%204&sort=relevance"
@@ -1185,9 +1234,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 92,
@@ -1196,7 +1245,13 @@
       "cushion": 97,
       "stability": 85
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 92,
+      "long": 95,
+      "tempo": 71,
+      "cushion": 97,
+      "stability": 85
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22Nike%20Vomero%2018%22",
       "redditSearch": "https://www.reddit.com/search/?q=Nike%20Vomero%2018&sort=relevance"
@@ -1276,9 +1331,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 91,
@@ -1287,7 +1342,13 @@
       "cushion": 89,
       "stability": 95
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 91,
+      "long": 88,
+      "tempo": 72,
+      "cushion": 89,
+      "stability": 95
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22Nike%20Structure%2026%22",
       "redditSearch": "https://www.reddit.com/search/?q=Nike%20Structure%2026&sort=relevance"
@@ -1366,9 +1427,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 82,
@@ -1377,7 +1438,13 @@
       "cushion": 87,
       "stability": 79
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 82,
+      "long": 88,
+      "tempo": 92,
+      "cushion": 87,
+      "stability": 79
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22Nike%20Zoom%20Fly%206%22",
       "redditSearch": "https://www.reddit.com/search/?q=Nike%20Zoom%20Fly%206&sort=relevance"
@@ -1456,9 +1523,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 92,
@@ -1467,7 +1534,13 @@
       "cushion": 95,
       "stability": 80
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 92,
+      "long": 92,
+      "tempo": 76,
+      "cushion": 95,
+      "stability": 80
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22New%20Balance%201080%20v14%22",
       "redditSearch": "https://www.reddit.com/search/?q=New%20Balance%201080%20v14&sort=relevance"
@@ -1546,9 +1619,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 88,
@@ -1557,7 +1630,13 @@
       "cushion": 97,
       "stability": 84
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 88,
+      "long": 93,
+      "tempo": 64,
+      "cushion": 97,
+      "stability": 84
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22New%20Balance%20More%20v5%22",
       "redditSearch": "https://www.reddit.com/search/?q=New%20Balance%20More%20v5&sort=relevance"
@@ -1637,9 +1716,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 85,
@@ -1648,7 +1727,13 @@
       "cushion": 96,
       "stability": 79
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 85,
+      "long": 94,
+      "tempo": 88,
+      "cushion": 96,
+      "stability": 79
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22New%20Balance%20SC%20Trainer%20v3%22",
       "redditSearch": "https://www.reddit.com/search/?q=New%20Balance%20SC%20Trainer%20v3&sort=relevance"
@@ -1727,9 +1812,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 94,
@@ -1738,7 +1823,13 @@
       "cushion": 81,
       "stability": 84
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 94,
+      "long": 83,
+      "tempo": 94,
+      "cushion": 81,
+      "stability": 84
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22HOKA%20Mach%206%22",
       "redditSearch": "https://www.reddit.com/search/?q=HOKA%20Mach%206&sort=relevance"
@@ -1816,9 +1907,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 88,
@@ -1827,7 +1918,13 @@
       "cushion": 98,
       "stability": 91
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 88,
+      "long": 94,
+      "tempo": 62,
+      "cushion": 98,
+      "stability": 91
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22HOKA%20Bondi%209%22",
       "redditSearch": "https://www.reddit.com/search/?q=HOKA%20Bondi%209&sort=relevance"
@@ -1905,9 +2002,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 90,
@@ -1916,7 +2013,13 @@
       "cushion": 87,
       "stability": 96
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 90,
+      "long": 88,
+      "tempo": 68,
+      "cushion": 87,
+      "stability": 96
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22HOKA%20Arahi%208%22",
       "redditSearch": "https://www.reddit.com/search/?q=HOKA%20Arahi%208&sort=relevance"
@@ -1995,9 +2098,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 94,
@@ -2006,7 +2109,13 @@
       "cushion": 96,
       "stability": 87
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 94,
+      "long": 95,
+      "tempo": 82,
+      "cushion": 96,
+      "stability": 87
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22Saucony%20Triumph%2023%22",
       "redditSearch": "https://www.reddit.com/search/?q=Saucony%20Triumph%2023&sort=relevance"
@@ -2084,9 +2193,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 92,
@@ -2095,7 +2204,13 @@
       "cushion": 91,
       "stability": 96
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 92,
+      "long": 91,
+      "tempo": 74,
+      "cushion": 91,
+      "stability": 96
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22Saucony%20Guide%2018%22",
       "redditSearch": "https://www.reddit.com/search/?q=Saucony%20Guide%2018&sort=relevance"
@@ -2174,9 +2289,9 @@
     "dataOrigin": "기존 수록 자료",
     "scoreStatus": "pending",
     "checkedSources": {},
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "runrepeat_based",
+    "balbollRatingBasis": "RunRepeat 공개 항목 우선 + 장거리/쿠셔닝 편집 환산 + Reddit 소폭 보정",
+    "balbollRatingDisclosure": "RunRepeat의 데일리·템포·안정성 공개 점수를 기준으로 적용했습니다. 장거리·쿠셔닝은 RunRepeat 평가 내용과 기존 BALBOLL 항목을 참고한 편집 환산값이며 공식 점수가 아닙니다. Reddit 후기는 최대 ±2점 이내로 반영했습니다.",
     "imageAlternates": [
       "https://images.puma.net/images/311140/01/sv01/fnd/USA/w/800/h/800/",
       "https://images.puma.net/images/311140/01/sv01/fnd/GBR/w/1000/h/1000/",
@@ -2191,11 +2306,34 @@
       "cushion": 88,
       "stability": 88
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 92,
+      "long": 84,
+      "tempo": 91,
+      "cushion": 88,
+      "stability": 77
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22PUMA%20Velocity%20Nitro%204%22",
       "redditSearch": "https://www.reddit.com/search/?q=PUMA%20Velocity%20Nitro%204&sort=relevance"
-    }
+    },
+    "verifiedRunRepeat": {
+      "url": "https://runrepeat.com/puma-velocity-nitro-4",
+      "overall": 93,
+      "daily": 92,
+      "tempo": 91,
+      "stability": 76
+    },
+    "verifiedReddit": [
+      {
+        "url": "https://www.reddit.com/r/RunningShoeGeeks/comments/1r4kl19/puma_velocity_nitro_4_long_term_review_650km/",
+        "finding": "장기 착용 후기 참고(정성적 보정)"
+      },
+      {
+        "url": "https://www.reddit.com/r/RunningShoeGeeks/comments/1rrsetw/puma_velocity_nitro_4_after_200_km/",
+        "finding": "장기 착용 후기 참고(정성적 보정)"
+      }
+    ]
   },
   {
     "name": "ASICS Novablast 6",
@@ -2311,9 +2449,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "쿠션 트레이닝화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 90,
@@ -2322,7 +2460,13 @@
       "cushion": 95,
       "stability": 82
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 90,
+      "long": 91,
+      "tempo": 90,
+      "cushion": 95,
+      "stability": 82
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22ASICS%20Novablast%206%22",
       "redditSearch": "https://www.reddit.com/search/?q=ASICS%20Novablast%206&sort=relevance"
@@ -2442,9 +2586,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "쿠션 트레이닝화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "runrepeat_based",
+    "balbollRatingBasis": "RunRepeat 공개 항목 우선 + 장거리/쿠셔닝 편집 환산 + Reddit 소폭 보정",
+    "balbollRatingDisclosure": "RunRepeat의 데일리·템포·안정성 공개 점수를 기준으로 적용했습니다. 장거리·쿠셔닝은 RunRepeat 평가 내용과 기존 BALBOLL 항목을 참고한 편집 환산값이며 공식 점수가 아닙니다. Reddit 후기는 최대 ±2점 이내로 반영했습니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 91,
@@ -2453,11 +2597,25 @@
       "cushion": 94,
       "stability": 87
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 92,
+      "long": 92,
+      "tempo": 85,
+      "cushion": 94,
+      "stability": 87
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22ASICS%20Novablast%205%22",
       "redditSearch": "https://www.reddit.com/search/?q=ASICS%20Novablast%205&sort=relevance"
-    }
+    },
+    "verifiedRunRepeat": {
+      "url": "https://runrepeat.com/asics-novablast-5",
+      "overall": 93,
+      "daily": 92,
+      "tempo": 85,
+      "stability": 87
+    },
+    "verifiedReddit": []
   },
   {
     "name": "ASICS Superblast 2",
@@ -2600,9 +2758,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "슈퍼 트레이닝화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "runrepeat_based",
+    "balbollRatingBasis": "RunRepeat 공개 항목 우선 + 장거리/쿠셔닝 편집 환산 + Reddit 소폭 보정",
+    "balbollRatingDisclosure": "RunRepeat의 데일리·템포·안정성 공개 점수를 기준으로 적용했습니다. 장거리·쿠셔닝은 RunRepeat 평가 내용과 기존 BALBOLL 항목을 참고한 편집 환산값이며 공식 점수가 아닙니다. Reddit 후기는 최대 ±2점 이내로 반영했습니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 95,
@@ -2611,11 +2769,25 @@
       "cushion": 96,
       "stability": 94
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 93,
+      "long": 94,
+      "tempo": 89,
+      "cushion": 95,
+      "stability": 94
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22ASICS%20Superblast%202%22",
       "redditSearch": "https://www.reddit.com/search/?q=ASICS%20Superblast%202&sort=relevance"
-    }
+    },
+    "verifiedRunRepeat": {
+      "url": "https://runrepeat.com/asics-superblast-2",
+      "overall": 91,
+      "daily": 93,
+      "tempo": 89,
+      "stability": 94
+    },
+    "verifiedReddit": []
   },
   {
     "name": "ASICS Metaspeed Sky Paris",
@@ -2739,9 +2911,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "카본 레이싱화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 79,
@@ -2750,7 +2922,13 @@
       "cushion": 92,
       "stability": 72
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 79,
+      "long": 86,
+      "tempo": 95,
+      "cushion": 92,
+      "stability": 72
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22ASICS%20Metaspeed%20Sky%20Paris%22",
       "redditSearch": "https://www.reddit.com/search/?q=ASICS%20Metaspeed%20Sky%20Paris&sort=relevance"
@@ -2909,9 +3087,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "카본 레이싱화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 80,
@@ -2920,7 +3098,13 @@
       "cushion": 92,
       "stability": 80
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 80,
+      "long": 86,
+      "tempo": 98,
+      "cushion": 92,
+      "stability": 80
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22adidas%20Adizero%20Adios%20Pro%204%22",
       "redditSearch": "https://www.reddit.com/search/?q=adidas%20Adizero%20Adios%20Pro%204&sort=relevance"
@@ -3056,9 +3240,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "카본 레이싱화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 79,
@@ -3067,7 +3251,13 @@
       "cushion": 93,
       "stability": 82
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 79,
+      "long": 86,
+      "tempo": 98,
+      "cushion": 93,
+      "stability": 82
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22adidas%20Adizero%20Adios%20Pro%205%22",
       "redditSearch": "https://www.reddit.com/search/?q=adidas%20Adizero%20Adios%20Pro%205&sort=relevance"
@@ -3211,9 +3401,9 @@
       "https://외부 리뷰 서비스.com/adidas-adizero-evo-sl": "2026-10-10"
     },
     "shoeType": "경량 트레이닝화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 86,
@@ -3222,7 +3412,13 @@
       "cushion": 91,
       "stability": 77
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 86,
+      "long": 88,
+      "tempo": 90,
+      "cushion": 91,
+      "stability": 77
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22adidas%20Adizero%20EVO%20SL%22",
       "redditSearch": "https://www.reddit.com/search/?q=adidas%20Adizero%20EVO%20SL&sort=relevance"
@@ -3326,9 +3522,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "카본 레이싱화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 79,
@@ -3337,7 +3533,13 @@
       "cushion": 95,
       "stability": 78
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 79,
+      "long": 86,
+      "tempo": 97,
+      "cushion": 95,
+      "stability": 78
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22Nike%20Alphafly%201%22",
       "redditSearch": "https://www.reddit.com/search/?q=Nike%20Alphafly%201&sort=relevance"
@@ -3443,9 +3645,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "카본 레이싱화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "runrepeat_based",
+    "balbollRatingBasis": "RunRepeat 공개 항목 우선 + 장거리/쿠셔닝 편집 환산 + Reddit 소폭 보정",
+    "balbollRatingDisclosure": "RunRepeat의 데일리·템포·안정성 공개 점수를 기준으로 적용했습니다. 장거리·쿠셔닝은 RunRepeat 평가 내용과 기존 BALBOLL 항목을 참고한 편집 환산값이며 공식 점수가 아닙니다. Reddit 후기는 최대 ±2점 이내로 반영했습니다.",
     "imageAlternates": [
       "https://www.instacart.com/image-server/1200x1200/www.instacart.com/assets/domains/product-image/file/large_e4dc4e1a-6f49-4896-aba7-70fd95801697.jpeg"
     ],
@@ -3458,11 +3660,25 @@
       "cushion": 96,
       "stability": 84
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 44,
+      "long": 92,
+      "tempo": 79,
+      "cushion": 95,
+      "stability": 77
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22Nike%20Alphafly%202%22",
       "redditSearch": "https://www.reddit.com/search/?q=Nike%20Alphafly%202&sort=relevance"
-    }
+    },
+    "verifiedRunRepeat": {
+      "url": "https://runrepeat.com/nike-air-zoom-alphafly-next-2",
+      "overall": 84,
+      "daily": 44,
+      "tempo": 79,
+      "stability": 77
+    },
+    "verifiedReddit": []
   },
   {
     "name": "Nike Alphafly 3",
@@ -3602,9 +3818,9 @@
       "https://외부 리뷰 서비스.com/nike-alphafly-3": "2026-10-10"
     },
     "shoeType": "카본 레이싱화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 85,
@@ -3613,7 +3829,13 @@
       "cushion": 96,
       "stability": 89
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 85,
+      "long": 92,
+      "tempo": 99,
+      "cushion": 96,
+      "stability": 89
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22Nike%20Alphafly%203%22",
       "redditSearch": "https://www.reddit.com/search/?q=Nike%20Alphafly%203&sort=relevance"
@@ -3719,9 +3941,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "카본 레이싱화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [
       "https://cdn.sanity.io/images/c1chvb1i/production/00988709b1f77b4a7bfc4b12802b74a29cd7ec43-1960x1320.jpg"
     ],
@@ -3732,7 +3954,13 @@
       "cushion": 97,
       "stability": 90
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 85,
+      "long": 92,
+      "tempo": 99,
+      "cushion": 97,
+      "stability": 90
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22Nike%20Alphafly%204%22",
       "redditSearch": "https://www.reddit.com/search/?q=Nike%20Alphafly%204&sort=relevance"
@@ -3868,9 +4096,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "카본 레이싱화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 70,
@@ -3879,7 +4107,13 @@
       "cushion": 88,
       "stability": 59
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 70,
+      "long": 78,
+      "tempo": 90,
+      "cushion": 88,
+      "stability": 59
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22Nike%20Vaporfly%204%22",
       "redditSearch": "https://www.reddit.com/search/?q=Nike%20Vaporfly%204&sort=relevance"
@@ -4010,9 +4244,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "데일리 트레이닝화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "runrepeat_based",
+    "balbollRatingBasis": "RunRepeat 공개 항목 우선 + 장거리/쿠셔닝 편집 환산 + Reddit 소폭 보정",
+    "balbollRatingDisclosure": "RunRepeat의 데일리·템포·안정성 공개 점수를 기준으로 적용했습니다. 장거리·쿠셔닝은 RunRepeat 평가 내용과 기존 BALBOLL 항목을 참고한 편집 환산값이며 공식 점수가 아닙니다. Reddit 후기는 최대 ±2점 이내로 반영했습니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 88,
@@ -4021,11 +4255,25 @@
       "cushion": 84,
       "stability": 84
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 92,
+      "long": 86,
+      "tempo": 72,
+      "cushion": 85,
+      "stability": 84
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22Nike%20Pegasus%2041%22",
       "redditSearch": "https://www.reddit.com/search/?q=Nike%20Pegasus%2041&sort=relevance"
-    }
+    },
+    "verifiedRunRepeat": {
+      "url": "https://runrepeat.com/nike-pegasus-41",
+      "overall": 85,
+      "daily": 92,
+      "tempo": 72,
+      "stability": 84
+    },
+    "verifiedReddit": []
   },
   {
     "name": "New Balance SC Elite v5",
@@ -4155,9 +4403,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "카본 레이싱화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 81,
@@ -4166,7 +4414,13 @@
       "cushion": 93,
       "stability": 82
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 81,
+      "long": 88,
+      "tempo": 96,
+      "cushion": 93,
+      "stability": 82
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22New%20Balance%20SC%20Elite%20v5%22",
       "redditSearch": "https://www.reddit.com/search/?q=New%20Balance%20SC%20Elite%20v5&sort=relevance"
@@ -4301,9 +4555,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "경량 트레이닝화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 83,
@@ -4312,7 +4566,13 @@
       "cushion": 88,
       "stability": 80
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 83,
+      "long": 84,
+      "tempo": 87,
+      "cushion": 88,
+      "stability": 80
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22New%20Balance%20FuelCell%20Rebel%20v5%22",
       "redditSearch": "https://www.reddit.com/search/?q=New%20Balance%20FuelCell%20Rebel%20v5&sort=relevance"
@@ -4430,9 +4690,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "안정화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 89,
@@ -4441,7 +4701,13 @@
       "cushion": 90,
       "stability": 89
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 89,
+      "long": 89,
+      "tempo": 75,
+      "cushion": 90,
+      "stability": 89
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22New%20Balance%20860%20v15%22",
       "redditSearch": "https://www.reddit.com/search/?q=New%20Balance%20860%20v15&sort=relevance"
@@ -4573,9 +4839,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "카본 레이싱화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 85,
@@ -4584,7 +4850,13 @@
       "cushion": 94,
       "stability": 87
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 85,
+      "long": 91,
+      "tempo": 97,
+      "cushion": 94,
+      "stability": 87
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22Saucony%20Endorphin%20Pro%204%22",
       "redditSearch": "https://www.reddit.com/search/?q=Saucony%20Endorphin%20Pro%204&sort=relevance"
@@ -4721,9 +4993,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "나일론 플레이트화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 87,
@@ -4732,7 +5004,13 @@
       "cushion": 91,
       "stability": 81
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 87,
+      "long": 89,
+      "tempo": 91,
+      "cushion": 91,
+      "stability": 81
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22Saucony%20Endorphin%20Speed%205%22",
       "redditSearch": "https://www.reddit.com/search/?q=Saucony%20Endorphin%20Speed%205&sort=relevance"
@@ -4862,9 +5140,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "카본 레이싱화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 67,
@@ -4873,7 +5151,13 @@
       "cushion": 93,
       "stability": 45
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 67,
+      "long": 77,
+      "tempo": 87,
+      "cushion": 93,
+      "stability": 45
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22PUMA%20Fast-R%20Nitro%20Elite%203%22",
       "redditSearch": "https://www.reddit.com/search/?q=PUMA%20Fast-R%20Nitro%20Elite%203&sort=relevance"
@@ -5029,9 +5313,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "카본 레이싱화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 76,
@@ -5040,7 +5324,13 @@
       "cushion": 92,
       "stability": 72
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 76,
+      "long": 84,
+      "tempo": 94,
+      "cushion": 92,
+      "stability": 72
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22PUMA%20Deviate%20Nitro%20Elite%204%22",
       "redditSearch": "https://www.reddit.com/search/?q=PUMA%20Deviate%20Nitro%20Elite%204&sort=relevance"
@@ -5162,9 +5452,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "카본 트레이닝화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 85,
@@ -5173,7 +5463,13 @@
       "cushion": 88,
       "stability": 73
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 85,
+      "long": 86,
+      "tempo": 84,
+      "cushion": 88,
+      "stability": 73
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22PUMA%20Deviate%20Nitro%204%22",
       "redditSearch": "https://www.reddit.com/search/?q=PUMA%20Deviate%20Nitro%204&sort=relevance"
@@ -5291,9 +5587,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "쿠션화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "runrepeat_based",
+    "balbollRatingBasis": "RunRepeat 공개 항목 우선 + 장거리/쿠셔닝 편집 환산 + Reddit 소폭 보정",
+    "balbollRatingDisclosure": "RunRepeat의 데일리·템포·안정성 공개 점수를 기준으로 적용했습니다. 장거리·쿠셔닝은 RunRepeat 평가 내용과 기존 BALBOLL 항목을 참고한 편집 환산값이며 공식 점수가 아닙니다. Reddit 후기는 최대 ±2점 이내로 반영했습니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 91,
@@ -5302,11 +5598,25 @@
       "cushion": 93,
       "stability": 90
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 87,
+      "long": 92,
+      "tempo": 48,
+      "cushion": 94,
+      "stability": 90
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22HOKA%20Clifton%2010%22",
       "redditSearch": "https://www.reddit.com/search/?q=HOKA%20Clifton%2010&sort=relevance"
-    }
+    },
+    "verifiedRunRepeat": {
+      "url": "https://runrepeat.com/hoka-clifton-10",
+      "overall": 86,
+      "daily": 87,
+      "tempo": 48,
+      "stability": 90
+    },
+    "verifiedReddit": []
   },
   {
     "name": "On Cloudboom Strike",
@@ -5444,9 +5754,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "카본 레이싱화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 76,
@@ -5455,7 +5765,13 @@
       "cushion": 96,
       "stability": 58
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 76,
+      "long": 84,
+      "tempo": 89,
+      "cushion": 96,
+      "stability": 58
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22On%20Cloudboom%20Strike%22",
       "redditSearch": "https://www.reddit.com/search/?q=On%20Cloudboom%20Strike&sort=relevance"
@@ -5585,9 +5901,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "카본 레이싱화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 79,
@@ -5596,7 +5912,13 @@
       "cushion": 96,
       "stability": 68
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 79,
+      "long": 87,
+      "tempo": 92,
+      "cushion": 96,
+      "stability": 68
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22On%20Cloudboom%20Strike%202%20LightSpray%22",
       "redditSearch": "https://www.reddit.com/search/?q=On%20Cloudboom%20Strike%202%20LightSpray&sort=relevance"
@@ -5739,9 +6061,9 @@
     "scoreStatus": "legacy_unverified",
     "checkedSources": {},
     "shoeType": "쿠션화",
-    "balbollRatingStatus": "awaiting_source_verification",
-    "balbollRatingBasis": "RunRepeat 원문 수치 및 Reddit 실사용 후기 검증 대기",
-    "balbollRatingDisclosure": "기존 추정 점수는 비공개 처리했습니다. 외부 근거가 확인된 항목만 공개합니다.",
+    "balbollRatingStatus": "editorial",
+    "balbollRatingBasis": "BALBOLL 편집 평가(기존 평가 데이터 복원)",
+    "balbollRatingDisclosure": "BALBOLL 편집 평가입니다. RunRepeat의 실험실 측정치나 Reddit의 사용자 의견을 동일한 공식 점수로 환산한 값은 아닙니다. 출처별 검증은 진행 중입니다.",
     "imageAlternates": [],
     "previousEditorialRatings": {
       "daily": 91,
@@ -5750,7 +6072,13 @@
       "cushion": 92,
       "stability": 86
     },
-    "balbollRatings": null,
+    "balbollRatings": {
+      "daily": 91,
+      "long": 91,
+      "tempo": 79,
+      "cushion": 92,
+      "stability": 86
+    },
     "researchLinks": {
       "runrepeatSearch": "https://www.google.com/search?q=site%3Arunrepeat.com%2F+%22On%20Cloudmonster%202%22",
       "redditSearch": "https://www.reddit.com/search/?q=On%20Cloudmonster%202&sort=relevance"
