@@ -301,3 +301,63 @@ img.image-missing{mix-blend-mode:normal!important;opacity:.58}
  .balboll-card .balboll-card-metrics>div.metric{grid-template-columns:33px 38px 20px!important;gap:3px!important}
  .balboll-card .balboll-card-metrics .balboll-mini-track{width:38px!important}
 }
+
+
+/* V16: left-aligned evaluation label + gauge-row-width detail button.
+   Scope: cards only. V15 4/3/2 responsive grid and score tiers stay intact. */
+.balboll-card .balboll-card-score{
+ justify-content:flex-start!important;
+ align-items:flex-start!important;
+ gap:0!important;
+ padding-left:0!important;
+ padding-right:0!important;
+}
+.balboll-card .balboll-score-stack{
+ display:flex;
+ flex-direction:column;
+ align-items:flex-start;
+ justify-content:flex-start;
+ margin:0!important;
+ min-width:0;
+ text-align:left!important;
+}
+.balboll-card .balboll-score-label{
+ display:block;
+ margin:0 0 3px!important;
+ padding:0!important;
+ color:#515e67!important;
+ font-weight:700;
+ font-size:10px!important;
+ line-height:1.2;
+ letter-spacing:0!important;
+ text-align:left!important;
+}
+/* Desktop metric row = 48 + 5 + 61 + 5 + 25 = 144px. */
+.balboll-card{--balboll-metric-row-width:144px}
+.balboll-card .balboll-detail-link{
+ display:inline-flex!important;
+ align-self:flex-start!important;
+ align-items:center!important;
+ justify-content:center!important;
+ width:var(--balboll-metric-row-width)!important;
+ max-width:100%!important;
+ min-height:28px;
+ margin-left:0!important;
+ margin-right:auto!important;
+ margin-top:auto!important;
+ padding:6px 6px!important;
+ box-sizing:border-box!important;
+ border-radius:7px!important;
+ text-align:center!important;
+ white-space:nowrap;
+ line-height:1.2;
+}
+@media(max-width:650px){
+ .balboll-card{--balboll-metric-row-width:105px}
+ .balboll-card .balboll-score-label{font-size:9px!important;margin-bottom:2px!important}
+ .balboll-card .balboll-detail-link{font-size:10px!important;min-height:26px;padding:5px 3px!important}
+}
+@media(max-width:360px){
+ .balboll-card{--balboll-metric-row-width:97px}
+ .balboll-card .balboll-detail-link{font-size:9px!important;padding:5px 2px!important}
+}
