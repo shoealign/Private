@@ -160,3 +160,144 @@ img.image-missing{mix-blend-mode:normal!important;opacity:.58}
  .balboll-card .card-photo{border-right:none!important;border-bottom:1px solid #e9eee9!important}
  .balboll-card .card-photo img{padding:8px 1px 3px!important}
 }
+
+/* V15 RELEASE — grid-first cards: 4 desktop, 3 laptop/tablet, 2 mobile.
+   Replaces the old 238px horizontal photo column, which prevented 3+ cards.
+   Score tiers are deliberately blue (90+), green (80s), amber (70s), red (<70).
+*/
+:root{
+ --ball-excellent:#245ce0;
+ --ball-good:#087c52;
+ --ball-fair:#b96c00;
+ --ball-low:#dc3545;
+}
+.product-grid{
+ display:grid!important;
+ grid-template-columns:repeat(4,minmax(0,1fr))!important;
+ align-items:stretch;
+ gap:13px!important;
+}
+.product-card.balboll-card,
+.product-card.balboll-card.image-unavailable{
+ display:flex!important;
+ flex-direction:column!important;
+ min-width:0!important;
+ overflow:hidden;
+ border-radius:14px;
+}
+.balboll-card .card-photo{
+ display:flex!important;
+ justify-content:center!important;
+ align-items:center!important;
+ flex:0 0 auto!important;
+ width:100%!important;
+ height:195px!important;
+ min-height:195px!important;
+ border-right:0!important;
+ border-bottom:1px solid #e5ece5!important;
+ background:var(--ball-photo-backdrop)!important;
+}
+.balboll-card .card-photo img{
+ width:100%!important;
+ height:190px!important;
+ max-height:190px!important;
+ object-fit:contain!important;
+ padding:9px 5px 3px!important;
+}
+.balboll-card .card-main{
+ display:flex!important;
+ flex-direction:column!important;
+ flex:1 1 auto!important;
+ min-width:0!important;
+ padding:11px 12px 12px!important;
+}
+.balboll-card .card-brand{font-size:10px!important;line-height:1.25}
+.balboll-card .card-title{
+ font-size:15px!important;
+ line-height:1.3!important;
+ min-height:39px!important;
+ margin-bottom:5px!important;
+ overflow-wrap:anywhere;
+}
+.balboll-card .card-facts{margin-bottom:5px!important}
+.balboll-card .balboll-card-score{
+ border-top:1px solid #eef0ed!important;
+ margin-top:2px!important;
+ padding:7px 0 5px!important;
+ gap:5px!important;
+ min-height:46px!important;
+}
+.balboll-card .balboll-card-score strong{
+ font-size:29px!important;
+ line-height:1.1!important;
+}
+.balboll-card .balboll-provisional{
+ font-size:9px!important;
+ line-height:1.25!important;
+ max-width:73px!important;
+}
+.balboll-card .balboll-card-metrics{gap:5px!important;margin:6px 0 10px!important}
+.balboll-card .balboll-card-metrics>div.metric{
+ display:grid!important;
+ grid-template-columns:48px 61px 25px!important;
+ justify-content:start!important;
+ align-items:center!important;
+ gap:5px!important;
+ font-size:10px!important;
+}
+.balboll-card .balboll-card-metrics .balboll-mini-track{
+ width:61px!important;
+ height:4px!important;
+}
+.balboll-card .balboll-detail-link{
+ margin-top:auto!important;
+ padding:9px 5px!important;
+ font-size:11px!important;
+}
+/* High contrast tier indicators, consistent for summary and each component. */
+.balboll-card .score-number,.balboll-detail-ratings .score-number{color:var(--score-color)!important}
+.balboll-card .metric b,.balboll-detail-ratings .balboll-row b{color:var(--score-color)!important}
+.balboll-card .metric .balboll-mini-track i,
+.balboll-detail-ratings .balboll-row .balboll-track i{background:var(--score-color)!important}
+.balboll-card .line-badge{z-index:3}
+
+/* Three cards per row when four become too narrow. */
+@media(max-width:1120px) and (min-width:841px){
+ .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}
+ .balboll-card .card-photo{height:192px!important;min-height:192px!important}
+ .balboll-card .card-photo img{height:188px!important;max-height:188px!important}
+}
+/* Two cards on small tablets and phones; photos remain the focus. */
+@media(max-width:840px){
+ .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+ .balboll-card .card-photo{height:196px!important;min-height:196px!important}
+ .balboll-card .card-photo img{height:190px!important;max-height:190px!important}
+}
+@media(max-width:650px){
+ .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
+ .product-card.balboll-card{border-radius:12px!important}
+ .balboll-card .card-photo{height:169px!important;min-height:169px!important}
+ .balboll-card .card-photo img{height:164px!important;max-height:164px!important;padding:7px 2px 2px!important}
+ .balboll-card .card-main{padding:8px 9px 10px!important}
+ .balboll-card .card-title{font-size:12px!important;min-height:31px!important;line-height:1.28!important}
+ .balboll-card .card-facts{display:none!important}
+ .balboll-card .balboll-card-score{min-height:35px!important;padding:4px 0!important}
+ .balboll-card .balboll-card-score strong{font-size:25px!important}
+ .balboll-card .balboll-provisional{font-size:8px!important;max-width:63px!important}
+ .balboll-card .balboll-card-metrics{gap:3px!important;margin:6px 0 8px!important}
+ .balboll-card .balboll-card-metrics>div.metric{
+  grid-template-columns:35px 43px 21px!important;
+  gap:3px!important;
+  font-size:9px!important;
+ }
+ .balboll-card .balboll-card-metrics .balboll-mini-track{width:43px!important;height:4px!important}
+ .balboll-card .balboll-detail-link{font-size:10px!important;padding:8px 3px!important}
+}
+@media(max-width:360px){
+ .product-grid{gap:6px!important}
+ .balboll-card .card-photo{height:146px!important;min-height:146px!important}
+ .balboll-card .card-photo img{height:142px!important;max-height:142px!important;padding:5px 1px 2px!important}
+ .balboll-card .card-main{padding:7px!important}
+ .balboll-card .balboll-card-metrics>div.metric{grid-template-columns:33px 38px 20px!important;gap:3px!important}
+ .balboll-card .balboll-card-metrics .balboll-mini-track{width:38px!important}
+}
