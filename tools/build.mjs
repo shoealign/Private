@@ -7,6 +7,21 @@ const V=require('./views.cjs');
 const root=path.resolve(path.dirname(new URL(import.meta.url).pathname),'..');
 const config=JSON.parse(fs.readFileSync(path.join(root,'site.config.json'),'utf8'));
 const shoes=JSON.parse(fs.readFileSync(path.join(root,'assets/shoes.json'),'utf8'));
+// V14: consume only cutouts actually generated during photo preparation.
+// Remote source URLs and image attribution remain intact as fallback.
+const photoManifestFile=path.join(root,'assets/shoe-cutouts/manifest.json');
+const photoManifest=fs.existsSync(photoManifestFile)?JSON.parse(fs.readFileSync(photoManifestFile,'utf8')):{};
+for(const s of shoes){
+ const asset=photoManifest[s.slug];
+ if(asset?.src&&asset.src==='/assets/shoe-cutouts/'+s.slug+'.webp'&&fs.existsSync(path.join(root,'assets/shoe-cutouts',s.slug+'.webp'))){
+  const prior=s.imageOriginal||s.img;
+  s.imageOriginal=prior;
+  s.imageAlternates=[s.img,...(s.imageAlternates||[])].filter((x,i,a)=>x&&a.indexOf(x)===i);
+  s.img=asset.src;
+  s.photoCutout=true;
+ }
+}
+
 if(!Array.isArray(shoes)||!shoes.length)throw new Error('shoes.json must contain a non-empty array');
 const slugs=new Set(),names=new Set();
 for(const s of shoes){if(!/^[a-z0-9-]+$/.test(s.slug)||slugs.has(s.slug)||names.has(s.name))throw new Error('Invalid or duplicate model: '+s.name);slugs.add(s.slug);names.add(s.name)}
@@ -28,10 +43,10 @@ save('robots.txt','User-agent: *\nAllow: /\nSitemap: '+config.siteUrl.replace(/\
 // BALBOLL review enhancement: source-based reviews live in Supabase, never fabricate scores.
 for(const rel of ['index.html',...shoes.map(s=>'shoes/'+s.slug+'/index.html')]){
  const target=path.join(root,rel);let html=fs.readFileSync(target,'utf8');
- html=html.replace('</head>','<link rel="stylesheet" href="/assets/runficial.css"><link rel="stylesheet" href="/assets/balboll.css"></head>');
+ html=html.replace('</head>','<link rel="stylesheet" href="/assets/runficial.css"><link rel="stylesheet" href="/assets/balboll.css?v='+config.version+'"></head>');
  html=html.replace('</body>','<script src="/assets/balboll-ui.js"></script></body>');
  if(rel.startsWith('shoes/'))html=html.replace('</body>','<script src="/assets/balboll-detail.js"></script></body>');fs.writeFileSync(target,html);
 }
 const out=path.join(root,'public');fs.rmSync(out,{recursive:true,force:true});fs.mkdirSync(out);
-for(const name of ['index.html','assets','shoes','methodology','privacy','reviews','request','admin','sitemap.xml','robots.txt'])fs.cpSync(path.join(root,name),path.join(out,name),{recursive:true});
-console.log('Built '+shoes.length+' product pages plus main and data-policy pages. No external dependencies.');
+for(const name of ['index.html','assets','shoes','methodology','privacy','reviews','request','admin','sitemap.xml','robots.txt','favicon.ico'])fs.cpSync(path.join(root,name),path.join(out,name),{recursive:true});
+console.log('Built '+shoes.length+' product pages plus main and data-policy pages. Photo cutouts: '+Object.keys(photoManifest).length+'.');

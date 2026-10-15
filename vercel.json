@@ -1,8 +1,8 @@
 {
   "framework": null,
-  "buildCommand": "node tools/build.mjs",
+  "buildCommand": "npm run build",
   "outputDirectory": "public",
-  "installCommand": "echo \"No dependencies to install\"",
+  "installCommand": "npm install --no-audit --no-fund",
   "trailingSlash": true,
   "headers": [
     {

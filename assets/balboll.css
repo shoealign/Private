@@ -76,3 +76,87 @@
 /* V8 release: never hide a model solely due to image loading failures. */
 .product-card.image-unavailable,.guide-model.image-unavailable{display:flex!important}
 .product-card.image-fallback .card-photo{background:#f4f5f3!important}
+
+
+/* V13: image-first cards, half-width micro gauges, accessible score tiers. */
+:root{--ball-excellent:#138e54;--ball-good:#7bb644;--ball-fair:#e39c14;--ball-low:#e45146}
+.score-excellent{--score-color:var(--ball-excellent)}
+.score-good{--score-color:var(--ball-good)}
+.score-fair{--score-color:var(--ball-fair)}
+.score-low{--score-color:var(--ball-low)}
+.score-unrated{--score-color:#9ca3a3}
+.balboll-card .score-number{color:var(--score-color);font-variant-numeric:tabular-nums}
+.balboll-card .balboll-card-metrics>div.metric{grid-template-columns:49px 67px 25px;justify-content:start;gap:5px}
+.balboll-card .balboll-card-metrics .balboll-mini-track{width:67px;height:3px;border-radius:4px;background:#e7e9e7}
+.balboll-card .balboll-card-metrics .balboll-mini-track i{background:var(--score-color)}
+.balboll-card .balboll-card-metrics .metric b{color:var(--score-color)}
+.balboll-card .balboll-card-metrics{gap:3px;margin:5px 0 7px}
+.product-card.balboll-card{grid-template-columns:238px minmax(0,1fr)}
+.balboll-card .card-photo{min-height:268px}
+.balboll-card .card-photo img{height:244px!important;max-height:244px!important;padding:10px!important}
+.balboll-card .card-main{padding:15px 16px 13px}
+.balboll-card .card-title{font-size:17px}
+.balboll-card .balboll-card-score{border-top-color:#eef0ef}
+.balboll-card .balboll-detail-link{margin-top:8px}
+/* Specific score on the detail page follows exactly the same band thresholds. */
+.balboll-detail-ratings .score-number{color:var(--score-color)}
+.balboll-detail-ratings .balboll-row{grid-template-columns:70px 118px 35px;justify-content:start;gap:12px;margin:9px 0}
+.balboll-detail-ratings .balboll-row .balboll-track{width:118px;height:4px;background:#e9ece8}
+.balboll-detail-ratings .balboll-row .balboll-track i{background:var(--score-color)}
+.balboll-detail-ratings .balboll-row b{color:var(--score-color)}
+.detail-picture>img{height:430px!important;padding:10px!important}
+@media(max-width:1100px) and (min-width:651px){
+ .product-card.balboll-card{grid-template-columns:250px minmax(0,1fr)}
+ .balboll-card .card-photo img{height:250px!important;max-height:250px!important}
+}
+@media(max-width:650px){
+ .product-card.balboll-card{display:flex!important;flex-direction:column!important}
+ .balboll-card .card-photo{height:177px!important;min-height:177px!important}
+ .balboll-card .card-photo img{height:170px!important;max-height:170px!important;padding:15px 2px 3px!important}
+ .balboll-card .card-main{padding:8px 9px 10px!important}
+ .balboll-card .card-title{min-height:29px!important;margin-bottom:2px!important}
+ .balboll-card .balboll-card-score{padding:4px 0!important;min-height:33px!important}
+ .balboll-card .balboll-card-score strong{font-size:24px!important}
+ .balboll-card .balboll-card-metrics{gap:2px!important;margin:5px 0 7px!important}
+ .balboll-card .balboll-card-metrics>div.metric{grid-template-columns:32px 39px 18px!important;gap:4px!important;font-size:9px!important}
+ .balboll-card .balboll-card-metrics .balboll-mini-track{width:39px!important;height:3px!important}
+ .balboll-card .balboll-detail-link{margin-top:auto!important}
+ .balboll-detail-ratings .balboll-row{grid-template-columns:63px 91px 29px;gap:8px}
+ .balboll-detail-ratings .balboll-row .balboll-track{width:91px;height:4px}
+ .detail-picture>img{height:340px!important;padding:3px!important}
+}
+@media(max-width:360px){
+ .balboll-card .card-photo{height:151px!important;min-height:151px!important}
+ .balboll-card .card-photo img{height:145px!important;max-height:145px!important}
+ .balboll-card .balboll-card-metrics>div.metric{grid-template-columns:30px 35px 18px!important;gap:3px!important}
+ .balboll-card .balboll-card-metrics .balboll-mini-track{width:35px!important}
+}
+
+/* V14: consistent studio backdrop for local transparent shoe cutouts. */
+:root{--ball-photo-backdrop:#f4f6f4}
+.balboll-card .card-photo,
+.product-card.image-fallback .card-photo,
+.detail-picture,
+.guide-model,
+.similar-card,
+.series-card .series-photo{background:var(--ball-photo-backdrop)!important}
+.balboll-card .card-photo{border-right:1px solid #edf0eb}
+.balboll-card .card-photo img,
+.detail-picture>img,
+.guide-model img,
+.similar-card img,
+.series-card img{
+ background:transparent!important;
+ object-fit:contain!important;
+ object-position:center center!important;
+ mix-blend-mode:multiply;
+ filter:none!important;
+}
+/* A real WebP with transparent pixels must not be darkened by multiply mode. */
+img[src^="/assets/shoe-cutouts/"]{mix-blend-mode:normal!important}
+/* Neutral fallback silhouettes have transparent backgrounds, never fake white tiles. */
+img.image-missing{mix-blend-mode:normal!important;opacity:.58}
+@media(max-width:650px){
+ .balboll-card .card-photo{border-right:none!important;border-bottom:1px solid #e9eee9!important}
+ .balboll-card .card-photo img{padding:8px 1px 3px!important}
+}
