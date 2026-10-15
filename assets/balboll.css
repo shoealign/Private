@@ -514,3 +514,43 @@ img.image-missing{mix-blend-mode:normal!important;opacity:.58}
  .product-card.balboll-card .card-main{padding:6px!important;}
  .product-card.balboll-card .balboll-card-metrics>.metric{grid-template-columns:33px minmax(0,1fr) 19px!important;gap:2px!important;}
 }
+
+
+/* V19: rating panel beside the shoe identity; no redundant saved controls */
+.product-card.balboll-card .card-main{display:flex!important;flex-direction:column!important;min-width:0!important}
+.product-card.balboll-card .balboll-card-side{display:grid!important;grid-template-columns:minmax(0,.90fr) minmax(0,1.1fr)!important;gap:8px!important;align-items:start!important;min-width:0!important;flex:1}
+.product-card.balboll-card .balboll-card-identity{min-width:0!important;display:flex!important;flex-direction:column!important;gap:2px!important}
+.product-card.balboll-card .card-title{overflow-wrap:anywhere!important;min-height:0!important;margin:1px 0 2px!important}
+.product-card.balboll-card .balboll-card-score{margin-top:4px!important;min-height:0!important;}
+.product-card.balboll-card .balboll-card-metrics{margin:0!important;min-width:0!important;gap:5px!important;}
+.product-card.balboll-card .balboll-card-metrics>.metric{grid-template-columns:37px minmax(0,1fr) 25px!important;gap:3px!important;min-width:0!important;font-size:9px!important}
+.product-card.balboll-card .balboll-card-metrics .balboll-mini-track{min-width:0!important;width:100%!important}
+.product-card.balboll-card .balboll-card-metrics .metric b{font-variant-numeric:tabular-nums!important;font-size:9px!important}
+.product-card.balboll-card .balboll-detail-link{margin-top:8px!important}
+.quick-tools #showSaved{display:none!important}
+/* Place the main BALBOLL /100 score ahead of the photo and specs on details */
+body[data-page="detail"] .balboll-detail-ratings{margin:9px auto 16px!important;max-width:1150px!important;}
+body[data-page="detail"] .detail-info .detail-score{display:none!important}
+body[data-page="detail"] .balboll-detail-ratings .balboll-row{grid-template-columns:74px minmax(0,1fr) 42px!important;gap:10px!important;justify-content:stretch!important}
+body[data-page="detail"] .balboll-detail-ratings .balboll-track{width:100%!important}
+@media(max-width:650px){
+ .product-card.balboll-card .balboll-card-side{grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr)!important;gap:4px!important}
+ .product-card.balboll-card .card-main{padding:8px 6px!important}
+ .product-card.balboll-card .card-brand{font-size:9px!important}
+ .product-card.balboll-card .card-title{font-size:11px!important;line-height:1.2!important;min-height:0!important}
+ .product-card.balboll-card .balboll-card-score strong{font-size:19px!important;white-space:nowrap!important}
+ .product-card.balboll-card .balboll-card-score em{display:block!important;margin:0!important;font-size:8px!important}
+ .product-card.balboll-card .balboll-card-metrics{gap:3px!important}
+ .product-card.balboll-card .balboll-card-metrics>.metric{grid-template-columns:31px minmax(0,1fr) 21px!important;gap:2px!important;font-size:8px!important;min-height:17px!important}
+ .product-card.balboll-card .balboll-card-metrics .metric b{font-size:8px!important}
+ .product-card.balboll-card .balboll-card-metrics .balboll-mini-track{height:4px!important}
+ .product-card.balboll-card .balboll-detail-link{margin-top:7px!important}
+ body[data-page="detail"] .balboll-detail-ratings{margin:8px 0 12px!important;padding:14px!important}
+ body[data-page="detail"] .balboll-detail-ratings .balboll-row{grid-template-columns:60px minmax(0,1fr) 35px!important;gap:7px!important}
+}
+@media(max-width:380px){
+ .product-card.balboll-card .balboll-card-side{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr)!important;gap:3px!important}
+ .product-card.balboll-card .balboll-card-metrics>.metric{grid-template-columns:29px minmax(0,1fr) 19px!important;gap:2px!important;font-size:7.3px!important}
+ .product-card.balboll-card .balboll-card-metrics .metric b{font-size:7.5px!important}
+ .product-card.balboll-card .balboll-card-score strong{font-size:17px!important}
+}
