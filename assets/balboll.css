@@ -573,3 +573,14 @@ body[data-page="detail"] .balboll-detail-ratings .balboll-track{width:100%!impor
  .product-card.balboll-card .line-badge small{font-size:7px!important}
  .product-card.balboll-card .line-badge strong{font-size:11px!important}
 }
+
+/* V21: compact desktop metrics, remove empty score side space. */
+@media(min-width:841px){
+ .product-card.balboll-card .balboll-card-side{grid-template-columns:minmax(0,1fr) 116px!important;gap:5px!important;align-items:start!important;}
+ .product-card.balboll-card .balboll-card-metrics{gap:2px!important;justify-self:end!important;width:116px!important;max-width:116px!important;}
+ .product-card.balboll-card .balboll-card-metrics>.metric{grid-template-columns:35px minmax(0,1fr) 27px!important;gap:3px!important;min-height:14px!important;font-size:9px!important;line-height:1.1!important;}
+ .product-card.balboll-card .balboll-mini-track{height:3px!important;}
+ .product-card.balboll-card .balboll-detail-link{margin-top:5px!important;}
+}
+/* Score stands on its own: no /100 suffix or reserved width. */
+.product-card.balboll-card .balboll-card-score em:empty{display:none!important;}
