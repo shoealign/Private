@@ -13,7 +13,7 @@ const categories={
 };
 const base={brand:'all',cat:'all',level:'all',distance:'all',widthfilter:'all',budget:'all'};
 let profile=SL.load('shoelineup_profile_v2',null);
-if(!profile||!['male','female'].includes(profile.gender))profile=null;
+if(!profile||!profile.goal)profile=null;
 let state={...base,rankcat:'all',q:'',sort:'score',savedOnly:false,matchMode:!!profile,limit:24};
 const oldState=SL.load('shoelineup_view_v2',null);
 if(oldState&&sessionStorage.getItem('sl:return')){for(const k of ['rankcat','q','sort','brand','cat','level','distance','widthfilter','budget','savedOnly','limit'])if(oldState[k]!==undefined)state[k]=oldState[k];sessionStorage.removeItem('sl:return')}
@@ -72,7 +72,7 @@ function render(){
  $('rankDesc').textContent=state.matchMode?'발볼 30% · 용도 30% · 거리 20% · 경험 20% 조건 일치 점수입니다.':categories[state.rankcat].description;
  $('loadMore').hidden=arr.length<=state.limit;$('loadMore').textContent=`${Math.min(24,arr.length-state.limit)}개 더 보기`;
  $('matchBanner').hidden=!state.matchMode||!profile;
- if(profile)$('matchBannerDesc').textContent=`${profile.gender==='male'?'남성':'여성'} · 발볼 ${SL.WIDTHS[Number(profile.width)-1]} · ${SL.distance(profile.distance)} · ${ {daily:'데일리',speed:'스피드',long:'장거리',race:'대회'}[profile.goal]}`;
+ if(profile)$('matchBannerDesc').textContent=`발볼 ${SL.WIDTHS[Number(profile.width||3)-1]} · ${SL.distance(profile.distance||'10k')} · ${ {daily:'데일리',speed:'템포런',long:'장거리',race:'대회'}[profile.goal]||'데일리'}`;
  $('matchSortOption').disabled=!profile;$('sort').value=state.sort;
  
  document.querySelectorAll('[data-rankcat]').forEach(b=>{const on=b.dataset.rankcat===state.rankcat;b.classList.toggle('active',on);b.setAttribute('aria-pressed',on)});
@@ -106,27 +106,29 @@ $('closeFilters').onclick=()=>modal('filterSheet',false);
 $('filterSheet').addEventListener('click',e=>{const b=e.target.closest('.sheet-option');if(b){const k=Object.keys(base).find(k=>b.dataset[k]!==undefined);if(k){draft[k]=b.dataset[k];showDraft()}}});
 $('resetFilters').onclick=()=>{draft={...base};showDraft()};
 $('applyFilters').onclick=()=>{Object.assign(state,draft,{limit:24});modal('filterSheet',false);render()};
-// Recommendation flow retains the five existing grouped screens.
-let step=0;
-let fp={gender:null,color:null,level:null,width:3,distance:null,goal:null,pace:null,cadence:'unknown',weight:70,weekly:'10to30',shoeSize:'unknown',preference:null};
-const required=[['gender','color'],['level','pace'],[],['distance','goal'],['preference']];
-function finderUpdate(){
- document.querySelectorAll('.finder-step').forEach((el,i)=>el.classList.toggle('active',step===i));
- $('finderProgress').style.width=(step+1)*20+'%';$('finderBack').disabled=step===0;$('finderNext').disabled=required[step].some(k=>!fp[k]);$('finderNext').textContent=step===4?'추천 결과 보기':'다음';
- document.querySelectorAll('.finder-option').forEach(b=>{const a=fp[b.dataset.fkey]===b.dataset.value;b.classList.toggle('active',a);b.setAttribute('aria-pressed',a)});
- document.querySelectorAll('[data-width]').forEach(b=>{b.classList.toggle('active',Number(b.dataset.width)===Number(fp.width));b.classList.toggle('filled',Number(b.dataset.width)<=Number(fp.width))});
- $('widthValue').textContent=SL.WIDTHS[fp.width-1];$('weightRange').value=fp.weight;$('weightValue').textContent=fp.weight;$('shoeSizeSelect').value=fp.shoeSize;$('weeklySelect').value=fp.weekly;
+// V26: progressive disclosure, meaningful defaults, immediate preview; four inputs at most.
+const finderDefaults=()=>({goal:'daily',width:3,distance:'10k',level:'intermediate'});
+let fp={...finderDefaults(),...(profile||{})};
+function previewFinder(){
+ const ranked=[...shoes].sort((a,b)=>{const x=SL.match(a,fp)?.value??0,y=SL.match(b,fp)?.value??0;return y-x||scoreVal(b)-scoreVal(a)}).slice(0,3);
+ $('finderPreviewList').innerHTML=ranked.map((s,i)=>`<div class="finder-preview-item"><b>${i+1}</b><span>${E(s.name)}</span><strong>${scoreVal(s)<0?'—':scoreVal(s).toFixed(1)}</strong></div>`).join('');
 }
-function openFinder(){if(profile)fp={...fp,...profile};step=0;finderUpdate();modal('finder',true)}
+function finderUpdate(){
+ document.querySelectorAll('#finder .finder-option').forEach(b=>{const active=fp[b.dataset.fkey]===b.dataset.value;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});
+ document.querySelectorAll('#finder [data-width]').forEach(b=>{const active=Number(b.dataset.width)===Number(fp.width);b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});
+ previewFinder();
+}
+function openFinder(){fp={...finderDefaults(),...(profile||{})};finderUpdate();modal('finder',true)}
 $('openFinder').onclick=openFinder;$('editFinder').onclick=openFinder;$('closeFinder').onclick=()=>modal('finder',false);
-document.querySelectorAll('.finder-option').forEach(b=>b.onclick=()=>{fp[b.dataset.fkey]=b.dataset.value;finderUpdate()});
-document.querySelectorAll('[data-width]').forEach(b=>b.onclick=()=>{fp.width=Number(b.dataset.width);finderUpdate()});
-$('weightRange').oninput=e=>{fp.weight=Number(e.target.value);$('weightValue').textContent=fp.weight};
-$('shoeSizeSelect').onchange=e=>fp.shoeSize=e.target.value;$('weeklySelect').onchange=e=>fp.weekly=e.target.value;
-$('finderBack').onclick=()=>{if(step>0)step--;finderUpdate();document.querySelector('.finder-body').scrollTop=0};
-$('finderNext').onclick=()=>{if(required[step].some(k=>!fp[k]))return;if(step<4){step++;finderUpdate();document.querySelector('.finder-body').scrollTop=0;return}
- profile={...fp};SL.save('shoelineup_profile_v2',profile);state={...state,...base,rankcat:'all',q:'',sort:'match',matchMode:true,savedOnly:false,limit:24};$('search').value='';modal('finder',false);render();scrollRank()};
-$('matchReset').onclick=()=>{profile=null;SL.save('shoelineup_profile_v2',null);state.matchMode=false;state.sort='latest';render()};
+document.querySelectorAll('#finder .finder-option').forEach(b=>b.onclick=()=>{fp[b.dataset.fkey]=b.dataset.value;finderUpdate()});
+document.querySelectorAll('#finder [data-width]').forEach(b=>b.onclick=()=>{fp.width=Number(b.dataset.width);finderUpdate()});
+$('finderClear').onclick=()=>{fp=finderDefaults();finderUpdate()};
+$('finderNext').onclick=()=>{
+ profile={...fp};SL.save('shoelineup_profile_v2',profile);
+ state={...state,...base,rankcat:'all',q:'',sort:'match',matchMode:true,savedOnly:false,limit:24};
+ $('search').value='';modal('finder',false);render();scrollRank();
+};
+$('matchReset').onclick=()=>{profile=null;SL.save('shoelineup_profile_v2',null);state.matchMode=false;state.sort='score';render()};
 const purposes=[['race','레이스','기록 도전',s=>s.cat==='race'],['tempo','템포 · 스피드','빠른 훈련',s=>categories.speed.test(s)&&s.cat!=='race'],['daily','데일리 · 쿠션','편안한 일상 러닝',s=>s.cat==='daily'&&!categories.speed.test(s)],['stability','안정화','지지력 중심',s=>s.cat==='stability']];
 function renderGuide(){
  $('guideBrandFilters').innerHTML=['all',...SL.BRANDS].map(b=>`<button data-guide-brand="${E(b)}" class="${b===guideBrand?'active':''}">${b==='all'?'전체 브랜드':E(b)}</button>`).join('');
