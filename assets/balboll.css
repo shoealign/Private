@@ -724,3 +724,49 @@ body[data-page="detail"] .balboll-detail-ratings .balboll-track{width:100%!impor
  .product-card.balboll-card .balboll-card-metrics>.metric{grid-template-columns:29px minmax(0,1fr) 24px!important;height:13px!important;min-height:13px!important;max-height:13px!important;gap:2px!important}
  .product-card.balboll-card .balboll-card-metrics .metric b,.product-card.balboll-card .balboll-card-metrics .metric span{font-size:8px!important}
 }
+
+/* V28: one-line mobile header, compact filters, polished square rank */
+.site-header .header-inner{gap:10px!important}
+.site-header .header-actions .btn{white-space:nowrap!important}
+.purpose-heading{display:none!important}
+.rank-tabs{margin-top:0!important;margin-bottom:0!important}
+.list-controls{margin:8px 0 4px!important;gap:7px!important;min-height:32px!important}
+.list-controls #openFilters{font-size:11px!important;min-height:30px!important;height:30px!important;padding:4px 11px!important;border-radius:7px!important}
+.list-controls .sort-wrap select{min-height:30px!important;height:30px!important;padding:3px 24px 3px 10px!important;font-size:11px!important;border-radius:7px!important}
+.quick-tools{margin:0 0 5px!important;min-height:25px!important}
+.quick-tools button{min-height:24px!important;padding:2px 4px!important}
+.performance-heading{margin:3px 0 6px!important;font-size:11px!important}
+.product-card.balboll-card .line-badge{width:27px!important;height:27px!important;min-height:27px!important;border-radius:7px!important;inset:7px auto auto 7px!important;box-shadow:0 2px 7px #15261c30!important;border:1px solid #36513e!important;background:#172920!important;color:#d9ffa3!important}
+.product-card.balboll-card .line-badge strong{font-size:15px!important;font-weight:900!important;line-height:1!important}
+@media(max-width:700px){
+ .site-header .header-inner{display:flex!important;flex-wrap:nowrap!important;align-items:center!important;gap:5px!important;padding:9px 10px!important;min-height:58px!important}
+ .site-header .brand-logo{order:0!important;flex:0 0 auto!important;min-width:0!important;gap:0!important}
+ .site-header .brand-logo .balboll-symbol{width:34px!important;height:34px!important;border-radius:9px!important;font-size:23px!important;letter-spacing:-2px!important}
+ .site-header .brand-wordmark{font-size:21px!important;letter-spacing:-1.4px!important;line-height:1!important}
+ .site-header .brand-wordmark small{display:none!important}
+ .site-header .desktop-nav{display:none!important}
+ .site-header .searchbar{order:1!important;position:static!important;transform:none!important;flex:1 1 0!important;min-width:0!important;width:auto!important;max-width:none!important;height:31px!important;min-height:31px!important;margin:0!important;padding:0 5px!important;gap:3px!important;border-radius:7px!important}
+ .site-header .searchbar input{font-size:11px!important;height:29px!important;width:100%!important;min-width:0!important}
+ .site-header .searchbar input::placeholder{color:#8b918d!important}
+ .site-header .searchbar>span{font-size:13px!important}
+ .site-header .searchbar button{min-width:12px!important;min-height:22px!important;font-size:12px!important;padding:0!important}
+ .site-header .header-actions{order:2!important;margin-left:0!important;gap:2px!important;flex:0 0 auto!important}
+ .site-header .header-actions .btn{font-size:10px!important;min-height:28px!important;height:28px!important;padding:4px 5px!important;border-radius:6px!important}
+ .rank-tabs{margin-top:0!important}.rank-tabs button{padding:7px 1px!important}
+ .list-controls{margin:6px 0 2px!important;min-height:29px!important}
+ .list-controls #openFilters{min-height:27px!important;height:27px!important;padding:3px 9px!important;font-size:10px!important}
+ .list-controls .sort-wrap select{min-height:27px!important;height:27px!important;font-size:10px!important}
+ .quick-tools{margin-bottom:3px!important;min-height:22px!important}
+ .quick-tools button{min-height:22px!important}
+ .performance-heading{margin:2px 0 5px!important}
+ .product-card.balboll-card .line-badge{width:26px!important;height:26px!important;min-height:26px!important;border-radius:7px!important;inset:6px auto auto 6px!important}
+ .product-card.balboll-card .line-badge strong{font-size:14px!important}
+}
+@media(max-width:375px){
+ .site-header .header-inner{padding:8px 7px!important;gap:3px!important}
+ .site-header .brand-logo .balboll-symbol{width:30px!important;height:30px!important;font-size:20px!important}
+ .site-header .brand-wordmark{font-size:18px!important;letter-spacing:-1.3px!important}
+ .site-header .searchbar{padding:0 3px!important}
+ .site-header .searchbar input{font-size:10px!important}
+ .site-header .header-actions .btn{font-size:9px!important;padding:3px 4px!important}
+}
