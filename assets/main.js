@@ -3,13 +3,12 @@
 const $=id=>document.getElementById(id), E=SL.escape;
 const shoes=window.SHOES;
 const categories={
- all:{title:'전체 러닝화 라인업',description:'같은 점수 기준으로 정렬합니다. 미평가 제품은 점수 순에서 뒤에 표시합니다.',test:()=>true},
- beginner:{title:'입문 러너를 위한 라인업',description:'처음 고르는 데일리·안정화 중심. 고가 레이싱화가 모두에게 좋은 것은 아닙니다.',test:s=>(s.level||[]).includes('beginner')&&s.cat!=='race'},
- training:{title:'트레이닝 라인업',description:'자주 신는 일상 훈련용 모델을 모았습니다.',test:s=>s.cat!=='race'},
- speed:{title:'스피드 훈련 라인업',description:'템포·인터벌 용도로 수록된 모델을 모았습니다.',test:s=>/템포|스피드|Boston|EVO SL|Endorphin Speed|Rebel|Mach|Zoom Fly|Deviate Nitro [0-9]/i.test(s.catko+' '+s.name)},
- long:{title:'장거리 라인업',description:'하프·풀·롱런 중심으로 분류한 모델입니다. 훈련/레이스 용도를 함께 확인하세요.',test:s=>(s.distances||[]).some(d=>['half','full'].includes(d))},
- advanced:{title:'숙련 러너 라인업',description:'숙련 러너용으로 분류된 모델입니다. 점수는 성능 보증이 아닙니다.',test:s=>(s.level||[]).includes('advanced')},
- race:{title:'레이스 라인업',description:'대회·기록 도전 용도로 분류된 모델입니다.',test:s=>s.cat==='race'}
+ all:{title:'전체',description:'전체 러닝화',test:()=>true},
+ daily:{title:'데일리',description:'일상적인 러닝·훈련용 제품',test:s=>s.cat==='daily'||(s.cat!=='race'&&s.cat!=='stability')},
+ long:{title:'장거리',description:'장거리 주행에 적합한 제품',test:s=>(s.distances||[]).some(d=>['half','full'].includes(d))},
+ tempo:{title:'템포·스피드',description:'빠른 페이스의 훈련용 제품',test:s=>/템포|스피드|Boston|EVO SL|Endorphin Speed|Rebel|Mach|Zoom Fly|Deviate Nitro [0-9]/i.test((s.catko||'')+' '+s.name)},
+ stability:{title:'안정화',description:'안정적인 지지에 초점을 둔 제품',test:s=>s.cat==='stability'},
+ race:{title:'레이스',description:'대회 및 기록 도전용 제품',test:s=>s.cat==='race'}
 };
 const base={brand:'all',cat:'all',level:'all',distance:'all',widthfilter:'all',budget:'all'};
 let profile=SL.load('shoelineup_profile_v2',null);
@@ -18,6 +17,7 @@ let state={...base,rankcat:'all',q:'',sort:'score',savedOnly:false,matchMode:!!p
 const oldState=SL.load('shoelineup_view_v2',null);
 if(oldState&&sessionStorage.getItem('sl:return')){for(const k of ['rankcat','q','sort','brand','cat','level','distance','widthfilter','budget','savedOnly','limit'])if(oldState[k]!==undefined)state[k]=oldState[k];sessionStorage.removeItem('sl:return')}
 if(state.sort==='match')state.sort='score';
+if(!categories[state.rankcat])state.rankcat='all';
 const urlQuery=new URLSearchParams(location.search).get('q');if(urlQuery)state.q=urlQuery;
 $('search').value=state.q;$('sort').value=state.sort;
 let draft={...base},guideBrand='all',guidePurpose='all',lastFocus=null;
@@ -55,11 +55,11 @@ function list(){
 function card(s,i){
  const r=s.balbollRatings,valid=r&&['daily','long','tempo','cushion','stability'].every(k=>Number.isFinite(r[k]));
  const total=valid?(['daily','long','tempo','cushion','stability'].reduce((a,k)=>a+r[k],0)/5).toFixed(1):null;
- const labels=[['daily','데일리'],['long','장거리'],['tempo','템포런'],['cushion','쿠셔닝'],['stability','안정성']];
+ const labels=[['daily','범용성'],['long','지속성'],['tempo','반응성'],['cushion','쿠셔닝'],['stability','안정성']];
  const band=n=>Number.isFinite(n)?(n>=90?'excellent':n>=80?'good':n>=70?'fair':'low'):'unrated';
  const overallClass=band(total===null?NaN:Number(total));
  const short=s.name.replace(new RegExp('^'+s.brand+'\\s*','i'),'');
- return `<article class="product-card balboll-card score-${overallClass}" data-product="${s.slug}"><a class="card-photo" href="/shoes/${s.slug}/" aria-label="${E(s.name)} 상세"><span class="line-badge"><small>BOLL</small><strong>${i+1}</strong></span><img src="${E(s.img)}" alt="${E(s.name)}" loading="lazy" decoding="async" data-slug="${s.slug}" onerror="SL.imageError(this)"></a><div class="card-main"><div class="balboll-card-side"><div class="balboll-card-identity"><div class="card-brand">${E(s.brand)}</div><h3 class="card-title"><a href="/shoes/${s.slug}/">${E(short)}</a></h3><div class="card-facts"><span class="chip">${E(SL.type(s))}</span><span class="chip">발볼 ${E(s.widthFeel||'확인 중')}</span></div><div class="balboll-card-score" aria-label="종합 점수"><strong class="score-number score-${overallClass}">${total||'—'}<em>${total?'':'평가 준비 중'}</em></strong></div></div><div class="balboll-card-metrics">${labels.map(([k,label])=>`<div class="metric score-${band(valid?r[k]:NaN)}" title="${label}: ${valid?scoreDisplay(r[k]):'평가 준비 중'}점"><span>${label}</span><div class="balboll-mini-track" role="meter" aria-label="${label}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${valid?r[k]:0}"><i style="width:${valid?r[k]:0}%"></i></div><b>${valid?scoreDisplay(r[k]):'—'}</b></div>`).join('')}</div></div><a class="balboll-detail-link" href="/shoes/${s.slug}/">상세 평가 보기 →</a></div></article>`;
+ return `<article class="product-card balboll-card score-${overallClass}" data-product="${s.slug}"><a class="card-photo" href="/shoes/${s.slug}/" aria-label="${E(s.name)} 상세"><span class="line-badge" aria-label="${i+1}위"><strong>${i+1}</strong></span><img src="${E(s.img)}" alt="${E(s.name)}" loading="lazy" decoding="async" data-slug="${s.slug}" onerror="SL.imageError(this)"></a><div class="card-main"><div class="balboll-card-side"><div class="balboll-card-identity"><div class="card-brand">${E(s.brand)}</div><h3 class="card-title"><a href="/shoes/${s.slug}/">${E(short)}</a></h3><div class="card-facts"><span class="chip">${E(SL.type(s))}</span><span class="chip">발볼 ${E(s.widthFeel||'확인 중')}</span></div><div class="balboll-card-score" aria-label="종합 점수"><strong class="score-number score-${overallClass}">${total||'—'}<em>${total?'':'평가 준비 중'}</em></strong></div></div><div class="balboll-card-metrics">${labels.map(([k,label])=>`<div class="metric score-${band(valid?r[k]:NaN)}" title="${label}: ${valid?scoreDisplay(r[k]):'평가 준비 중'}점"><span>${label}</span><div class="balboll-mini-track" role="meter" aria-label="${label}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${valid?r[k]:0}"><i style="width:${valid?r[k]:0}%"></i></div><b>${valid?scoreDisplay(r[k]):'—'}</b></div>`).join('')}</div></div><a class="balboll-detail-link" href="/shoes/${s.slug}/">상세 평가 보기 →</a></div></article>`;
 }
 function updateTags(){
  const label={brand:state.brand,cat:{daily:'데일리/트레이닝',race:'레이싱',stability:'안정화'}[state.cat],level:{beginner:'입문',intermediate:'중급',advanced:'숙련'}[state.level],distance:SL.distance(state.distance),widthfilter:{narrow:'발볼 좁음',normal:'발볼 보통',wide:'발볼 넓음'}[state.widthfilter],budget:(Number(state.budget)/10000)+'만 원 이하'};
@@ -88,7 +88,7 @@ $('searchForm').addEventListener('submit',e=>{e.preventDefault();scrollRank()});
 $('search').oninput=e=>{state.q=e.target.value;state.limit=24;render()};
 $('clearSearch').onclick=()=>{state.q='';$('search').value='';render();$('search').focus()};
 $('sort').onchange=e=>{state.sort=e.target.value;state.matchMode=state.sort==='match'&&!!profile;state.limit=24;render()};
-$('rankTabs').onclick=e=>{const b=e.target.closest('[data-rankcat]');if(!b)return;state.rankcat=b.dataset.rankcat;state.matchMode=false;state.sort='latest';state.limit=24;render()};
+$('rankTabs').onclick=e=>{const b=e.target.closest('[data-rankcat]');if(!b)return;state.rankcat=b.dataset.rankcat;state.matchMode=false;state.sort='score';state.limit=24;render()};
 $('loadMore').onclick=()=>{state.limit+=24;render()};
 $('showAll').onclick=()=>{state.savedOnly=false;render()};
 $('activeFilterBar').onclick=e=>{const b=e.target.closest('[data-reset-filter]');if(b){state[b.dataset.resetFilter]='all';render()}};
