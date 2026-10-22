@@ -34,10 +34,16 @@ function page(title,description,url,template,scripts,home=false){
 }
 save('index.html',page('러닝화 평점과 장단점','러닝화 5개 항목 평점과 장점, 단점, 발볼을 한눈에 확인하세요.','/','home-body.html',['shoes.js','core.js','main.js'],true));
 
+// Category catalogs use their own dataset; running scores are never reused as walking or hiking scores.
+for(const [key,label] of [['hiking','등산화'],['walking','워킹화']]){
+ process.env.BALBOLL_CATEGORY=key;
+ save(key+'/index.html',page(label+' 추천 20선',label+' 전문 리뷰 기반 추천 모델 20개','/'+key+'/',key+'-body.html',['category-collection.js','category.js']));
+ delete process.env.BALBOLL_CATEGORY;
+}
 save('methodology/index.html',page('점수·데이터 안내','BALBOLL 점수와 리뷰 출처, 평가 기준을 안내합니다.','/methodology/','methodology-body.html',['core.js']));
 save('privacy/index.html',page('브라우저 저장 안내','사이트 데이터 처리 안내입니다.','/privacy/','privacy-body.html',['core.js','privacy.js']));
 for(const s of shoes)save('shoes/'+s.slug+'/index.html',V.detail(s,shoes));
-const urls=['/reviews/','/request/','/admin/', '/','/methodology/','/privacy/',...shoes.map(s=>'/shoes/'+s.slug+'/')];
+const urls=['/reviews/','/request/','/admin/','/hiking/','/walking/', '/', '/methodology/','/privacy/',...shoes.map(s=>'/shoes/'+s.slug+'/')];
 save('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+urls.map(u=>'<url><loc>'+config.siteUrl.replace(/\/$/,'')+u+'</loc></url>').join('')+'</urlset>');
 save('robots.txt','User-agent: *\nAllow: /\nSitemap: '+config.siteUrl.replace(/\/$/,'')+'/sitemap.xml\n');
 // BALBOLL review enhancement: source-based reviews live in Supabase, never fabricate scores.
@@ -48,5 +54,5 @@ for(const rel of ['index.html',...shoes.map(s=>'shoes/'+s.slug+'/index.html')]){
  if(rel.startsWith('shoes/'))html=html.replace('</body>','<script src="/assets/balboll-detail.js"></script></body>');fs.writeFileSync(target,html);
 }
 const out=path.join(root,'public');fs.rmSync(out,{recursive:true,force:true});fs.mkdirSync(out);
-for(const name of ['index.html','assets','shoes','methodology','privacy','reviews','request','admin','sitemap.xml','robots.txt','favicon.ico'])fs.cpSync(path.join(root,name),path.join(out,name),{recursive:true});
+for(const name of ['index.html','assets','shoes','hiking','walking','methodology','privacy','reviews','request','admin','sitemap.xml','robots.txt','favicon.ico'])fs.cpSync(path.join(root,name),path.join(out,name),{recursive:true});
 console.log('Built '+shoes.length+' product pages plus main and data-policy pages. Photo cutouts: '+Object.keys(photoManifest).length+'.');

@@ -869,3 +869,67 @@ body[data-page="detail"] .balboll-detail-ratings .balboll-track{width:100%!impor
   width:14px!important;min-width:14px!important;max-width:14px!important;
  }
 }
+
+/* V31: single-line product model names and accessible performance pentagon on details. */
+.product-card.balboll-card .balboll-card-identity{min-width:0!important}
+.product-card.balboll-card .card-title{min-width:0!important;max-width:100%!important;height:18px!important;min-height:18px!important;line-height:18px!important;overflow:hidden!important;white-space:nowrap!important}
+.product-card.balboll-card .card-title a{display:block!important;min-width:0!important;max-width:100%!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;word-break:normal!important;overflow-wrap:normal!important;line-height:18px!important}
+.product-card.balboll-card .card-title .model-break{display:none!important}
+.balboll-radar-section{margin-top:18px!important}
+.balboll-radar-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.balboll-radar-heading h2{margin:0!important}
+.balboll-radar-total{font-size:13px;color:#66716a;white-space:nowrap}
+.balboll-radar-total strong{font-size:29px;margin-left:7px;font-variant-numeric:tabular-nums}
+.balboll-radar-layout{display:grid;grid-template-columns:minmax(0,330px) minmax(0,1fr);align-items:center;gap:24px;margin:14px 0}
+.balboll-radar-chart{width:100%;max-width:330px;margin:auto}
+.balboll-radar-chart svg{display:block;width:100%;height:auto;overflow:visible}
+.balboll-radar-list{width:100%;min-width:0}
+.balboll-radar-list .balboll-row{grid-template-columns:64px minmax(0,1fr) 44px!important;margin:11px 0!important;gap:9px!important}
+.balboll-radar-list .balboll-row b{text-align:right;font-variant-numeric:tabular-nums}
+@media(max-width:650px){
+ .product-card.balboll-card .card-title{height:17px!important;min-height:17px!important;line-height:17px!important}
+ .product-card.balboll-card .card-title a{line-height:17px!important}
+ .balboll-radar-layout{grid-template-columns:1fr;gap:0;margin:5px 0 10px}
+ .balboll-radar-chart{max-width:280px}
+ .balboll-radar-list .balboll-row{margin:8px 0!important}
+ .balboll-radar-heading h2{font-size:18px}
+ .balboll-radar-total strong{font-size:24px}
+}
+
+
+/* V32: two-line model name slot, compact usage label, no pentagon. */
+.product-card.balboll-card .card-title{
+ box-sizing:border-box!important;height:36px!important;min-height:36px!important;max-height:36px!important;
+ white-space:normal!important;overflow:hidden!important;line-height:17px!important;margin:2px 0 0!important;
+}
+.product-card.balboll-card .card-title a{
+ display:block!important;overflow:hidden!important;text-overflow:clip!important;
+ height:36px!important;max-height:36px!important;white-space:normal!important;line-height:17px!important;
+ word-break:keep-all!important;overflow-wrap:normal!important;
+}
+.product-card.balboll-card .card-title .model-title-line{
+ display:block!important;white-space:nowrap!important;text-overflow:ellipsis!important;
+ overflow:hidden!important;max-width:100%!important;line-height:17px!important;
+}
+.product-card.balboll-card .balboll-card-identity{
+ display:grid!important;grid-template-rows:auto 36px 1fr auto!important;align-self:stretch!important;gap:1px!important;
+}
+.product-card.balboll-card .balboll-card-score{
+ display:flex!important;flex-direction:column!important;align-items:flex-start!important;
+ justify-content:end!important;grid-row:4!important;gap:2px!important;margin-top:0!important;
+}
+.product-card.balboll-card .shoe-usage-label{
+ display:block!important;max-width:100%!important;white-space:nowrap!important;
+ font-size:9px!important;line-height:12px!important;font-weight:600!important;
+ letter-spacing:-.2px!important;color:#67736b!important;
+}
+@media(max-width:650px){
+ .product-card.balboll-card .card-title,
+ .product-card.balboll-card .card-title a{height:34px!important;min-height:34px!important;max-height:34px!important;line-height:16px!important}
+ .product-card.balboll-card .card-title .model-title-line{line-height:16px!important}
+ .product-card.balboll-card .balboll-card-identity{grid-template-rows:auto 34px 1fr auto!important}
+ .product-card.balboll-card .shoe-usage-label{font-size:8px!important;line-height:11px!important}
+}
+
+/* V32: reserve identical label height regardless of model name length. */
+.product-card.balboll-card .balboll-card-score .shoe-usage-label{min-height:12px!important;text-align:left!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}

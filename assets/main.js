@@ -53,20 +53,27 @@ function list(){
  return arr;
 }
 function cardModelTitle(short){
- // Keep model families together and place generation/version on the next line.
- const rules=[
-  /^(Adizero(?:\s+Adios\s+Pro|\s+EVO|\s+Boston|\s+Takumi\s+Sen|\s+SL2?))\s+(.+)$/i,
-  /^(Endorphin(?:\s+Speed|\s+Pro))\s+(.+)$/i,
-  /^(FuelCell(?:\s+Rebel))\s+(.+)$/i,
-  /^(SC(?:\s+Trainer|\s+Elite))\s+(.+)$/i,
-  /^(Metaspeed(?:\s+Sky|\s+Edge))\s+(.+)$/i,
-  /^(Fast-R(?:\s+Nitro\s+Elite)|Deviate(?:\s+Nitro(?:\s+Elite)?)|Velocity\s+Nitro)\s+(.+)$/i,
-  /^(Cloudboom(?:\s+Strike)?)\s+(.+)$/i
- ];
- for(const rule of rules){const m=short.match(rule);if(m)return E(m[1])+'<br class="model-break">'+E(m[2]);}
- // Other names wrap naturally at spaces without breaking a word in the middle.
- return E(short);
+ const parts=short.trim().split(/\s+/);
+ if(parts.length<2)return E(short);
+ // Keep established model families together where the distinction is meaningful.
+ const families=['Adizero','Endorphin','FuelCell','Metaspeed','Gel-Kayano','Magic Speed','SC','Fresh Foam','Deviate Nitro','Fast-R Nitro'];
+ let split=parts.length===2?1:Math.ceil(parts.length/2);
+ const match=families.find(f=>short.toLowerCase().startsWith(f.toLowerCase()+' '));
+ if(match){const familyCount=match.split(' ').length;split=Math.min(familyCount,parts.length-1)}
+ const left=parts.slice(0,split).join(' '),right=parts.slice(split).join(' ');
+ return `<span class="model-title-line">${E(left)}</span><span class="model-title-line">${E(right)}</span>`;
 }
+function shoeUsageLabel(s){
+ const type=String(s.shoeType||'');
+ if(s.cat==='stability'||/안정화/.test(type))return '데일리 안정화';
+ if(s.cat==='race')return /카본/.test(type)?'레이싱 카본화':'레이싱화';
+ if(/카본/.test(type))return '데일리 카본화';
+ if(/플레이트/.test(type))return '데일리 플레이트화';
+ if(/템포|경량/.test(type))return '데일리 경량화';
+ if(/쿠션|슈퍼|트레이닝/.test(type))return '데일리 쿠션화';
+ return '데일리 러닝화';
+}
+
 function card(s,i){
  const r=s.balbollRatings,valid=r&&['daily','long','tempo','cushion','stability'].every(k=>Number.isFinite(r[k]));
  const total=valid?(['daily','long','tempo','cushion','stability'].reduce((a,k)=>a+r[k],0)/5).toFixed(1):null;
@@ -74,7 +81,7 @@ function card(s,i){
  const band=n=>Number.isFinite(n)?(n>=90?'excellent':n>=80?'good':n>=70?'fair':'low'):'unrated';
  const overallClass=band(total===null?NaN:Number(total));
  const short=s.name.replace(new RegExp('^'+s.brand+'\\s*','i'),'');
- return `<article class="product-card balboll-card score-${overallClass}" data-product="${s.slug}"><a class="card-photo" href="/shoes/${s.slug}/" aria-label="${E(s.name)} 상세"><span class="line-badge" aria-label="${i+1}위"><strong>${i+1}</strong></span><img src="${E(s.img)}" alt="${E(s.name)}" loading="lazy" decoding="async" data-slug="${s.slug}" onerror="SL.imageError(this)"></a><div class="card-main"><div class="balboll-card-side"><div class="balboll-card-identity"><div class="card-brand">${E(s.brand)}</div><h3 class="card-title"><a href="/shoes/${s.slug}/">${cardModelTitle(short)}</a></h3><div class="card-facts"><span class="chip">${E(SL.type(s))}</span><span class="chip">발볼 ${E(s.widthFeel||'확인 중')}</span></div><div class="balboll-card-score" aria-label="종합 점수"><strong class="score-number score-${overallClass}">${total||'—'}<em>${total?'':'평가 준비 중'}</em></strong></div></div><div class="balboll-card-metrics">${labels.map(([k,label])=>`<div class="metric score-${band(valid?r[k]:NaN)}" title="${label}: ${valid?scoreDisplay(r[k]):'평가 준비 중'}점"><span>${label}</span><div class="balboll-mini-track" role="meter" aria-label="${label}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${valid?r[k]:0}"><i style="width:${valid?r[k]:0}%"></i></div><b>${valid?scoreDisplay(r[k]):'—'}</b></div>`).join('')}</div></div><a class="balboll-detail-link" href="/shoes/${s.slug}/">상세 평가 보기 →</a></div></article>`;
+ return `<article class="product-card balboll-card score-${overallClass}" data-product="${s.slug}"><a class="card-photo" href="/shoes/${s.slug}/" aria-label="${E(s.name)} 상세"><span class="line-badge" aria-label="${i+1}위"><strong>${i+1}</strong></span><img src="${E(s.img)}" alt="${E(s.name)}" loading="lazy" decoding="async" data-slug="${s.slug}" onerror="SL.imageError(this)"></a><div class="card-main"><div class="balboll-card-side"><div class="balboll-card-identity"><div class="card-brand">${E(s.brand)}</div><h3 class="card-title"><a href="/shoes/${s.slug}/" title="${E(s.name)}">${cardModelTitle(short)}</a></h3><div class="card-facts"><span class="chip">${E(SL.type(s))}</span><span class="chip">발볼 ${E(s.widthFeel||'확인 중')}</span></div><div class="balboll-card-score" aria-label="종합 점수"><strong class="score-number score-${overallClass}">${total||'—'}<em>${total?'':'평가 준비 중'}</em></strong><span class="shoe-usage-label">${E(shoeUsageLabel(s))}</span></div></div><div class="balboll-card-metrics">${labels.map(([k,label])=>`<div class="metric score-${band(valid?r[k]:NaN)}" title="${label}: ${valid?scoreDisplay(r[k]):'평가 준비 중'}점"><span>${label}</span><div class="balboll-mini-track" role="meter" aria-label="${label}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${valid?r[k]:0}"><i style="width:${valid?r[k]:0}%"></i></div><b>${valid?scoreDisplay(r[k]):'—'}</b></div>`).join('')}</div></div><a class="balboll-detail-link" href="/shoes/${s.slug}/">상세 평가 보기 →</a></div></article>`;
 }
 function updateTags(){
  const label={brand:state.brand,cat:{daily:'데일리/트레이닝',race:'레이싱',stability:'안정화'}[state.cat],level:{beginner:'입문',intermediate:'중급',advanced:'숙련'}[state.level],distance:SL.distance(state.distance),widthfilter:{narrow:'발볼 좁음',normal:'발볼 보통',wide:'발볼 넓음'}[state.widthfilter],budget:(Number(state.budget)/10000)+'만 원 이하'};
