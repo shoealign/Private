@@ -105,7 +105,7 @@ function syncSelectionButtons(){
  document.querySelectorAll('[data-save]').forEach(b=>{const on=SL.saved().includes(b.dataset.save);b.classList.toggle('selected',on);b.setAttribute('aria-pressed',on);b.textContent=on?'♥ 관심 저장됨':'♡ 관심'});
 
 }
-function scrollRank(){$('rankTabs').scrollIntoView({behavior:'smooth',block:'start'})}
+function scrollRank(){$('ranking').scrollIntoView({behavior:'smooth',block:'start'})}
 $('searchForm').addEventListener('submit',e=>{e.preventDefault();scrollRank()});
 $('search').oninput=e=>{state.q=e.target.value;state.limit=24;render()};
 $('clearSearch').onclick=()=>{state.q='';$('search').value='';render();$('search').focus()};
