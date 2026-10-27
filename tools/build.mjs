@@ -37,7 +37,7 @@ save('index.html',page('러닝화 평점과 장단점','러닝화 5개 항목 �
 // Category catalogs use their own dataset; running scores are never reused as walking or hiking scores.
 for(const [key,label] of [['hiking','등산화'],['walking','워킹화']]){
  process.env.BALBOLL_CATEGORY=key;
- save(key+'/index.html',page(label+' 추천 20선',label+' 전문 리뷰 기반 추천 모델 20개','/'+key+'/',key+'-body.html',['category-collection.js','category.js']));
+ save(key+'/index.html',page(label,label+' 모델별 평가와 자료 출처','/'+key+'/',key+'-body.html',['category-collection.js','category.js']));
  delete process.env.BALBOLL_CATEGORY;
 }
 save('methodology/index.html',page('점수·데이터 안내','BALBOLL 점수와 리뷰 출처, 평가 기준을 안내합니다.','/methodology/','methodology-body.html',['core.js']));
@@ -49,9 +49,17 @@ save('robots.txt','User-agent: *\nAllow: /\nSitemap: '+config.siteUrl.replace(/\
 // BALBOLL review enhancement: source-based reviews live in Supabase, never fabricate scores.
 for(const rel of ['index.html',...shoes.map(s=>'shoes/'+s.slug+'/index.html')]){
  const target=path.join(root,rel);let html=fs.readFileSync(target,'utf8');
- html=html.replace('</head>','<link rel="stylesheet" href="/assets/runficial.css"><link rel="stylesheet" href="/assets/balboll.css?v='+config.version+'"></head>');
- html=html.replace('</body>','<script src="/assets/balboll-ui.js"></script></body>');
+ html=html.replace('</head>','<link rel="stylesheet" href="/assets/runficial.css"><link rel="stylesheet" href="/assets/balboll.css?v='+config.version+'"><link rel="stylesheet" href="/assets/v38-restore.css?v=20261027-v38"></head>');
+ 
+ html=html.replace('</body>','<script src="/assets/balboll-ui.js"></script></body>');if(rel==='index.html')html=html.replace('</body>','<script src="/assets/restore-guard.js?v=20261027-v38"></script></body>');
  if(rel.startsWith('shoes/'))html=html.replace('</body>','<script src="/assets/balboll-detail.js"></script></body>');fs.writeFileSync(target,html);
+}
+// V41: shared category UI, generated AFTER all legacy pages and BEFORE public copy.
+const unified=fs.readFileSync(path.join(root,'tools/unified-template-v41.html'),'utf8');
+for(const [kind,label,rel] of [['running','러닝화','index.html'],['hiking','등산화','hiking/index.html'],['walking','워킹화','walking/index.html']]){
+ let html=unified.replace('data-kind="running"','data-kind="'+kind+'"').replace('러닝화 검색',label+' 검색');
+ html=html.replace(/(<a href="(\/|\/hiking\/|\/walking\/)" class=")[^"]*(")/g,(whole,start,href,end)=>start+(href===(kind==='running'?'/':kind==='hiking'?'/hiking/':'/walking/')?'active':'')+end);
+ save(rel,html);
 }
 const out=path.join(root,'public');fs.rmSync(out,{recursive:true,force:true});fs.mkdirSync(out);
 for(const name of ['index.html','assets','shoes','hiking','walking','methodology','privacy','reviews','request','admin','sitemap.xml','robots.txt','favicon.ico'])fs.cpSync(path.join(root,name),path.join(out,name),{recursive:true});
