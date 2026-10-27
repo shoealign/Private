@@ -10,3 +10,16 @@
 .category-nav .community-nav-link{margin-left:auto;color:#20372b;border-color:#b5c7b7;background:#eaf4ec}
 .catalog-talk{display:block;margin-top:9px;font-size:12px;font-weight:800;color:#186448;text-decoration:none}
 @media(max-width:650px){.category-nav .community-nav-link{margin-left:auto;padding:0 9px}}
+
+/* V39: actual model-specific photography with safe failed-image fallback */
+.catalog-card-top{height:auto;aspect-ratio:1.82;background:#f6f7f6;overflow:hidden}
+.catalog-photo-wrap{height:100%;width:100%;display:grid;place-items:center;overflow:hidden}
+.catalog-photo{display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:#f8f8f8;mix-blend-mode:multiply}
+.catalog-photo-fallback{width:100%;height:100%;display:grid;place-items:center}
+.catalog-photo-fallback[hidden]{display:none!important}
+.catalog-visual small{font-size:9px}
+.catalog-card-body{gap:4px}
+.catalog-name{overflow-wrap:normal;word-break:keep-all}
+.catalog-axis{grid-template-columns:48px minmax(0,1fr) 24px;min-width:0;column-gap:4px}
+.catalog-axis span,.catalog-axis b{white-space:nowrap}
+@media(max-width:650px){.catalog-card-top{height:auto;aspect-ratio:1.5}.catalog-card-body{padding:9px 8px}.catalog-axis{grid-template-columns:37px minmax(0,1fr) 18px;gap:2px;font-size:9px}.catalog-axis b{font-size:9px}}

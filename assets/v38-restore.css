@@ -26,3 +26,51 @@
 #grid{display:grid!important;visibility:visible!important;opacity:1!important}
 @media(max-width:1150px){.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
 @media(max-width:760px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}.product-card.balboll-card .card-photo{height:126px!important;min-height:126px!important;max-height:126px!important}.product-card.balboll-card .card-photo img{padding:9px!important}.product-card.balboll-card .card-main{padding:9px!important}.product-card.balboll-card .card-title{font-size:12px!important}.product-card.balboll-card .balboll-card-score strong{font-size:24px!important}.product-card.balboll-card .shoe-usage-label{font-size:9px!important}.product-card.balboll-card .balboll-card-metrics>div{grid-template-columns:39px minmax(0,1fr) 22px!important;gap:2px!important;font-size:9px!important}.product-card.balboll-card .line-badge{width:24px!important;height:24px!important;min-width:24px!important;max-width:24px!important;min-height:24px!important;max-height:24px!important}.product-card.balboll-card .line-badge strong{font-size:10px!important}}
+
+/* V39 final layout: override the older emergency fallback CSS above. */
+.product-card.balboll-card .balboll-card-side{
+ display:grid!important;grid-template-columns:minmax(0,1fr) minmax(112px,45%)!important;
+ align-items:stretch!important;column-gap:8px!important;row-gap:0!important;
+ flex:1 1 auto!important;min-width:0!important;
+}
+.product-card.balboll-card .balboll-card-identity{
+ display:grid!important;grid-template-rows:auto 36px minmax(0,1fr) auto!important;
+ flex:none!important;min-width:0!important;align-self:stretch!important;gap:0!important;
+}
+.product-card.balboll-card .card-title{min-width:0!important;margin:2px 0 0!important;height:36px!important;min-height:36px!important;max-height:36px!important}
+.product-card.balboll-card .card-title .model-title-line{display:block!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+.product-card.balboll-card .balboll-card-score{
+ grid-row:4!important;align-self:end!important;justify-content:flex-end!important;align-items:flex-start!important;
+ flex-direction:column!important;gap:2px!important;padding:0!important;margin:0!important;min-height:0!important;
+}
+.product-card.balboll-card .balboll-card-score strong{font-size:28px!important;line-height:1.05!important}
+.product-card.balboll-card .shoe-usage-label{font-size:9px!important;line-height:12px!important;text-align:left!important}
+.product-card.balboll-card .balboll-card-metrics{
+ box-sizing:border-box!important;display:grid!important;width:100%!important;min-width:0!important;max-width:none!important;
+ align-self:start!important;justify-self:stretch!important;grid-auto-rows:15px!important;
+ row-gap:0!important;column-gap:0!important;margin:0!important;padding:0!important;
+}
+.product-card.balboll-card .balboll-card-metrics>.metric{
+ box-sizing:border-box!important;display:grid!important;grid-template-columns:40px minmax(12px,1fr) 33px!important;
+ column-gap:3px!important;width:100%!important;height:15px!important;min-height:15px!important;max-height:15px!important;
+ margin:0!important;padding:0!important;align-items:center!important;
+}
+.product-card.balboll-card .balboll-card-metrics>.metric span{
+ font-size:10px!important;line-height:15px!important;white-space:nowrap!important;word-break:keep-all!important;
+}
+.product-card.balboll-card .balboll-card-metrics>.metric b{
+ font-size:10px!important;line-height:15px!important;text-align:right!important;white-space:nowrap!important;
+ font-variant-numeric:tabular-nums!important;
+}
+.product-card.balboll-card .balboll-card-metrics .balboll-mini-track{
+ width:100%!important;max-width:none!important;min-width:0!important;height:4px!important;margin:0!important;
+}
+.product-card.balboll-card .balboll-detail-link{margin-top:12px!important}
+@media(max-width:760px){
+ .product-card.balboll-card .balboll-card-side{grid-template-columns:minmax(0,1fr) 99px!important;column-gap:3px!important}
+ .product-card.balboll-card .balboll-card-metrics{width:99px!important;min-width:99px!important;max-width:99px!important;grid-auto-rows:15px!important}
+ .product-card.balboll-card .balboll-card-metrics>.metric{grid-template-columns:35px minmax(9px,1fr) 29px!important;column-gap:2px!important;width:99px!important;height:15px!important;min-height:15px!important;max-height:15px!important}
+ .product-card.balboll-card .balboll-card-metrics>.metric span,.product-card.balboll-card .balboll-card-metrics>.metric b{font-size:9px!important;line-height:15px!important}
+ .product-card.balboll-card .balboll-card-metrics .balboll-mini-track{height:3px!important}
+ .product-card.balboll-card .balboll-card-score strong{font-size:24px!important}
+}
