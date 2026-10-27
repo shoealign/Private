@@ -23,3 +23,52 @@
 .catalog-axis{grid-template-columns:48px minmax(0,1fr) 24px;min-width:0;column-gap:4px}
 .catalog-axis span,.catalog-axis b{white-space:nowrap}
 @media(max-width:650px){.catalog-card-top{height:auto;aspect-ratio:1.5}.catalog-card-body{padding:9px 8px}.catalog-axis{grid-template-columns:37px minmax(0,1fr) 18px;gap:2px;font-size:9px}.catalog-axis b{font-size:9px}}
+
+/* V40 single common design language across all categories */
+.category-nav{max-width:1200px;padding:8px 24px 0;margin:0 auto;display:flex;gap:8px}
+.category-nav a{border-radius:9px;height:36px;padding:0 16px;font-size:13px}
+.catalog-container{width:min(1200px,calc(100% - 48px));margin:12px auto 60px}
+.catalog-controls{display:flex;align-items:center;gap:10px;margin:0 0 18px;min-height:42px}
+.catalog-controls .catalog-count{font-size:13px;color:#768077}
+.catalog-controls select{margin-left:auto;height:38px;max-width:145px;border:1px solid #dce2dc;border-radius:10px;padding:0 8px;background:#fff;font-size:12px}
+.catalog-reset{font-size:11px;border:0;background:transparent;color:#345c46}
+.catalog-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.catalog-card{border-radius:14px;box-shadow:none;min-width:0}
+.catalog-card-top{aspect-ratio:auto!important;height:176px!important;overflow:hidden;display:grid;place-items:center;background:#fafafa}
+.catalog-photo-wrap{width:100%;height:100%;padding:10px;box-sizing:border-box;overflow:hidden;display:grid;place-items:center}
+.catalog-photo{width:100%;height:100%;object-fit:contain;object-position:center;mix-blend-mode:multiply}
+.catalog-card-body{padding:11px;gap:5px}
+.catalog-brand{font-size:11px}.catalog-name{font-size:14px;line-height:1.35;min-height:40px;max-height:none;overflow:visible;word-break:normal;overflow-wrap:anywhere}
+.catalog-index{z-index:2;width:27px;height:27px;top:9px;left:9px;font-size:12px}
+.catalog-score-line{display:flex;align-items:baseline;gap:5px;white-space:nowrap;min-height:39px}
+.catalog-score{font-size:27px;font-weight:850;letter-spacing:-.04em;color:#2357d6}
+.catalog-score-max{font-size:10px;color:#77867c}
+.catalog-tag{font-size:10px;max-width:100%;white-space:normal}
+.catalog-axes{gap:6px;margin:4px 0}
+.catalog-axis{display:grid;grid-template-columns:43px minmax(0,1fr) 25px;gap:5px;align-items:center;font-size:10px}
+.catalog-axis span{white-space:nowrap}.catalog-axis b{font-size:11px;text-align:right}
+.catalog-track{background:#e4e9e5;height:5px;border-radius:99px;overflow:hidden}.catalog-track i{display:block;height:100%;background:#229c5e;border-radius:99px}
+.catalog-awaiting{font-size:11px;line-height:1.4;color:#77847b;margin:4px 0}
+.catalog-source{margin-top:auto;display:block;background:#202320;color:white;text-align:center;border-radius:9px;padding:10px;font-size:11px;text-decoration:none}
+.catalog-disclosure{margin:16px 0;font-size:10px}
+@media(max-width:760px){
+ .category-nav{padding:8px 16px 0;gap:7px}.category-nav a{height:33px;padding:0 13px;font-size:12px}
+ .catalog-container{width:calc(100% - 32px)}.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .catalog-card-top{height:132px!important}.catalog-photo-wrap{padding:8px}.catalog-card-body{padding:10px 8px}
+ .catalog-name{font-size:12px;min-height:45px;line-height:1.35}.catalog-score{font-size:24px}
+ .catalog-axis{grid-template-columns:33px minmax(0,1fr) 20px;gap:3px;font-size:9px}.catalog-axis b{font-size:9px}
+ .catalog-source{font-size:10px;padding:10px 4px}.catalog-controls{margin-bottom:14px}
+ .catalog-controls select{max-width:130px}
+}
+/* Keep the same logo, search and two actions across all three page types. */
+.site-header .header-inner{max-width:1200px}
+.site-header .header-inner>.searchbar{margin:0!important;flex:1;min-width:0;max-width:520px}
+.site-header .header-actions{margin-left:0}
+@media(max-width:760px){.site-header .header-inner{display:flex;flex-wrap:nowrap;padding:12px 12px;gap:7px}
+ .site-header .header-inner>.searchbar{min-height:35px;padding:0 7px;gap:4px}
+ .site-header .header-inner>.searchbar input{height:35px;font-size:11px}
+ .site-header .header-inner>.searchbar button{min-width:16px;min-height:30px;font-size:17px}
+ .site-header .header-inner>.searchbar>span{font-size:13px}
+ .site-header .header-actions{flex:0 0 auto;gap:2px}.site-header .header-actions .btn{font-size:11px;padding:8px 7px;min-height:35px}
+ .site-header .header-actions .btn.light{padding:8px 4px}
+}
