@@ -54,6 +54,13 @@ for(const rel of ['index.html',...shoes.map(s=>'shoes/'+s.slug+'/index.html')]){
  html=html.replace('</body>','<script src="/assets/balboll-ui.js"></script></body>');if(rel==='index.html')html=html.replace('</body>','<script src="/assets/restore-guard.js?v=20261027-v38"></script></body>');
  if(rel.startsWith('shoes/'))html=html.replace('</body>','<script src="/assets/balboll-detail.js"></script></body>');fs.writeFileSync(target,html);
 }
+// V41: shared category UI, generated AFTER all legacy pages and BEFORE public copy.
+const unified=fs.readFileSync(path.join(root,'tools/unified-template-v41.html'),'utf8');
+for(const [kind,label,rel] of [['running','러닝화','index.html'],['hiking','등산화','hiking/index.html'],['walking','워킹화','walking/index.html']]){
+ let html=unified.replace('data-kind="running"','data-kind="'+kind+'"').replace('러닝화 검색',label+' 검색');
+ html=html.replace(/(<a href="(\/|\/hiking\/|\/walking\/)" class=")[^"]*(")/g,(whole,start,href,end)=>start+(href===(kind==='running'?'/':kind==='hiking'?'/hiking/':'/walking/')?'active':'')+end);
+ save(rel,html);
+}
 const out=path.join(root,'public');fs.rmSync(out,{recursive:true,force:true});fs.mkdirSync(out);
 for(const name of ['index.html','assets','shoes','hiking','walking','methodology','privacy','reviews','request','admin','sitemap.xml','robots.txt','favicon.ico'])fs.cpSync(path.join(root,name),path.join(out,name),{recursive:true});
 console.log('Built '+shoes.length+' product pages plus main and data-policy pages. Photo cutouts: '+Object.keys(photoManifest).length+'.');
