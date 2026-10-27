@@ -112,7 +112,8 @@ $('clearSearch').onclick=()=>{state.q='';$('search').value='';render();$('search
 $('sort').onchange=e=>{state.sort=e.target.value;state.matchMode=state.sort==='match'&&!!profile;state.limit=24;render()};
 $('rankTabs').onclick=e=>{const b=e.target.closest('[data-rankcat]');if(!b)return;state.rankcat=b.dataset.rankcat;state.matchMode=false;state.sort='score';state.limit=24;render()};
 $('loadMore').onclick=()=>{state.limit+=24;render()};
-$('showAll').onclick=()=>{state.savedOnly=false;render()};
+// V37: legacy 'showAll' control was removed; do not dereference a missing element.
+if($('showAll')) $('showAll').onclick=()=>{state.savedOnly=false;render()};
 $('activeFilterBar').onclick=e=>{const b=e.target.closest('[data-reset-filter]');if(b){state[b.dataset.resetFilter]='all';render()}};
 $('grid').addEventListener('click',e=>{if(e.target.closest('#emptyReset'))reset()});
 document.addEventListener('click',e=>{if(e.target.closest('a[href^="/shoes/"]')){saveView();sessionStorage.setItem('sl:return','1')}});
