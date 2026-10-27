@@ -50,6 +50,7 @@ save('robots.txt','User-agent: *\nAllow: /\nSitemap: '+config.siteUrl.replace(/\
 for(const rel of ['index.html',...shoes.map(s=>'shoes/'+s.slug+'/index.html')]){
  const target=path.join(root,rel);let html=fs.readFileSync(target,'utf8');
  html=html.replace('</head>','<link rel="stylesheet" href="/assets/runficial.css"><link rel="stylesheet" href="/assets/balboll.css?v='+config.version+'"></head>');
+ html=html.replaceAll('<link rel="stylesheet" href="/assets/polish-v36.css?v=20261027-v36">','').replace('</head>','<link rel="stylesheet" href="/assets/polish-v36.css?v=20261027-v36"></head>');
  html=html.replace('</body>','<script src="/assets/balboll-ui.js"></script></body>');
  if(rel.startsWith('shoes/'))html=html.replace('</body>','<script src="/assets/balboll-detail.js"></script></body>');fs.writeFileSync(target,html);
 }
