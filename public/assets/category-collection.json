@@ -1,0 +1,466 @@
+{
+  "hiking": [
+    {
+      "brand": "On",
+      "model": "Cloudrock Low Waterproof",
+      "tag": "균형형",
+      "metrics": {
+        "편안함": 9,
+        "지지력": 7,
+        "접지력": 8,
+        "내구성": 9
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "Salomon",
+      "model": "X Ultra 5 Gore-Tex",
+      "tag": "접지력",
+      "metrics": {
+        "편안함": 7,
+        "지지력": 8,
+        "접지력": 9,
+        "내구성": 8
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "HOKA",
+      "model": "Anacapa 2 Low GTX",
+      "tag": "쿠셔닝",
+      "metrics": {
+        "편안함": 8,
+        "지지력": 8,
+        "접지력": 7,
+        "내구성": 8
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "La Sportiva",
+      "model": "Spire GTX",
+      "tag": "견고함",
+      "metrics": {
+        "편안함": 7,
+        "지지력": 8,
+        "접지력": 8,
+        "내구성": 8
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "Oboz",
+      "model": "Katabatic LT Low GTX",
+      "tag": "방수·경량",
+      "metrics": {
+        "편안함": 8,
+        "지지력": 7,
+        "접지력": 8,
+        "내구성": 8
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "HOKA",
+      "model": "Speedgoat 7",
+      "tag": "편안함",
+      "metrics": {
+        "편안함": 9,
+        "지지력": 7,
+        "접지력": 7.5,
+        "내구성": 7
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "Oboz",
+      "model": "Sawtooth X Low Waterproof",
+      "tag": "지지력",
+      "metrics": {
+        "편안함": 7,
+        "지지력": 8,
+        "접지력": 7,
+        "내구성": 8
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "Altra",
+      "model": "Lone Peak 9 Waterproof",
+      "tag": "발볼 여유",
+      "metrics": {
+        "편안함": 7,
+        "지지력": 7,
+        "접지력": 8,
+        "내구성": 7
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "adidas",
+      "model": "Terrex Free Hiker GTX 2.0 Low",
+      "tag": "가벼운 산행",
+      "metrics": {
+        "편안함": 7,
+        "지지력": 7,
+        "접지력": 8,
+        "내구성": 6
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "Merrell",
+      "model": "Moab 3",
+      "tag": "입문형",
+      "metrics": {
+        "편안함": 8,
+        "지지력": 7,
+        "접지력": 7,
+        "내구성": 6
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "Topo Athletic",
+      "model": "Ultraventure 4",
+      "tag": "편안함",
+      "metrics": {
+        "편안함": 9.5,
+        "지지력": 6,
+        "접지력": 6,
+        "내구성": 6
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "Merrell",
+      "model": "Moab Speed 2",
+      "tag": "민첩성",
+      "metrics": {
+        "편안함": 8,
+        "지지력": 7,
+        "접지력": 9,
+        "내구성": 3
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "Merrell",
+      "model": "Moab 3 Waterproof",
+      "tag": "방수",
+      "metrics": {
+        "편안함": 7,
+        "지지력": 8,
+        "접지력": 6,
+        "내구성": 6
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "Columbia",
+      "model": "Facet 75 OutDry",
+      "tag": "방수",
+      "metrics": {
+        "편안함": 8,
+        "지지력": 6,
+        "접지력": 8,
+        "내구성": 5
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "KEEN",
+      "model": "Targhee IV Low",
+      "tag": "내구성",
+      "metrics": {
+        "편안함": 5,
+        "지지력": 6,
+        "접지력": 7,
+        "내구성": 8
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "Columbia",
+      "model": "Crestwood",
+      "tag": "입문형",
+      "metrics": {
+        "편안함": 8,
+        "지지력": 6,
+        "접지력": 6,
+        "내구성": 5
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "Danner",
+      "model": "Trail 2650 GTX",
+      "tag": "데일리 하이크",
+      "metrics": {
+        "편안함": 7,
+        "지지력": 5,
+        "접지력": 5,
+        "내구성": 6
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "Topo Athletic",
+      "model": "Terraventure 5",
+      "tag": "암릉·비포장",
+      "metrics": {
+        "편안함": 8,
+        "지지력": 7.5,
+        "접지력": 8,
+        "내구성": 5.5
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "The North Face",
+      "model": "VECTIV Fastpack",
+      "tag": "지지력",
+      "metrics": {
+        "편안함": 8,
+        "지지력": 8,
+        "접지력": 6,
+        "내구성": 6
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    },
+    {
+      "brand": "adidas",
+      "model": "Terrex Swift R3 Gore-Tex",
+      "tag": "테크니컬",
+      "metrics": {
+        "편안함": 5,
+        "지지력": 7,
+        "접지력": 8,
+        "내구성": 5
+      },
+      "source": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-shoes",
+      "sourceName": "OutdoorGearLab",
+      "note": "테스트 대상 제품 · 수록 순서는 참고용이며 공식 순위와 다름"
+    }
+  ],
+  "walking": [
+    {
+      "brand": "New Balance",
+      "model": "Ellipse",
+      "tag": "종합 추천",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-walking-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "Saucony",
+      "model": "Triumph 24",
+      "tag": "충격 흡수",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-walking-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "HOKA",
+      "model": "Transport 2",
+      "tag": "도심·가벼운 트레일",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-walking-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "Brooks",
+      "model": "Adrenaline GTS 25",
+      "tag": "아치 지지",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-walking-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "On",
+      "model": "Cloud 6",
+      "tag": "여행",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-walking-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "HOKA",
+      "model": "Bondi SR",
+      "tag": "미끄럼 방지",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-walking-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "Nike",
+      "model": "Revolution 8",
+      "tag": "합리적인 선택",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-walking-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "adidas",
+      "model": "Ultraboost 5X",
+      "tag": "내구성",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-walking-running-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "HOKA",
+      "model": "Bondi 9",
+      "tag": "쿠셔닝",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-walking-running-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "ASICS",
+      "model": "GT 2000 15",
+      "tag": "안정성",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-walking-running-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "Saucony",
+      "model": "Hurricane 26",
+      "tag": "안정성",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-walking-running-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "Saucony",
+      "model": "Guide 19",
+      "tag": "안정성",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-walking-running-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "Nike",
+      "model": "InfinityRN 4",
+      "tag": "내구성",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-walking-running-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "Brooks",
+      "model": "Glycerin GTS 22",
+      "tag": "안정성",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-walking-running-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "New Balance",
+      "model": "Fresh Foam X 860 v15",
+      "tag": "안정성",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-walking-running-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "On",
+      "model": "Cloudnova Form 2",
+      "tag": "측면 지지",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-on-walking-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "On",
+      "model": "Cloudnova 2",
+      "tag": "안정성",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-on-walking-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "On",
+      "model": "Cloudtilt",
+      "tag": "일상 보행",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-on-walking-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "On",
+      "model": "Cloud 6 Waterproof",
+      "tag": "방수",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-on-walking-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    },
+    {
+      "brand": "On",
+      "model": "Cloudflyer 5",
+      "tag": "지지력",
+      "metrics": null,
+      "source": "https://www.runrepeat.com/guides/best-on-walking-shoes",
+      "sourceName": "RunRepeat",
+      "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용"
+    }
+  ]
+}

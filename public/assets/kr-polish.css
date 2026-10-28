@@ -1,0 +1,33 @@
+/* BALBOLL KR V42: V33-safe shared layout improvements */
+.category-nav{border-bottom:1px solid #e7eae7;padding-bottom:7px;margin-top:5px}
+.category-nav a{background:transparent;border:0;border-radius:0;font-size:14px;font-weight:750;padding:0 5px 7px;height:auto;margin-right:14px;color:#808681}
+.category-nav a.active{background:transparent;border:0;color:#14271d;box-shadow:0 3px 0 #14271d}
+.rank-tabs{display:none!important} /* controls already duplicated inside filter sheet */
+.quick-tools #showAll{display:none!important}
+.catalog-controls{margin:4px 0 14px}.catalog-heading,.catalog-sub{display:none!important}
+.catalog-tools{display:flex;align-items:center;gap:10px;margin-top:4px;margin-bottom:15px}
+.catalog-tools .catalog-count{font-size:13px;margin-right:auto;white-space:nowrap}
+.kr-inline-search{display:none!important}
+.catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.catalog-card-top{height:165px;background:#f9faf9}.catalog-card-body{padding:12px}
+.catalog-name{font-size:15px;min-height:42px;overflow-wrap:anywhere}
+.catalog-visual svg{width:90px;height:62px}.catalog-axes{min-height:85px}
+.catalog-axis{grid-template-columns:50px minmax(0,1fr) 24px}
+.catalog-disclosure{max-width:800px}
+.site-header .searchbar{min-width:0}
+@media(max-width:650px){
+ .site-header .header-inner{display:flex!important;align-items:center!important;flex-wrap:nowrap!important;gap:5px!important;padding-left:10px!important;padding-right:10px!important}
+ .site-header .brand-logo{flex:0 0 auto!important;min-width:0!important}
+ .site-header .brand-wordmark small{display:none!important}
+ .site-header .searchbar{flex:1 1 80px!important;width:80px!important;max-width:none!important;margin:0!important;min-width:0!important}
+ .site-header .searchbar input{min-width:0!important;width:100%!important;font-size:11px!important}
+ .site-header .header-actions{flex:0 0 auto!important;display:flex!important;gap:3px!important;margin:0!important}
+ .site-header .header-actions .btn{padding:7px 6px!important;font-size:11px!important;min-width:0!important}
+ .category-nav{padding:8px 12px 2px}.category-nav a{font-size:14px;margin-right:14px}
+ .catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .catalog-card-top{height:125px}.catalog-card-body{padding:10px}
+ .catalog-name{font-size:13px;min-height:40px;line-height:1.4}
+ .catalog-axis{grid-template-columns:41px minmax(0,1fr) 18px;gap:3px;font-size:9px}
+ .catalog-visual svg{width:78px;height:52px}
+}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}

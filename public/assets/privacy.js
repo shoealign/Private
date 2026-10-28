@@ -1,0 +1,1 @@
+document.getElementById('clearLocal').onclick=()=>{if(!confirm('관심 신발, 비교 목록, 추천 조건을 이 브라우저에서 삭제할까요?'))return;try{for(const k of Object.keys(localStorage))if(k.startsWith('shoelineup_'))localStorage.removeItem(k);SL.toast('이 브라우저에 저장된 정보를 삭제했어요.')}catch{SL.toast('브라우저 설정에서 사이트 데이터를 삭제해 주세요.')}};
