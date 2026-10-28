@@ -81,7 +81,7 @@ function card(s,i){
  const band=n=>Number.isFinite(n)?(n>=90?'excellent':n>=80?'good':n>=70?'fair':'low'):'unrated';
  const overallClass=band(total===null?NaN:Number(total));
  const short=s.name.replace(new RegExp('^'+s.brand+'\\s*','i'),'');
- return `<article class="product-card balboll-card score-${overallClass}" data-product="${s.slug}"><a class="card-photo" href="/shoes/${s.slug}/" aria-label="${E(s.name)} 상세"><span class="line-badge" aria-label="${i+1}위"><strong>${i+1}</strong></span><img src="${E(s.img)}" alt="${E(s.name)}" loading="lazy" decoding="async" data-slug="${s.slug}" onerror="SL.imageError(this)"></a><div class="card-main"><div class="balboll-card-side"><div class="balboll-card-identity"><div class="card-brand">${E(s.brand)}</div><h3 class="card-title"><a href="/shoes/${s.slug}/" title="${E(s.name)}">${cardModelTitle(short)}</a></h3><div class="card-facts"><span class="chip">${E(SL.type(s))}</span><span class="chip">발볼 ${E(s.widthFeel||'확인 중')}</span></div><div class="balboll-card-score" aria-label="종합 점수"><strong class="score-number score-${overallClass}">${total||'—'}<em>${total?'':'평가 준비 중'}</em></strong><span class="shoe-usage-label">${E(shoeUsageLabel(s))}</span></div></div><div class="balboll-card-metrics">${labels.map(([k,label])=>`<div class="metric score-${band(valid?r[k]:NaN)}" title="${label}: ${valid?scoreDisplay(r[k]):'평가 준비 중'}점"><span>${label}</span><div class="balboll-mini-track" role="meter" aria-label="${label}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${valid?r[k]:0}"><i style="width:${valid?r[k]:0}%"></i></div><b>${valid?scoreDisplay(r[k]):'—'}</b></div>`).join('')}</div></div><a class="balboll-detail-link" href="/shoes/${s.slug}/">상세 평가 보기 →</a></div></article>`;
+ return `<article class="product-card balboll-card score-${overallClass}" data-product="${s.slug}"><a class="card-photo" href="/shoes/${s.slug}/" aria-label="${E(s.name)} 상세"><span class="line-badge" aria-label="${i+1}위"><strong>${i+1}</strong></span><img src="${E(s.img)}" alt="${E(s.name)}" loading="lazy" decoding="async" data-slug="${s.slug}" onerror="SL.imageError(this)"></a><div class="card-main"><div class="balboll-card-side"><div class="balboll-card-identity"><div class="card-brand">${E(s.brand)}</div><h3 class="card-title"><a href="/shoes/${s.slug}/" title="${E(s.name)}">${E(short)}</a></h3><div class="card-facts"><span class="chip">${E(SL.type(s))}</span><span class="chip">발볼 ${E(s.widthFeel||'확인 중')}</span></div><div class="balboll-card-score" aria-label="종합 점수"><strong class="score-number score-${overallClass}">${total||'—'}<em>${total?'':'평가 준비 중'}</em></strong><span class="shoe-usage-label">${E(shoeUsageLabel(s))}</span></div></div><div class="balboll-card-metrics">${labels.map(([k,label])=>`<div class="metric score-${band(valid?r[k]:NaN)}" title="${label}: ${valid?scoreDisplay(r[k]):'평가 준비 중'}점"><span>${label}</span><div class="balboll-mini-track" role="meter" aria-label="${label}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${valid?r[k]:0}"><i style="width:${valid?r[k]:0}%"></i></div><b>${valid?scoreDisplay(r[k]):'—'}</b></div>`).join('')}</div></div><a class="balboll-detail-link" href="/shoes/${s.slug}/">상세 평가 보기 →</a></div></article>`;
 }
 function updateTags(){
  const label={brand:state.brand,cat:{daily:'데일리/트레이닝',race:'레이싱',stability:'안정화'}[state.cat],level:{beginner:'입문',intermediate:'중급',advanced:'숙련'}[state.level],distance:SL.distance(state.distance),widthfilter:{narrow:'발볼 좁음',normal:'발볼 보통',wide:'발볼 넓음'}[state.widthfilter],budget:(Number(state.budget)/10000)+'만 원 이하'};
@@ -105,14 +105,15 @@ function syncSelectionButtons(){
  document.querySelectorAll('[data-save]').forEach(b=>{const on=SL.saved().includes(b.dataset.save);b.classList.toggle('selected',on);b.setAttribute('aria-pressed',on);b.textContent=on?'♥ 관심 저장됨':'♡ 관심'});
 
 }
-function scrollRank(){$('rankTabs').scrollIntoView({behavior:'smooth',block:'start'})}
+function scrollRank(){$('ranking').scrollIntoView({behavior:'smooth',block:'start'})}
 $('searchForm').addEventListener('submit',e=>{e.preventDefault();scrollRank()});
 $('search').oninput=e=>{state.q=e.target.value;state.limit=24;render()};
 $('clearSearch').onclick=()=>{state.q='';$('search').value='';render();$('search').focus()};
 $('sort').onchange=e=>{state.sort=e.target.value;state.matchMode=state.sort==='match'&&!!profile;state.limit=24;render()};
 $('rankTabs').onclick=e=>{const b=e.target.closest('[data-rankcat]');if(!b)return;state.rankcat=b.dataset.rankcat;state.matchMode=false;state.sort='score';state.limit=24;render()};
 $('loadMore').onclick=()=>{state.limit+=24;render()};
-$('showAll').onclick=()=>{state.savedOnly=false;render()};
+// V37: legacy 'showAll' control was removed; do not dereference a missing element.
+if($('showAll')) $('showAll').onclick=()=>{state.savedOnly=false;render()};
 $('activeFilterBar').onclick=e=>{const b=e.target.closest('[data-reset-filter]');if(b){state[b.dataset.resetFilter]='all';render()}};
 $('grid').addEventListener('click',e=>{if(e.target.closest('#emptyReset'))reset()});
 document.addEventListener('click',e=>{if(e.target.closest('a[href^="/shoes/"]')){saveView();sessionStorage.setItem('sl:return','1')}});
@@ -172,3 +173,7 @@ document.addEventListener('keydown',e=>{
 window.addEventListener('sl:compare',syncSelectionButtons);window.addEventListener('sl:compare-refresh',syncSelectionButtons);
 window.addEventListener('sl:saved',()=>{if(state.savedOnly)render();else syncSelectionButtons()});
 render();
+
+// Cross-category header actions; open the existing home-page tools.
+if(new URLSearchParams(location.search).has("guide"))document.getElementById("navQuickGuide")?.click();
+if(new URLSearchParams(location.search).has("finder"))document.getElementById("openFinder")?.click();
