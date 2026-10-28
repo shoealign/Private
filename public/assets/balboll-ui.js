@@ -1,1 +1,0 @@
-document.querySelectorAll('[data-save],[data-compare],#compareDock,a[href="/compare/"]').forEach(el=>el.remove());document.querySelectorAll('a,button').forEach(el=>{if(/비교하기|비교 담기|관심 저장/.test(el.textContent||''))el.remove()});
