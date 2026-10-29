@@ -1,1 +1,2 @@
-const fs=require('fs'),path=require('path');const root=path.resolve(__dirname,'..');for(const file of ['index.html','public/index.html']){const p=path.join(root,file);if(!fs.existsSync(p))continue;let s=fs.readFileSync(p,'utf8');s=s.replace(/<script src="\/assets\/main\.js[^"]*"><\/script>/, '<script src="/assets/runficial-config.js"></script><script src="/assets/live-edits-v10.js"></script>');fs.writeFileSync(p,s)}console.log('V10 live edits bootstrap installed');
+// V44: main.js must remain loaded; build is intentionally non-destructive.
+console.log('V44: main.js retained');

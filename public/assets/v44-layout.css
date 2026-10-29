@@ -1,0 +1,53 @@
+/* BALBOLL V44: one compact, aligned card system on desktop and mobile. */
+:root{--v44-ink:#192820;--v44-green:#0b8564;--v44-blue:#1767e7}
+.site-header .brand-logo,.site-header .brand-wordmark,.site-header .balboll-symbol{visibility:visible!important;opacity:1!important}
+.site-header .brand-logo{white-space:nowrap!important;flex-shrink:0!important}
+.category-nav{box-sizing:border-box!important;min-height:53px!important;max-width:1200px!important;width:min(1200px,100%)!important;margin:0 auto!important;padding:0 12px!important;gap:21px!important;display:flex!important;align-items:center!important;border-bottom:1px solid #e0e5e0!important}
+.category-nav a,.category-nav a.active{display:inline-flex!important;align-items:center!important;justify-content:center!important;height:51px!important;min-width:0!important;padding:0 2px!important;margin:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;font-size:15px!important;font-weight:750!important;color:#828983!important;white-space:nowrap!important}
+.category-nav a.active{color:#1b3025!important;border-bottom:3px solid #1b3025!important}
+/* Shared card skeleton and image space. */
+.product-card.v44-card{min-width:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+.product-card.v44-card .card-photo{position:relative!important;display:flex!important;align-items:center!important;justify-content:center!important;background:#fafafa!important;width:100%!important;height:186px!important;min-height:186px!important;overflow:hidden!important;padding:0!important}
+.product-card.v44-card .card-photo img{box-sizing:border-box!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;max-width:100%!important;padding:7px!important;transform:none!important}
+.product-card.v44-card .card-main{padding:10px 12px 12px!important;min-width:0!important;display:flex!important;flex-direction:column!important;flex:1!important;gap:0!important}
+.product-card.v44-card .v44-fullname{display:block!important;box-sizing:border-box!important;width:100%!important;min-width:0!important;height:23px!important;min-height:23px!important;max-height:23px!important;margin:0 0 3px!important;padding:0!important;font-size:13px!important;font-weight:760!important;line-height:23px!important;letter-spacing:-.045em!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;word-break:normal!important}
+.product-card.v44-card .v44-fullname a{color:inherit!important;text-decoration:none!important;font:inherit!important;white-space:nowrap!important}
+.product-card.v44-card .v44-usage{display:block!important;box-sizing:border-box!important;height:20px!important;min-height:20px!important;max-height:20px!important;width:100%!important;color:#7d8580!important;font-size:11px!important;line-height:20px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;margin:0 0 6px!important}
+/* Top-left score only, graded by score range. */
+.product-card.v44-card .v44-score-badge,.product-card.v44-card .line-badge.v44-score-badge,.product-card.v44-card .catalog-score-badge.v44-score-badge{position:absolute!important;z-index:3!important;top:8px!important;left:8px!important;inset:8px auto auto 8px!important;box-sizing:border-box!important;min-width:45px!important;width:auto!important;height:28px!important;min-height:28px!important;padding:0 7px!important;margin:0!important;border-radius:8px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;background:#172b22!important;border:1px solid #36513e!important;box-shadow:0 1px 5px #0002!important;font-size:12px!important;line-height:1!important;font-weight:850!important;font-variant-numeric:tabular-nums!important}
+.product-card.v44-card .v44-score-badge strong{font-size:inherit!important;font-weight:850!important;line-height:1!important;color:inherit!important}
+.product-card.v44-card .v44-score-badge.score-excellent{color:#b6f5aa!important}
+.product-card.v44-card .v44-score-badge.score-good{color:#64ddba!important}
+.product-card.v44-card .v44-score-badge.score-fair{color:#ffd37a!important}
+.product-card.v44-card .v44-score-badge.score-low{color:#ffa38d!important}
+.product-card.v44-card .v44-score-badge.score-unrated{color:#d7dbd8!important}
+/* Metrics all appear under brand+name and type, no duplicate total score. */
+.product-card.v44-card .balboll-card-metrics{display:grid!important;grid-template-columns:1fr!important;gap:5px!important;width:100%!important;min-width:0!important;margin:0 0 9px!important;padding:0!important}
+.product-card.v44-card .metric{display:grid!important;grid-template-columns:49px minmax(0,1fr) 31px!important;gap:5px!important;align-items:center!important;min-width:0!important;font-size:10px!important;line-height:16px!important}
+.product-card.v44-card .metric span{white-space:nowrap!important;overflow:visible!important}
+.product-card.v44-card .metric b{font-size:10px!important;line-height:16px!important;font-variant-numeric:tabular-nums!important;text-align:right!important;white-space:nowrap!important}
+.product-card.v44-card .balboll-mini-track{width:100%!important;min-width:0!important;height:5px!important;overflow:hidden!important;border-radius:10px!important;background:#e7e9e7!important}
+.product-card.v44-card .balboll-mini-track i{display:block!important;height:100%!important;border-radius:10px!important}
+.product-card.v44-card .balboll-detail-link{display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;box-sizing:border-box!important;margin:auto 0 0!important;min-height:36px!important;padding:8px 3px!important;font-size:11px!important;text-align:center!important;border-radius:8px!important;background:#202020!important;color:#fff!important;text-decoration:none!important}
+.product-card.v44-card .catalog-awaiting{margin:2px 0 10px!important;min-height:75px!important;color:#929a94!important;font-size:11px!important}
+/* PC layout: 3 cards per row, stable dimensions. */
+.catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;align-items:stretch!important}
+#grid{align-items:stretch!important}
+.catalog-container{max-width:1200px!important}
+.catalog-unified-card .balboll-card-side,.v44-card .balboll-card-side,.v44-card .balboll-card-score,.v44-card .card-facts,.v44-card .card-brand,.v44-card .card-title,.v44-card .catalog-basis{display:none!important}
+@media(max-width:720px){
+ .site-header .header-inner{min-height:70px!important;display:flex!important;flex-wrap:nowrap!important;align-items:center!important;gap:5px!important;padding:8px 9px!important}
+ .site-header .searchbar{min-width:0!important;flex:1 1 0!important;width:0!important;margin:0!important}
+ .site-header .header-actions{flex:0 0 auto!important;display:flex!important;gap:3px!important}
+ .site-header .header-actions .btn{padding:8px 5px!important;min-width:0!important;font-size:11px!important}
+ .category-nav{min-height:47px!important;gap:17px!important;padding:0 12px!important}.category-nav a,.category-nav a.active{height:46px!important;font-size:15px!important}
+ .catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+ .product-card.v44-card .card-photo{height:140px!important;min-height:140px!important}
+ .product-card.v44-card .card-photo img{padding:4px!important}
+ .product-card.v44-card .card-main{padding:8px 7px 9px!important}
+ .product-card.v44-card .v44-fullname{font-size:clamp(10px,2.5vw,12px)!important;letter-spacing:-.045em!important}
+ .product-card.v44-card .v44-usage{font-size:10px!important}
+ .product-card.v44-card .metric{grid-template-columns:39px minmax(0,1fr) 26px!important;gap:2px!important;font-size:9px!important}
+ .product-card.v44-card .metric b{font-size:9px!important}
+ .product-card.v44-card .v44-score-badge,.product-card.v44-card .line-badge.v44-score-badge,.product-card.v44-card .catalog-score-badge.v44-score-badge{top:6px!important;left:6px!important;inset:6px auto auto 6px!important;min-width:41px!important;font-size:11px!important}
+}

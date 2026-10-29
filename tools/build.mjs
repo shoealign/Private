@@ -53,6 +53,12 @@ for(const rel of ['index.html',...shoes.map(s=>'shoes/'+s.slug+'/index.html')]){
  html=html.replace('</body>','<script src="/assets/balboll-ui.js"></script></body>');
  if(rel.startsWith('shoes/'))html=html.replace('</body>','<script src="/assets/balboll-detail.js"></script></body>');fs.writeFileSync(target,html);
 }
+// V44 final layout stylesheet applies consistently to all categories on every build.
+for(const rel of ['index.html','hiking/index.html','walking/index.html']){
+ const target=path.join(root,rel);let html=fs.readFileSync(target,'utf8');
+ html=html.replace('</head>','<link rel="stylesheet" href="/assets/v44-layout.css?v=44"></head>');
+ fs.writeFileSync(target,html);
+}
 const out=path.join(root,'public');fs.rmSync(out,{recursive:true,force:true});fs.mkdirSync(out);
 for(const name of ['index.html','assets','shoes','hiking','walking','methodology','privacy','reviews','request','admin','sitemap.xml','robots.txt','favicon.ico'])fs.cpSync(path.join(root,name),path.join(out,name),{recursive:true});
 console.log('Built '+shoes.length+' product pages plus main and data-policy pages. Photo cutouts: '+Object.keys(photoManifest).length+'.');
