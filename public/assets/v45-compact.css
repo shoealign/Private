@@ -1,0 +1,21 @@
+/* V45 unified compact metrics & image presentation */
+.product-card.v44-card .card-photo{height:175px!important;min-height:175px!important;isolation:isolate!important;background:#fff!important;overflow:hidden!important}
+.product-card.v44-card .card-photo img{width:100%!important;height:100%!important;max-width:100%!important;object-fit:contain!important;object-position:center!important;padding:0!important;transform:scale(1.13)!important;mix-blend-mode:multiply!important;transition:transform .2s ease!important}
+.product-card.v44-card .card-photo img.is-placeholder{transform:scale(.66)!important;mix-blend-mode:normal!important;opacity:.65!important}
+.product-card.v44-card .card-main{padding:7px 10px 10px!important}
+.product-card.v44-card .v44-usage{margin-bottom:4px!important}
+.product-card.v44-card .balboll-card-metrics{display:grid!important;grid-template-columns:1fr!important;gap:3px!important;margin:0 0 5px!important}
+.product-card.v44-card .metric{display:grid!important;grid-template-columns:45px minmax(0,1fr) 31px!important;gap:5px!important;height:17px!important;line-height:17px!important;align-items:center!important;font-size:10px!important}
+.product-card.v44-card .metric span{white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+.product-card.v44-card .metric b{font-size:10px!important;font-variant-numeric:tabular-nums!important}
+.product-card.v44-card .balboll-mini-track{height:6px!important;background:#e9eee9!important;border-radius:20px!important}
+.product-card.v44-card .balboll-mini-track i{background:linear-gradient(90deg,#8bd6ae,#258a63)!important}
+.product-card.v44-card .metric.score-excellent .balboll-mini-track i{background:#2a986e!important}
+.product-card.v44-card .metric.score-good .balboll-mini-track i{background:#51ad86!important}
+.product-card.v44-card .metric.score-fair .balboll-mini-track i{background:#e4a64b!important}
+.product-card.v44-card .metric-estimated{font-size:9px!important;color:#849188!important;line-height:12px!important;letter-spacing:-.02em!important;margin:0 0 2px!important}
+.product-card.v44-card .balboll-detail-link{min-height:31px!important;padding:5px!important}
+@media(min-width:980px){.catalog-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:11px!important}.product-card.v44-card .card-photo{height:160px!important;min-height:160px!important}}
+@media(max-width:720px){.product-card.v44-card .card-photo{height:133px!important;min-height:133px!important}.product-card.v44-card .card-photo img{transform:scale(1.14)!important}.product-card.v44-card .card-main{padding:7px 6px 8px!important}.product-card.v44-card .metric{grid-template-columns:36px minmax(0,1fr) 26px!important;gap:3px!important;font-size:9px!important}.product-card.v44-card .metric b{font-size:9px!important}.product-card.v44-card .balboll-card-metrics{gap:2px!important}}
+/* Avoid layout shifts when switching categories */
+.site-header .header-inner{box-sizing:border-box!important}.category-nav{box-sizing:border-box!important}.catalog-grid .product-card{min-width:0!important}

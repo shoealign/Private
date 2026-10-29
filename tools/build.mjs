@@ -56,7 +56,7 @@ for(const rel of ['index.html',...shoes.map(s=>'shoes/'+s.slug+'/index.html')]){
 // V44 final layout stylesheet applies consistently to all categories on every build.
 for(const rel of ['index.html','hiking/index.html','walking/index.html']){
  const target=path.join(root,rel);let html=fs.readFileSync(target,'utf8');
- html=html.replace('</head>','<link rel="stylesheet" href="/assets/v44-layout.css?v=44"></head>');
+ html=html.replace('</head>','<link rel="stylesheet" href="/assets/v44-layout.css?v=44"><link rel="stylesheet" href="/assets/v45-compact.css?v=45"></head>');
  fs.writeFileSync(target,html);
 }
 const out=path.join(root,'public');fs.rmSync(out,{recursive:true,force:true});fs.mkdirSync(out);
