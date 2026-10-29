@@ -37,7 +37,7 @@ save('index.html',page('러닝화 평점과 장단점','러닝화 5개 항목 �
 // Category catalogs use their own dataset; running scores are never reused as walking or hiking scores.
 for(const [key,label] of [['hiking','등산화'],['walking','워킹화']]){
  process.env.BALBOLL_CATEGORY=key;
- save(key+'/index.html',page(label+' 추천 20선',label+' 전문 리뷰 기반 추천 모델 20개','/'+key+'/',key+'-body.html',['category-collection.js','category.js']));
+ save(key+'/index.html',page(label+' 제품 정보',label+' 공개 자료 기반 신발 정보','/'+key+'/',key+'-body.html',['category-collection.js','category.js','kr-catalog.js']));
  delete process.env.BALBOLL_CATEGORY;
 }
 save('methodology/index.html',page('점수·데이터 안내','BALBOLL 점수와 리뷰 출처, 평가 기준을 안내합니다.','/methodology/','methodology-body.html',['core.js']));
