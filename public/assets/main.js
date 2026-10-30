@@ -74,6 +74,9 @@ function shoeUsageLabel(s){
  return '데일리 러닝화';
 }
 
+function displayBrand(name){return String(name).toLowerCase()==='adidas'?'Adidas':name;}
+function displayModel(s){return String(s.name).replace(new RegExp('^(?:'+s.brand+'\\s+)+','i'),'').replace(new RegExp('^(?:'+s.brand+'\\s+)+','i'),'');}
+function displayFullName(name){return String(name||'').replace(/^(adidas\s+){2,}/i,'Adidas ').replace(/^adidas\b/i,'Adidas');}
 function card(s,i){
  const r=s.balbollRatings,valid=r&&['daily','long','tempo','cushion','stability'].every(k=>Number.isFinite(r[k]));
  const total=valid?(['daily','long','tempo','cushion','stability'].reduce((a,k)=>a+r[k],0)/5).toFixed(1):null;
@@ -81,7 +84,7 @@ function card(s,i){
  const band=n=>Number.isFinite(n)?(n>=90?'excellent':n>=80?'good':n>=70?'fair':'low'):'unrated';
  const overallClass=band(total===null?NaN:Number(total));
  const short=s.name.replace(new RegExp('^'+s.brand+'\\s*','i'),'');
- return `<article class="product-card balboll-card v44-card score-${overallClass}" data-product="${s.slug}"><a class="card-photo" href="/shoes/${s.slug}/" aria-label="${E(s.name)} 상세"><span class="line-badge is-score v44-score-badge score-${overallClass}" aria-label="종합점수 ${total||'평가 준비 중'}"><strong>${total||'—'}</strong></span><img src="${E(s.img)}" alt="${E(s.name)}" loading="lazy" decoding="async" data-slug="${s.slug}" onerror="SL.imageError(this)"></a><div class="card-main"><h3 class="v44-fullname" title="${E(s.name)}"><a href="/shoes/${s.slug}/">${E(s.name)}</a></h3><div class="v44-usage">${E(shoeUsageLabel(s))}</div><div class="balboll-card-metrics">${labels.map(([k,label])=>`<div class="metric score-${band(valid?r[k]:NaN)}" title="${label}: ${valid?scoreDisplay(r[k]):'평가 준비 중'}점"><span>${label}</span><div class="balboll-mini-track" role="meter" aria-label="${label}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${valid?r[k]:0}"><i style="width:${valid?r[k]:0}%"></i></div><b>${valid?scoreDisplay(r[k]):'—'}</b></div>`).join('')}</div><a class="balboll-detail-link" href="/shoes/${s.slug}/">상세 평가 보기 →</a></div></article>`;
+ return `<article class="product-card balboll-card v44-card score-${overallClass}" data-product="${s.slug}"><a class="card-photo" href="/shoes/${s.slug}/" aria-label="${E(s.name)} 상세"><span class="line-badge is-score v44-score-badge score-${overallClass}" aria-label="종합점수 ${total||'평가 준비 중'}"><strong>${total||'—'}</strong></span><img src="${E(s.img)}" alt="${E(s.name)}" loading="lazy" decoding="async" data-slug="${s.slug}" onerror="SL.imageError(this)"></a><div class="card-main"><h3 class="v44-fullname" title="${E(s.name)}"><a href="/shoes/${s.slug}/"><span class="v46-brand">${E(displayBrand(s.brand))}</span> ${E(displayModel(s))}</a></h3><div class="v44-usage">${E(shoeUsageLabel(s))}</div><div class="balboll-card-metrics">${labels.map(([k,label])=>`<div class="metric score-${band(valid?r[k]:NaN)}" title="${label}: ${valid?scoreDisplay(r[k]):'평가 준비 중'}점"><span>${label}</span><div class="balboll-mini-track" role="meter" aria-label="${label}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${valid?r[k]:0}"><i style="width:${valid?r[k]:0}%"></i></div><b>${valid?scoreDisplay(r[k]):'—'}</b></div>`).join('')}</div><a class="balboll-detail-link" href="/shoes/${s.slug}/">상세 평가 보기 →</a></div></article>`;
 }
 function updateTags(){
  const label={brand:state.brand,cat:{daily:'데일리/트레이닝',race:'레이싱',stability:'안정화'}[state.cat],level:{beginner:'입문',intermediate:'중급',advanced:'숙련'}[state.level],distance:SL.distance(state.distance),widthfilter:{narrow:'발볼 좁음',normal:'발볼 보통',wide:'발볼 넓음'}[state.widthfilter],budget:(Number(state.budget)/10000)+'만 원 이하'};

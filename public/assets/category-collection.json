@@ -564,7 +564,11 @@
       "brand": "HOKA",
       "model": "Bondi SR",
       "tag": "미끄럼 방지",
-      "metrics": null,
+      "metrics": {
+        "일상": 92,
+        "여행": 55,
+        "안정성": 98
+      },
       "source": "https://www.runrepeat.com/guides/best-walking-shoes",
       "sourceName": "RunRepeat",
       "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용",
@@ -572,10 +576,13 @@
       "imageSource": "https://comfortoneshoes.com/products/hoka-bondi-sr-women",
       "imageStatus": "external-unverified",
       "imageFallback": "/assets/shoe-placeholder.svg",
-      "metricSource": null,
+      "metricSource": "RunRepeat 공식 용도별 평가 (일상/여행/안정성)",
       "redditAdjustment": null,
       "redditSummary": "커뮤니티 의견은 참고용이며 독립된 점수로 집계하지 않았습니다.",
-      "scoreBasis": "직접 검증된 종합점수 없음"
+      "scoreBasis": "RunRepeat 공개 종합점수 (실측 항목과 구분)",
+      "runrepeatScore": 89,
+      "runrepeatUrl": "https://runrepeat.com/hoka-bondi-sr",
+      "metricScale": "100"
     },
     {
       "brand": "Nike",
@@ -611,7 +618,9 @@
       "metricSource": null,
       "redditAdjustment": null,
       "redditSummary": "커뮤니티 의견은 참고용이며 독립된 점수로 집계하지 않았습니다.",
-      "scoreBasis": "직접 검증된 종합점수 없음"
+      "scoreBasis": "RunRepeat 공개 종합 평점",
+      "runrepeatScore": 85,
+      "runrepeatUrl": "https://runrepeat.com/adidas-ultraboost-5-x"
     },
     {
       "brand": "HOKA",
@@ -628,7 +637,9 @@
       "metricSource": null,
       "redditAdjustment": null,
       "redditSummary": "커뮤니티 의견은 참고용이며 독립된 점수로 집계하지 않았습니다.",
-      "scoreBasis": "직접 검증된 종합점수 없음"
+      "scoreBasis": "RunRepeat 공개 종합점수 (실측 항목과 구분)",
+      "runrepeatScore": 86,
+      "runrepeatUrl": "https://runrepeat.com/hoka-bondi-9"
     },
     {
       "brand": "ASICS",
@@ -645,7 +656,9 @@
       "metricSource": null,
       "redditAdjustment": null,
       "redditSummary": "커뮤니티 의견은 참고용이며 독립된 점수로 집계하지 않았습니다.",
-      "scoreBasis": "직접 검증된 종합점수 없음"
+      "scoreBasis": "RunRepeat 공개 종합 평점",
+      "runrepeatScore": 91,
+      "runrepeatUrl": "https://runrepeat.com/asics-gt-2000-15"
     },
     {
       "brand": "Saucony",
@@ -662,7 +675,9 @@
       "metricSource": null,
       "redditAdjustment": null,
       "redditSummary": "커뮤니티 의견은 참고용이며 독립된 점수로 집계하지 않았습니다.",
-      "scoreBasis": "직접 검증된 종합점수 없음"
+      "scoreBasis": "RunRepeat 공개 종합 평점",
+      "runrepeatScore": 91,
+      "runrepeatUrl": "https://runrepeat.com/saucony-hurricane-26"
     },
     {
       "brand": "Saucony",
@@ -679,7 +694,9 @@
       "metricSource": null,
       "redditAdjustment": null,
       "redditSummary": "커뮤니티 의견은 참고용이며 독립된 점수로 집계하지 않았습니다.",
-      "scoreBasis": "직접 검증된 종합점수 없음"
+      "scoreBasis": "RunRepeat 공개 종합 평점",
+      "runrepeatScore": 84,
+      "runrepeatUrl": "https://runrepeat.com/saucony-guide-19"
     },
     {
       "brand": "Nike",
@@ -696,7 +713,9 @@
       "metricSource": null,
       "redditAdjustment": null,
       "redditSummary": "커뮤니티 의견은 참고용이며 독립된 점수로 집계하지 않았습니다.",
-      "scoreBasis": "직접 검증된 종합점수 없음"
+      "scoreBasis": "RunRepeat 공개 종합점수 (실측 항목과 구분)",
+      "runrepeatScore": 82,
+      "runrepeatUrl": "https://runrepeat.com/nike-infinityrn-4"
     },
     {
       "brand": "Brooks",
@@ -713,7 +732,9 @@
       "metricSource": null,
       "redditAdjustment": null,
       "redditSummary": "커뮤니티 의견은 참고용이며 독립된 점수로 집계하지 않았습니다.",
-      "scoreBasis": "직접 검증된 종합점수 없음"
+      "scoreBasis": "RunRepeat 공개 종합점수 (실측 항목과 구분)",
+      "runrepeatScore": 82,
+      "runrepeatUrl": "https://runrepeat.com/brooks-glycerin-gts-22"
     },
     {
       "brand": "New Balance",
@@ -730,13 +751,19 @@
       "metricSource": null,
       "redditAdjustment": null,
       "redditSummary": "커뮤니티 의견은 참고용이며 독립된 점수로 집계하지 않았습니다.",
-      "scoreBasis": "직접 검증된 종합점수 없음"
+      "scoreBasis": "RunRepeat 공개 종합점수 (실측 항목과 구분)",
+      "runrepeatScore": 85,
+      "runrepeatUrl": "https://runrepeat.com/new-balance-fresh-foam-x-860-v-15"
     },
     {
       "brand": "On",
       "model": "Cloudnova Form 2",
       "tag": "측면 지지",
-      "metrics": null,
+      "metrics": {
+        "일상": 96,
+        "여행": 92,
+        "안정성": 89
+      },
       "source": "https://www.runrepeat.com/guides/best-on-walking-shoes",
       "sourceName": "RunRepeat",
       "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용",
@@ -744,16 +771,23 @@
       "imageSource": "https://shopsportive.com/products/on-running-womens-cloudnova-form-2-shoes-white-ivory",
       "imageStatus": "external-unverified",
       "imageFallback": "/assets/shoe-placeholder.svg",
-      "metricSource": null,
+      "metricSource": "RunRepeat 공식 용도별 평가 (일상/여행/안정성)",
       "redditAdjustment": null,
       "redditSummary": "커뮤니티 의견은 참고용이며 독립된 점수로 집계하지 않았습니다.",
-      "scoreBasis": "직접 검증된 종합점수 없음"
+      "scoreBasis": "RunRepeat 공개 종합점수 (실측 항목과 구분)",
+      "runrepeatScore": 94,
+      "runrepeatUrl": "https://runrepeat.com/on-cloudnova-form-2",
+      "metricScale": "100"
     },
     {
       "brand": "On",
       "model": "Cloudnova 2",
       "tag": "안정성",
-      "metrics": null,
+      "metrics": {
+        "일상": 93,
+        "여행": 80,
+        "안정성": 88
+      },
       "source": "https://www.runrepeat.com/guides/best-on-walking-shoes",
       "sourceName": "RunRepeat",
       "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용",
@@ -761,16 +795,23 @@
       "imageSource": "https://www.on.com/en-us/products/cloudnova-2-3we3022/womens/all-white-shoes-3WE30220108",
       "imageStatus": "external-unverified",
       "imageFallback": "/assets/shoe-placeholder.svg",
-      "metricSource": null,
+      "metricSource": "RunRepeat 공식 용도별 평가 (일상/여행/안정성)",
       "redditAdjustment": null,
       "redditSummary": "커뮤니티 의견은 참고용이며 독립된 점수로 집계하지 않았습니다.",
-      "scoreBasis": "직접 검증된 종합점수 없음"
+      "scoreBasis": "RunRepeat 공개 종합점수 (실측 항목과 구분)",
+      "runrepeatScore": 90,
+      "runrepeatUrl": "https://runrepeat.com/on-cloudnova-2",
+      "metricScale": "100"
     },
     {
       "brand": "On",
       "model": "Cloudtilt",
       "tag": "일상 보행",
-      "metrics": null,
+      "metrics": {
+        "일상": 95,
+        "여행": 88,
+        "안정성": 84
+      },
       "source": "https://www.runrepeat.com/guides/best-on-walking-shoes",
       "sourceName": "RunRepeat",
       "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용",
@@ -778,16 +819,23 @@
       "imageSource": "https://www.hypedc.com/nz/products/on-cloudtilt-mineral-ivory-blu",
       "imageStatus": "external-unverified",
       "imageFallback": "/assets/shoe-placeholder.svg",
-      "metricSource": null,
+      "metricSource": "RunRepeat 공식 용도별 평가 (일상/여행/안정성)",
       "redditAdjustment": null,
       "redditSummary": "커뮤니티 의견은 참고용이며 독립된 점수로 집계하지 않았습니다.",
-      "scoreBasis": "직접 검증된 종합점수 없음"
+      "scoreBasis": "RunRepeat 공개 종합점수 (실측 항목과 구분)",
+      "runrepeatScore": 92,
+      "runrepeatUrl": "https://runrepeat.com/on-cloudtilt",
+      "metricScale": "100"
     },
     {
       "brand": "On",
       "model": "Cloud 6 Waterproof",
       "tag": "방수",
-      "metrics": null,
+      "metrics": {
+        "일상": 75,
+        "여행": 86,
+        "안정성": 75
+      },
       "source": "https://www.runrepeat.com/guides/best-on-walking-shoes",
       "sourceName": "RunRepeat",
       "note": "전문 리뷰 가이드에 등장한 모델 · 수록 순서는 참고용",
@@ -795,10 +843,13 @@
       "imageSource": "https://www.flannels.com/on-cloud-6-waterproof-shoes-211376",
       "imageStatus": "external-unverified",
       "imageFallback": "/assets/shoe-placeholder.svg",
-      "metricSource": null,
+      "metricSource": "RunRepeat 공식 용도별 평가 (일상/여행/안정성)",
       "redditAdjustment": null,
       "redditSummary": "커뮤니티 의견은 참고용이며 독립된 점수로 집계하지 않았습니다.",
-      "scoreBasis": "직접 검증된 종합점수 없음"
+      "scoreBasis": "RunRepeat 공개 종합점수 (실측 항목과 구분)",
+      "runrepeatScore": 82,
+      "runrepeatUrl": "https://runrepeat.com/on-cloud-6-waterproof",
+      "metricScale": "100"
     },
     {
       "brand": "On",
@@ -815,7 +866,9 @@
       "metricSource": null,
       "redditAdjustment": null,
       "redditSummary": "커뮤니티 의견은 참고용이며 독립된 점수로 집계하지 않았습니다.",
-      "scoreBasis": "직접 검증된 종합점수 없음"
+      "scoreBasis": "RunRepeat 공개 종합 평점",
+      "runrepeatScore": 78,
+      "runrepeatUrl": "https://runrepeat.com/on-cloudflyer-5"
     }
   ]
 }

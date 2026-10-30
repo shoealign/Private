@@ -1,0 +1,58 @@
+/* V46 compact shopping-style catalog, consistent header across all categories */
+:root{--v46-shadow:#172a2112}
+html{scrollbar-gutter:stable}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif!important}
+.site-header{height:auto!important}.site-header .header-inner{width:100%;max-width:1200px;box-sizing:border-box!important;display:flex!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;padding:10px 14px!important;min-height:66px!important;height:66px!important}
+.site-header .brand-logo{width:162px!important;min-width:162px!important;max-width:162px!important;gap:6px!important;flex:0 0 162px!important;white-space:nowrap!important}
+.site-header .brand-wordmark{font-size:22px!important;font-style:normal!important;letter-spacing:-1px!important}.site-header .brand-wordmark small{display:none!important}
+.site-header .balboll-symbol{flex:0 0 auto!important}
+.site-header .desktop-nav{display:none!important}
+.site-header .searchbar{height:40px!important;min-height:40px!important;margin:0!important;padding:0 8px!important;flex:1 1 auto!important;min-width:0!important;width:100%!important;max-width:none!important;box-sizing:border-box!important}
+.site-header .searchbar input{height:38px!important;font-size:13px!important}
+.site-header .header-actions{margin:0!important;flex:0 0 auto!important;display:flex!important;align-items:center!important;gap:5px!important}
+.site-header .header-actions .btn{font-size:12px!important;padding:6px 8px!important;min-height:34px!important;height:34px!important;text-decoration:none!important}
+.category-nav{height:47px!important;min-height:47px!important;max-height:47px!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;padding:0 14px!important;margin:0 auto!important;gap:20px!important;border-bottom:1px solid #e6eae7!important}
+.category-nav a,.category-nav a.active{height:46px!important;min-height:46px!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;padding:0 2px!important;font-size:15px!important;white-space:nowrap!important}
+.catalog-container{width:min(1200px,calc(100% - 24px))!important;margin:10px auto 40px!important}
+.catalog-container .catalog-controls{margin:6px 0 12px!important}
+.catalog-container .catalog-heading{display:none!important}.catalog-container .catalog-tools{justify-content:space-between!important;gap:8px!important}
+.catalog-container .catalog-count{font-size:11px!important;white-space:nowrap!important}
+.catalog-container .catalog-search-wrap{display:none!important}
+.catalog-container .catalog-tools select{margin-left:auto!important}
+.catalog-disclosure{font-size:10px!important}
+/* dense cards */
+#grid,.catalog-grid{gap:9px!important;align-items:stretch!important;grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.product-card.v44-card{border-radius:12px!important;box-shadow:0 1px 6px var(--v46-shadow)!important}
+.product-card.v44-card .card-photo{height:188px!important;min-height:188px!important;max-height:188px!important;background:#f7f8f7!important;overflow:hidden!important}
+.product-card.v44-card .card-photo img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;box-sizing:border-box!important;transform:scale(1.18)!important;padding:2px!important;mix-blend-mode:multiply!important}
+.product-card.v44-card .card-photo img.is-placeholder{transform:scale(.55)!important;mix-blend-mode:normal!important}
+.product-card.v44-card .card-main{padding:8px 9px 9px!important}
+.product-card.v44-card .v44-fullname{font-size:12px!important;letter-spacing:-.035em!important;font-weight:760!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;height:21px!important;min-height:21px!important;max-height:21px!important;line-height:21px!important;margin:0!important}
+.product-card.v44-card .v46-brand{font-weight:650!important;color:#87918b!important}
+.product-card.v44-card .v44-usage{height:16px!important;min-height:16px!important;max-height:16px!important;line-height:16px!important;margin-bottom:4px!important;font-size:10px!important;color:#728078!important}
+.product-card.v44-card .balboll-card-metrics{gap:1px!important;margin:0 0 6px!important}
+.product-card.v44-card .metric{display:grid!important;grid-template-columns:48px minmax(0,1fr) 30px!important;gap:4px!important;align-items:center!important;height:16px!important;line-height:16px!important}
+.product-card.v44-card .metric span{font-size:10px!important;white-space:nowrap!important;text-overflow:clip!important}
+.product-card.v44-card .metric b{font-size:10px!important;font-variant-numeric:tabular-nums!important}
+.product-card.v44-card .balboll-mini-track{height:5px!important}
+.product-card.v44-card .balboll-detail-link{min-height:30px!important;height:30px!important;padding:5px!important;font-size:11px!important;margin-top:auto!important}
+@media(max-width:900px){#grid,.catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media(max-width:650px){
+ .site-header .header-inner{height:60px!important;min-height:60px!important;padding:6px 8px!important;gap:5px!important}
+ .site-header .brand-logo{width:108px!important;min-width:108px!important;max-width:108px!important;flex-basis:108px!important;gap:3px!important}
+ .site-header .brand-wordmark{font-size:16px!important;letter-spacing:-.8px!important}
+ .site-header .balboll-symbol{transform:scale(.77)!important;transform-origin:center left!important;margin-right:-6px!important}
+ .site-header .searchbar{height:36px!important;min-height:36px!important;padding:0 5px!important;gap:3px!important}
+ .site-header .searchbar input{font-size:11px!important;height:34px!important}
+ .site-header .searchbar button{min-width:16px!important;width:17px!important;padding:0!important;font-size:17px!important}
+ .site-header .header-actions{gap:2px!important}
+ .site-header .header-actions .btn{font-size:10px!important;min-height:31px!important;height:31px!important;padding:5px 4px!important}
+ .category-nav{padding:0 10px!important;gap:17px!important}
+ #grid,.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px!important}
+ .product-card.v44-card .card-photo{height:137px!important;min-height:137px!important;max-height:137px!important}
+ .product-card.v44-card .card-photo img{transform:scale(1.16)!important}
+ .product-card.v44-card .card-main{padding:6px 6px 8px!important}
+ .product-card.v44-card .v44-fullname{font-size:clamp(9px,2.55vw,11px)!important;letter-spacing:-.04em!important}
+ .product-card.v44-card .metric{grid-template-columns:38px minmax(0,1fr) 26px!important;gap:2px!important;height:15px!important;line-height:15px!important}
+ .product-card.v44-card .metric span,.product-card.v44-card .metric b{font-size:9px!important}
+ .product-card.v44-card .balboll-detail-link{height:28px!important;min-height:28px!important;font-size:10px!important}
+}

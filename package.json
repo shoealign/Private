@@ -5,7 +5,8 @@
   "scripts": {
     "build": "node tools/build.mjs && node tools/postbuild-v10.cjs",
     "test:photos": "node tools/test-photo-cutout.cjs",
-    "photos:prepare": "node tools/prepare-photos.cjs"
+    "photos:prepare": "node tools/prepare-photos.cjs",
+    "photos:categories": "node tools/prepare-category-photos.cjs"
   },
   "dependencies": {
     "sharp": "^0.34.1"
